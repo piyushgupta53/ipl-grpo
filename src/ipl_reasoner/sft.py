@@ -13,6 +13,7 @@ import pandas as pd
 from ipl_reasoner.paths import ProjectPaths
 
 PREFERRED_SFT_SEASONS = {"2019", "2020", "2021", "2022", "2023"}
+SFT_PROMPT_SUFFIX = "\n"
 
 
 @dataclass(frozen=True)
@@ -832,8 +833,8 @@ def _write_sft_jsonl(candidates: pd.DataFrame, output_path: Path) -> None:
     with output_path.open("w", encoding="utf-8") as f:
         for row in candidates.to_dict("records"):
             payload = {
-                "prompt": row["prompt"],
-                "completion": row["draft_response"],
+                "prompt": _sft_prompt_text(str(row["prompt"])),
+                "completion": _sft_completion_text(str(row["draft_response"])),
                 "metadata": {
                     "match_id": row["match_id"],
                     "season": row["season"],
@@ -957,8 +958,8 @@ def _write_reviewed_jsonl(review_pack: pd.DataFrame, output_path: Path) -> None:
     with output_path.open("w", encoding="utf-8") as f:
         for row in approved.to_dict("records"):
             payload = {
-                "prompt": row["prompt"],
-                "completion": row["approved_response"],
+                "prompt": _sft_prompt_text(str(row["prompt"])),
+                "completion": _sft_completion_text(str(row["approved_response"])),
                 "metadata": {
                     "match_id": row["match_id"],
                     "season": row["season"],
@@ -981,8 +982,8 @@ def _write_warmup_training_jsonl(
     with output_path.open("w", encoding="utf-8") as f:
         for row in first_pass_all.to_dict("records"):
             payload = {
-                "prompt": row["prompt"],
-                "completion": row["approved_response"],
+                "prompt": _sft_prompt_text(str(row["prompt"])),
+                "completion": _sft_completion_text(str(row["approved_response"])),
                 "metadata": {
                     "match_id": row["match_id"],
                     "season": row["season"],
@@ -1005,8 +1006,8 @@ def _write_prompt_completion_jsonl(
     with output_path.open("w", encoding="utf-8") as f:
         for row in df.to_dict("records"):
             payload = {
-                "prompt": row["prompt"],
-                "completion": row[response_column],
+                "prompt": _sft_prompt_text(str(row["prompt"])),
+                "completion": _sft_completion_text(str(row[response_column])),
                 "metadata": {
                     "match_id": row["match_id"],
                     "season": row["season"],
@@ -1018,3 +1019,11 @@ def _write_prompt_completion_jsonl(
                 },
             }
             f.write(json.dumps(payload, ensure_ascii=True) + "\n")
+
+
+def _sft_prompt_text(prompt: str) -> str:
+    return prompt.rstrip() + SFT_PROMPT_SUFFIX
+
+
+def _sft_completion_text(completion: str) -> str:
+    return completion.lstrip()
