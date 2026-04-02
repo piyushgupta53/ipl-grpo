@@ -1,0 +1,40 @@
+[project]
+name = "ipl-win-probability-reasoner"
+version = "0.1.0"
+description = "Offline and live pipelines for IPL win-probability reasoning."
+readme = "README.md"
+requires-python = ">=3.11,<3.13"
+dependencies = [
+  "pandas>=2.2,<3",
+  "pyarrow>=17,<20",
+  "protobuf>=7.34,<8",
+  "scikit-learn>=1.5,<2",
+  "transformers>=4.51,<5",
+]
+
+[project.scripts]
+ipl-reasoner = "ipl_reasoner.cli:main"
+
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"
+
+[dependency-groups]
+dev = [
+  "pytest>=8.3,<9",
+  "ruff>=0.11,<1",
+]
+train = [
+  "accelerate>=1.10,<2",
+  "datasets>=3.6,<5",
+  "peft>=0.17,<1",
+  "sentencepiece>=0.2,<1",
+  "trl>=0.26,<1",
+]
+
+[tool.ruff]
+line-length = 100
+target-version = "py311"
+
+[tool.ruff.lint]
+select = ["E", "F", "I", "B"]
