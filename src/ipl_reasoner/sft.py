@@ -21,9 +21,11 @@ class SFTArtifacts:
     candidate_csv_path: Path
     draft_jsonl_path: Path
     review_pack_csv_path: Path
+    gold_review_pack_csv_path: Path
     reviewed_jsonl_path: Path
     reviewed_only_jsonl_path: Path
     first_pass_all_jsonl_path: Path
+    gold_v1_jsonl_path: Path
     warmup_training_jsonl_path: Path
 
 
@@ -34,27 +36,33 @@ def build_sft_artifacts(training_dataset: pd.DataFrame, paths: ProjectPaths) -> 
     candidate_csv_path = paths.processed / "sft_candidate_examples.csv"
     draft_jsonl_path = paths.processed / "sft_warmup_drafts.jsonl"
     review_pack_csv_path = paths.processed / "sft_review_pack.csv"
+    gold_review_pack_csv_path = paths.manual / "sft_gold_review_pack_v1.csv"
     reviewed_jsonl_path = paths.processed / "sft_warmup_reviewed.jsonl"
     reviewed_only_jsonl_path = paths.processed / "sft_warmup_reviewed_only.jsonl"
     first_pass_all_jsonl_path = paths.processed / "sft_warmup_first_pass_all.jsonl"
+    gold_v1_jsonl_path = paths.processed / "sft_warmup_gold_v1.jsonl"
     warmup_training_jsonl_path = paths.processed / "sft_warmup_training.jsonl"
 
     candidates.to_csv(candidate_csv_path, index=False)
     _write_sft_jsonl(candidates, draft_jsonl_path)
     review_pack = _write_review_pack(candidates, review_pack_csv_path)
     first_pass_all = _apply_first_pass_review(candidates.copy())
+    gold_pack = _load_gold_review_pack(gold_review_pack_csv_path)
     _write_reviewed_jsonl(review_pack, reviewed_jsonl_path)
     _write_prompt_completion_jsonl(review_pack, reviewed_only_jsonl_path, response_column="approved_response", response_source="reviewed_only")
     _write_prompt_completion_jsonl(first_pass_all, first_pass_all_jsonl_path, response_column="approved_response", response_source="first_pass_all")
+    _write_gold_jsonl(gold_pack, gold_v1_jsonl_path)
     _write_warmup_training_jsonl(first_pass_all, warmup_training_jsonl_path)
 
     return SFTArtifacts(
         candidate_csv_path=candidate_csv_path,
         draft_jsonl_path=draft_jsonl_path,
         review_pack_csv_path=review_pack_csv_path,
+        gold_review_pack_csv_path=gold_review_pack_csv_path,
         reviewed_jsonl_path=reviewed_jsonl_path,
         reviewed_only_jsonl_path=reviewed_only_jsonl_path,
         first_pass_all_jsonl_path=first_pass_all_jsonl_path,
+        gold_v1_jsonl_path=gold_v1_jsonl_path,
         warmup_training_jsonl_path=warmup_training_jsonl_path,
     )
 
@@ -1016,6 +1024,64 @@ def _write_prompt_completion_jsonl(
                     "review_priority": row["review_priority"],
                     "review_status": row.get("review_status"),
                     "response_source": response_source,
+                },
+            }
+            f.write(json.dumps(payload, ensure_ascii=True) + "\n")
+
+
+def _load_gold_review_pack(input_path: Path) -> pd.DataFrame:
+    if not input_path.exists():
+        raise FileNotFoundError(
+            f"Missing gold SFT review pack at {input_path}. Expected the curated gold CSV to exist before building SFT artifacts."
+        )
+
+    gold_df = pd.read_csv(input_path)
+    required_cols = {
+        "gold_example_id",
+        "match_id",
+        "season",
+        "snapshot_over",
+        "sft_bucket",
+        "review_priority",
+        "prompt",
+        "label_status",
+        "gold_probability",
+        "gold_analysis",
+    }
+    missing = sorted(required_cols - set(gold_df.columns))
+    if missing:
+        raise ValueError(f"Gold SFT review pack is missing columns: {', '.join(missing)}")
+
+    approved = gold_df.loc[gold_df["label_status"].astype(str).str.strip().eq("approved")].copy()
+    if approved.empty:
+        raise ValueError("Gold SFT review pack has no approved rows.")
+
+    approved["gold_probability"] = approved["gold_probability"].astype(float)
+    approved["approved_response"] = approved.apply(_build_gold_response, axis=1)
+    return approved
+
+
+def _build_gold_response(row: pd.Series) -> str:
+    analysis = str(row["gold_analysis"]).strip()
+    probability = float(row["gold_probability"])
+    return f"<analysis>\n{analysis}\n</analysis>\n<answer>{probability:.2f}</answer>"
+
+
+def _write_gold_jsonl(gold_df: pd.DataFrame, output_path: Path) -> None:
+    with output_path.open("w", encoding="utf-8") as f:
+        for row in gold_df.to_dict("records"):
+            payload = {
+                "prompt": _sft_prompt_text(str(row["prompt"])),
+                "completion": _sft_completion_text(str(row["approved_response"])),
+                "metadata": {
+                    "gold_example_id": row["gold_example_id"],
+                    "match_id": row["match_id"],
+                    "season": row["season"],
+                    "snapshot_over": row["snapshot_over"],
+                    "sft_bucket": row["sft_bucket"],
+                    "review_priority": row["review_priority"],
+                    "review_status": row.get("label_status"),
+                    "response_source": "gold_v1",
                 },
             }
             f.write(json.dumps(payload, ensure_ascii=True) + "\n")

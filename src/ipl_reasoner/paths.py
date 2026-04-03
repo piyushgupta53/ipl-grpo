@@ -10,6 +10,7 @@ from pathlib import Path
 class ProjectPaths:
     root: Path
     data: Path
+    manual: Path
     raw: Path
     interim: Path
     processed: Path
@@ -26,6 +27,7 @@ class ProjectPaths:
         return cls(
             root=root,
             data=data,
+            manual=data / "manual",
             raw=data / "raw",
             interim=data / "interim",
             processed=data / "processed",
@@ -39,6 +41,7 @@ class ProjectPaths:
         created: list[Path] = []
         for path in (
             self.data,
+            self.manual,
             self.raw,
             self.interim,
             self.processed,
@@ -50,4 +53,3 @@ class ProjectPaths:
             path.mkdir(parents=True, exist_ok=True)
             created.append(path)
         return created
-

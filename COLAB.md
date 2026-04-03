@@ -57,7 +57,7 @@ If Colab already has a suitable `torch`, keep it. The project plan specifically 
 This step is important because manifests written on the laptop contain laptop-specific absolute paths.
 
 ```bash
-!PYTHONPATH=src python scripts/colab_prepare_and_run.py --stage sft --sft-dataset-variant first_pass_all
+!PYTHONPATH=src python scripts/colab_prepare_and_run.py --stage sft --sft-dataset-variant gold_v1
 ```
 
 That will:
@@ -68,7 +68,7 @@ That will:
 ## Start SFT Warmup
 
 ```bash
-!PYTHONPATH=src python scripts/colab_prepare_and_run.py --stage sft --sft-dataset-variant first_pass_all --run
+!PYTHONPATH=src python scripts/colab_prepare_and_run.py --stage sft --sft-dataset-variant gold_v1 --run
 ```
 
 If you still see a `wandb` import error after uninstalling it, restart the Colab runtime once and
@@ -110,5 +110,5 @@ Or prepare both in sequence:
 
 - Start with SFT only. Do not jump straight into GRPO on the first Colab run.
 - The improved rerun uses prompt/completion examples so the model is trained on assistant answers only.
-- The default rerun dataset is `first_pass_all` rather than the earlier draft-backed blend.
+- The default rerun dataset is `gold_v1`, built from the curated manual gold review pack at `data/manual/sft_gold_review_pack_v1.csv`.
 - `training_dataset.csv` already passes the prompt length and cooldown checks needed by the plan.

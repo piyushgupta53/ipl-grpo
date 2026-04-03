@@ -1,0 +1,4531 @@
+gold_example_id,match_id,season,snapshot_over,sft_bucket,scenario_tag,review_priority,required_run_rate,wickets_in_hand,prompt,label_status,gold_probability,gold_analysis,reviewer_notes
+gold_001,1178422,2019,4,easy,balanced_chase,medium,13.25,8,"SYSTEM:
+You are an IPL cricket analyst. Estimate the probability (0.0 to 1.0) that the batting team wins the match.
+Write a short public reasoning summary focused only on the most important signals.
+Do not reveal hidden chain-of-thought.
+
+Format exactly as:
+<analysis>
+[2-5 sentence public reasoning summary here]
+</analysis>
+<answer>0.XX</answer>
+
+Answer must be a decimal between 0.0 and 1.0.
+
+USER:
+IPL Match - Mumbai Indians chasing 233 set by Kolkata Knight Riders
+Venue: Eden Gardens
+Match type: Evening (7:30 PM IST, dew likely)
+Toss: Mumbai Indians chose to field first
+
+End of Over 4:
+Score: 21/2 (24 balls faced)
+Need: 212 off 96 (RRR: 13.25)
+Current run rate: 5.25
+
+Momentum:
+Last over: 1
+Last 3 overs: 12 runs, 2 wickets
+Last 5 overs: Dot% 71% | Boundary% 17%
+
+Batters:
+E Lewis (chase SR 126, death SR 161) (career data limited)
+SA Yadav (chase SR 126, death SR 161) (career data limited)
+Partnership: 3b, 0r
+
+Last over bowler: HF Gurney (1/4 overs used, death econ 10.77, death wkts/ov 0.49) (career data limited)
+Next over: different bowler.
+
+Venue context (Eden Gardens):
+Surface: balanced, medium boundaries
+Chase rate: 60% (67 matches)
+Avg 2nd inns: 149
+Death RPO: 10.1
+Dew: Medium evenings
+
+Win probability for Mumbai Indians?",approved,0.08,"It is still early enough for Mumbai Indians to recover, but the chase has already started badly. Run rate pressure is severe here: they need 13.25, but the innings has only run at 5.25 so far. The chase has lost shape recently, with 2 wickets in the last three overs and a 71% dot-ball share across the last five.",assistant_authored_gold_v1
+gold_002,1178420,2019,13,easy,balanced_chase,medium,6.714285714285714,8,"SYSTEM:
+You are an IPL cricket analyst. Estimate the probability (0.0 to 1.0) that the batting team wins the match.
+Write a short public reasoning summary focused only on the most important signals.
+Do not reveal hidden chain-of-thought.
+
+Format exactly as:
+<analysis>
+[2-5 sentence public reasoning summary here]
+</analysis>
+<answer>0.XX</answer>
+
+Answer must be a decimal between 0.0 and 1.0.
+
+USER:
+IPL Match - Rajasthan Royals chasing 161 set by Sunrisers Hyderabad
+Venue: Sawai Mansingh Stadium
+Match type: Evening (7:30 PM IST, dew likely)
+Toss: Rajasthan Royals chose to field first
+
+End of Over 13:
+Score: 114/2 (78 balls faced)
+Need: 47 off 42 (RRR: 6.71)
+Current run rate: 8.77
+
+Momentum:
+Last over: 14
+Last 3 overs: 35 runs, 1 wickets
+Last 5 overs: Dot% 40% | Boundary% 13%
+
+Batters:
+SPD Smith (chase SR 111, death SR 115)
+SV Samson (chase SR 124, death SR 145)
+Partnership: 9b, 21r
+
+Last over bowler: S Kaul (3/4 overs used, death econ 8.77, death wkts/ov 0.38)
+Next over: different bowler.
+
+Venue context (Sawai Mansingh Stadium):
+Surface: batting-friendly, medium boundaries
+Chase rate: 65% (40 matches)
+Avg 2nd inns: 145
+Death RPO: 9.6
+Dew: Low evenings
+
+Win probability for Rajasthan Royals?",approved,0.95,Rajasthan Royals should close this chase out from here unless they create a collapse for themselves. Run rate is under control: they only need 6.71 and are already moving at 8.77. Having 8 wickets in reserve keeps plenty of scoring options alive from here.,assistant_authored_gold_v1
+gold_003,1175356,2019,16,easy,cruise_control,medium,0.75,7,"SYSTEM:
+You are an IPL cricket analyst. Estimate the probability (0.0 to 1.0) that the batting team wins the match.
+Write a short public reasoning summary focused only on the most important signals.
+Do not reveal hidden chain-of-thought.
+
+Format exactly as:
+<analysis>
+[2-5 sentence public reasoning summary here]
+</analysis>
+<answer>0.XX</answer>
+
+Answer must be a decimal between 0.0 and 1.0.
+
+USER:
+IPL Match - Chennai Super Kings chasing 71 set by Royal Challengers Bengaluru
+Venue: MA Chidambaram Stadium
+Match type: Evening (7:30 PM IST, dew likely)
+Toss: Chennai Super Kings chose to field first
+
+End of Over 16:
+Score: 68/3 (96 balls faced)
+Need: 3 off 24 (RRR: 0.75)
+Current run rate: 4.25
+
+Momentum:
+Last over: 5
+Last 3 overs: 16 runs, 1 wickets
+Last 5 overs: Dot% 57% | Boundary% 3%
+
+Batters:
+RA Jadeja (chase SR 95, death SR 90)
+KM Jadhav (chase SR 126, death SR 161) (career data limited)
+Partnership: 10b, 9r
+
+Last over bowler: UT Yadav (3/4 overs used, death econ 11.82, death wkts/ov 0.44)
+Next over: different bowler.
+
+Venue context (MA Chidambaram Stadium):
+Surface: spin-friendly, medium boundaries
+Chase rate: 38% (50 matches)
+Avg 2nd inns: 152
+Death RPO: 9.3
+Dew: Medium evenings
+
+Win probability for Chennai Super Kings?",approved,0.98,Chennai Super Kings are basically one controlled over away from the target now. Run rate is under control: they only need 0.75 and are already moving at 4.25. Recent scoring gives them a pulse here: 16 off the last three overs has stopped the equation from running away.,assistant_authored_gold_v1
+gold_004,1175371,2019,16,easy,balanced_chase,medium,4.75,5,"SYSTEM:
+You are an IPL cricket analyst. Estimate the probability (0.0 to 1.0) that the batting team wins the match.
+Write a short public reasoning summary focused only on the most important signals.
+Do not reveal hidden chain-of-thought.
+
+Format exactly as:
+<analysis>
+[2-5 sentence public reasoning summary here]
+</analysis>
+<answer>0.XX</answer>
+
+Answer must be a decimal between 0.0 and 1.0.
+
+USER:
+IPL Match - Sunrisers Hyderabad chasing 130 set by Delhi Capitals
+Venue: Arun Jaitley Stadium
+Match type: Evening (7:30 PM IST, dew likely)
+Toss: Sunrisers Hyderabad chose to field first
+
+End of Over 16:
+Score: 111/5 (96 balls faced)
+Need: 19 off 24 (RRR: 4.75)
+Current run rate: 6.94
+
+Momentum:
+Last over: 8
+Last 3 overs: 16 runs, 2 wickets
+Last 5 overs: Dot% 50% | Boundary% 7%
+
+Batters:
+YK Pathan (chase SR 153, death SR 178)
+NEW_BATTER_PENDING
+Partnership: 0b, 0r
+
+Last over bowler: S Lamichhane (4/4 overs used, death econ 10.77, death wkts/ov 0.49) (career data limited)
+Next over: different bowler.
+
+Venue context (Arun Jaitley Stadium):
+Surface: batting-friendly, medium boundaries
+Chase rate: 52% (63 matches)
+Avg 2nd inns: 152
+Death RPO: 9.3
+Dew: Low evenings
+
+Win probability for Sunrisers Hyderabad?",approved,0.94,"Sunrisers Hyderabad should close this chase out from here unless they create a collapse for themselves. The equation is favorable now because the asking rate of 4.75 is below the current scoring rate of 6.94. The bowling side now has to move away from S Lamichhane, which slightly improves the batting side's next-over outlook.",assistant_authored_gold_v1
+gold_005,1175366,2019,19,easy,near_collapse,medium,122.0,1,"SYSTEM:
+You are an IPL cricket analyst. Estimate the probability (0.0 to 1.0) that the batting team wins the match.
+Write a short public reasoning summary focused only on the most important signals.
+Do not reveal hidden chain-of-thought.
+
+Format exactly as:
+<analysis>
+[2-5 sentence public reasoning summary here]
+</analysis>
+<answer>0.XX</answer>
+
+Answer must be a decimal between 0.0 and 1.0.
+
+USER:
+IPL Match - Royal Challengers Bengaluru chasing 232 set by Sunrisers Hyderabad
+Venue: Rajiv Gandhi International Stadium
+Match type: Evening (7:30 PM IST, dew likely)
+Toss: Royal Challengers Bengaluru chose to field first
+
+End of Over 19:
+Score: 110/9 (114 balls faced)
+Need: 122 off 6 (RRR: 122.00)
+Current run rate: 5.79
+
+Momentum:
+Last over: 6
+Last 3 overs: 15 runs, 2 wickets
+Last 5 overs: Dot% 57% | Boundary% 10%
+
+Batters:
+Mohammed Siraj (chase SR 126, death SR 161) (career data limited)
+YS Chahal (chase SR 126, death SR 161) (career data limited)
+Partnership: 3b, 1r
+
+Last over bowler: V Shankar (2/4 overs used, death econ 10.77, death wkts/ov 0.49) (career data limited)
+Next over: different bowler.
+
+Venue context (Rajiv Gandhi International Stadium):
+Surface: balanced, medium boundaries
+Chase rate: 58% (55 matches)
+Avg 2nd inns: 150
+Death RPO: 9.5
+Dew: Low evenings
+
+Win probability for Royal Challengers Bengaluru?",approved,0.01,"This is almost gone for Royal Challengers Bengaluru unless something very unusual happens immediately. Run rate pressure is severe here: they need 122.00, but the innings has only run at 5.79 so far. Only 1 wickets remain, so another dismissal would almost shut the door.",assistant_authored_gold_v1
+gold_006,1178394,2019,11,interesting,balanced_chase,high,8.444444444444445,6,"SYSTEM:
+You are an IPL cricket analyst. Estimate the probability (0.0 to 1.0) that the batting team wins the match.
+Write a short public reasoning summary focused only on the most important signals.
+Do not reveal hidden chain-of-thought.
+
+Format exactly as:
+<analysis>
+[2-5 sentence public reasoning summary here]
+</analysis>
+<answer>0.XX</answer>
+
+Answer must be a decimal between 0.0 and 1.0.
+
+USER:
+IPL Match - Sunrisers Hyderabad chasing 137 set by Mumbai Indians
+Venue: Rajiv Gandhi International Stadium
+Match type: Evening (7:30 PM IST, dew likely)
+Toss: Sunrisers Hyderabad chose to field first
+
+End of Over 11:
+Score: 61/4 (66 balls faced)
+Need: 76 off 54 (RRR: 8.44)
+Current run rate: 5.55
+
+Momentum:
+Last over: 2
+Last 3 overs: 14 runs, 1 wickets
+Last 5 overs: Dot% 37% | Boundary% 0%
+
+Batters:
+DJ Hooda (chase SR 126, death SR 161) (career data limited)
+YK Pathan (chase SR 153, death SR 178)
+Partnership: 3b, 0r
+
+Last over bowler: JP Behrendorff (3/4 overs used, death econ 10.77, death wkts/ov 0.49) (career data limited)
+Next over: different bowler.
+
+Venue context (Rajiv Gandhi International Stadium):
+Surface: balanced, medium boundaries
+Chase rate: 58% (55 matches)
+Avg 2nd inns: 150
+Death RPO: 9.5
+Dew: Low evenings
+
+Win probability for Sunrisers Hyderabad?",approved,0.39,"The bowling side is ahead for now, although Sunrisers Hyderabad still have a path if they string together a clean passage. The chase is still being pushed by the rate because 8.44 is comfortably above the current 5.55. There is still enough batting left to absorb one mistake and keep the chase going.",assistant_authored_gold_v1
+gold_007,1175367,2019,12,interesting,balanced_chase,high,11.125,6,"SYSTEM:
+You are an IPL cricket analyst. Estimate the probability (0.0 to 1.0) that the batting team wins the match.
+Write a short public reasoning summary focused only on the most important signals.
+Do not reveal hidden chain-of-thought.
+
+Format exactly as:
+<analysis>
+[2-5 sentence public reasoning summary here]
+</analysis>
+<answer>0.XX</answer>
+
+Answer must be a decimal between 0.0 and 1.0.
+
+USER:
+IPL Match - Rajasthan Royals chasing 176 set by Chennai Super Kings
+Venue: MA Chidambaram Stadium
+Match type: Evening (7:30 PM IST, dew likely)
+Toss: Rajasthan Royals chose to field first
+
+End of Over 12:
+Score: 87/4 (72 balls faced)
+Need: 89 off 48 (RRR: 11.12)
+Current run rate: 7.25
+
+Momentum:
+Last over: 7
+Last 3 overs: 15 runs, 1 wickets
+Last 5 overs: Dot% 23% | Boundary% 7%
+
+Batters:
+SPD Smith (chase SR 111, death SR 115)
+BA Stokes (chase SR 126, death SR 161) (career data limited)
+Partnership: 12b, 12r
+
+Last over bowler: Imran Tahir (2/4 overs used, death econ 7.54, death wkts/ov 0.30)
+Next over: different bowler.
+
+Venue context (MA Chidambaram Stadium):
+Surface: spin-friendly, medium boundaries
+Chase rate: 38% (50 matches)
+Avg 2nd inns: 152
+Death RPO: 9.3
+Dew: Medium evenings
+
+Win probability for Rajasthan Royals?",approved,0.15,Rajasthan Royals are under heavy pressure now and need something out of the ordinary from this position. They still need a clear gear change: 11.12 required is a fair step above the present 7.25. This is not one of the grounds where the batting side can expect conditions to rescue a difficult chase.,assistant_authored_gold_v1
+gold_008,1178394,2019,12,interesting,balanced_chase,high,8.625,5,"SYSTEM:
+You are an IPL cricket analyst. Estimate the probability (0.0 to 1.0) that the batting team wins the match.
+Write a short public reasoning summary focused only on the most important signals.
+Do not reveal hidden chain-of-thought.
+
+Format exactly as:
+<analysis>
+[2-5 sentence public reasoning summary here]
+</analysis>
+<answer>0.XX</answer>
+
+Answer must be a decimal between 0.0 and 1.0.
+
+USER:
+IPL Match - Sunrisers Hyderabad chasing 137 set by Mumbai Indians
+Venue: Rajiv Gandhi International Stadium
+Match type: Evening (7:30 PM IST, dew likely)
+Toss: Sunrisers Hyderabad chose to field first
+
+End of Over 12:
+Score: 68/5 (72 balls faced)
+Need: 69 off 48 (RRR: 8.62)
+Current run rate: 5.67
+
+Momentum:
+Last over: 7
+Last 3 overs: 14 runs, 2 wickets
+Last 5 overs: Dot% 33% | Boundary% 3%
+
+Batters:
+Mohammad Nabi (chase SR 126, death SR 161) (career data limited)
+DJ Hooda (chase SR 126, death SR 161) (career data limited)
+Partnership: 4b, 6r
+
+Last over bowler: RD Chahar (3/4 overs used, death econ 10.77, death wkts/ov 0.49) (career data limited)
+Next over: different bowler.
+
+Venue context (Rajiv Gandhi International Stadium):
+Surface: balanced, medium boundaries
+Chase rate: 58% (55 matches)
+Avg 2nd inns: 150
+Death RPO: 9.5
+Dew: Low evenings
+
+Win probability for Sunrisers Hyderabad?",approved,0.27,This has become a difficult chase for Sunrisers Hyderabad and they need the game to swing quickly back their way. The chase is still being pushed by the rate because 8.62 is comfortably above the current 5.67. The recent wickets are a major problem: 2 down in the last three overs has disrupted the chase badly.,assistant_authored_gold_v1
+gold_009,1178394,2019,13,interesting,balanced_chase,high,9.142857142857142,5,"SYSTEM:
+You are an IPL cricket analyst. Estimate the probability (0.0 to 1.0) that the batting team wins the match.
+Write a short public reasoning summary focused only on the most important signals.
+Do not reveal hidden chain-of-thought.
+
+Format exactly as:
+<analysis>
+[2-5 sentence public reasoning summary here]
+</analysis>
+<answer>0.XX</answer>
+
+Answer must be a decimal between 0.0 and 1.0.
+
+USER:
+IPL Match - Sunrisers Hyderabad chasing 137 set by Mumbai Indians
+Venue: Rajiv Gandhi International Stadium
+Match type: Evening (7:30 PM IST, dew likely)
+Toss: Sunrisers Hyderabad chose to field first
+
+End of Over 13:
+Score: 73/5 (78 balls faced)
+Need: 64 off 42 (RRR: 9.14)
+Current run rate: 5.62
+
+Momentum:
+Last over: 5
+Last 3 overs: 14 runs, 2 wickets
+Last 5 overs: Dot% 37% | Boundary% 3%
+
+Batters:
+Mohammad Nabi (chase SR 126, death SR 161) (career data limited)
+DJ Hooda (chase SR 126, death SR 161) (career data limited)
+Partnership: 10b, 11r
+
+Last over bowler: JP Behrendorff (4/4 overs used, death econ 10.77, death wkts/ov 0.49) (career data limited)
+Next over: different bowler.
+
+Venue context (Rajiv Gandhi International Stadium):
+Surface: balanced, medium boundaries
+Chase rate: 58% (55 matches)
+Avg 2nd inns: 150
+Death RPO: 9.5
+Dew: Low evenings
+
+Win probability for Sunrisers Hyderabad?",approved,0.26,Sunrisers Hyderabad are under heavy pressure now and need something out of the ordinary from this position. The chase is still being pushed by the rate because 9.14 is comfortably above the current 5.62. The recent wickets are a major problem: 2 down in the last three overs has disrupted the chase badly.,assistant_authored_gold_v1
+gold_010,1178393,2019,14,interesting,resources_but_work,high,10.166666666666666,8,"SYSTEM:
+You are an IPL cricket analyst. Estimate the probability (0.0 to 1.0) that the batting team wins the match.
+Write a short public reasoning summary focused only on the most important signals.
+Do not reveal hidden chain-of-thought.
+
+Format exactly as:
+<analysis>
+[2-5 sentence public reasoning summary here]
+</analysis>
+<answer>0.XX</answer>
+
+Answer must be a decimal between 0.0 and 1.0.
+
+USER:
+IPL Match - Punjab Kings chasing 161 set by Chennai Super Kings
+Venue: MA Chidambaram Stadium
+Match type: Evening (7:30 PM IST, dew likely)
+Toss: Chennai Super Kings chose to bat first
+
+End of Over 14:
+Score: 100/2 (84 balls faced)
+Need: 61 off 36 (RRR: 10.17)
+Current run rate: 7.14
+
+Momentum:
+Last over: 4
+Last 3 overs: 25 runs, 0 wickets
+Last 5 overs: Dot% 27% | Boundary% 7%
+
+Batters:
+KL Rahul (chase SR 126, death SR 161) (career data limited)
+SN Khan (chase SR 126, death SR 161) (career data limited)
+Partnership: 72b, 93r
+
+Last over bowler: Harbhajan Singh (3/4 overs used, death econ 13.65, death wkts/ov 0.16)
+Next over: different bowler.
+
+Venue context (MA Chidambaram Stadium):
+Surface: spin-friendly, medium boundaries
+Chase rate: 38% (50 matches)
+Avg 2nd inns: 152
+Death RPO: 9.3
+Dew: Medium evenings
+
+Win probability for Punjab Kings?",approved,0.67,"Punjab Kings are slightly in front, though the next over or two still matter. Having 8 wickets in reserve keeps plenty of scoring options alive from here. The current partnership is important here because KL Rahul and SN Khan have already built enough of a base to attack from. The chase is still being pushed by the rate because 10.17 is comfortably above the current 7.14.",assistant_authored_gold_v1
+gold_011,1178394,2019,14,interesting,balanced_chase,high,10.166666666666666,5,"SYSTEM:
+You are an IPL cricket analyst. Estimate the probability (0.0 to 1.0) that the batting team wins the match.
+Write a short public reasoning summary focused only on the most important signals.
+Do not reveal hidden chain-of-thought.
+
+Format exactly as:
+<analysis>
+[2-5 sentence public reasoning summary here]
+</analysis>
+<answer>0.XX</answer>
+
+Answer must be a decimal between 0.0 and 1.0.
+
+USER:
+IPL Match - Sunrisers Hyderabad chasing 137 set by Mumbai Indians
+Venue: Rajiv Gandhi International Stadium
+Match type: Evening (7:30 PM IST, dew likely)
+Toss: Sunrisers Hyderabad chose to field first
+
+End of Over 14:
+Score: 76/5 (84 balls faced)
+Need: 61 off 36 (RRR: 10.17)
+Current run rate: 5.43
+
+Momentum:
+Last over: 3
+Last 3 overs: 15 runs, 1 wickets
+Last 5 overs: Dot% 47% | Boundary% 3%
+
+Batters:
+Mohammad Nabi (chase SR 126, death SR 161) (career data limited)
+DJ Hooda (chase SR 126, death SR 161) (career data limited)
+Partnership: 16b, 14r
+
+Last over bowler: RD Chahar (4/4 overs used, death econ 10.77, death wkts/ov 0.49) (career data limited)
+Next over: different bowler.
+
+Venue context (Rajiv Gandhi International Stadium):
+Surface: balanced, medium boundaries
+Chase rate: 58% (55 matches)
+Avg 2nd inns: 150
+Death RPO: 9.5
+Dew: Low evenings
+
+Win probability for Sunrisers Hyderabad?",approved,0.21,"This has become a difficult chase for Sunrisers Hyderabad and they need the game to swing quickly back their way. Run rate pressure is severe here: they need 10.17, but the innings has only run at 5.43 so far.",assistant_authored_gold_v1
+gold_012,1175362,2019,16,interesting,death_overs_tension,high,10.25,7,"SYSTEM:
+You are an IPL cricket analyst. Estimate the probability (0.0 to 1.0) that the batting team wins the match.
+Write a short public reasoning summary focused only on the most important signals.
+Do not reveal hidden chain-of-thought.
+
+Format exactly as:
+<analysis>
+[2-5 sentence public reasoning summary here]
+</analysis>
+<answer>0.XX</answer>
+
+Answer must be a decimal between 0.0 and 1.0.
+
+USER:
+IPL Match - Royal Challengers Bengaluru chasing 188 set by Mumbai Indians
+Venue: M.Chinnaswamy Stadium
+Match type: Evening (7:30 PM IST, dew likely)
+Toss: Royal Challengers Bengaluru chose to field first
+
+End of Over 16:
+Score: 147/3 (96 balls faced)
+Need: 41 off 24 (RRR: 10.25)
+Current run rate: 9.19
+
+Momentum:
+Last over: 20
+Last 3 overs: 34 runs, 1 wickets
+Last 5 overs: Dot% 23% | Boundary% 20%
+
+Batters:
+SO Hetmyer (chase SR 126, death SR 161) (career data limited)
+AB de Villiers (chase SR 162, death SR 223)
+Partnership: 14b, 31r
+
+Last over bowler: SL Malinga (3/4 overs used, death econ 9.40, death wkts/ov 0.27)
+Next over: different bowler.
+
+Venue context (M.Chinnaswamy Stadium):
+Surface: batting-friendly, short boundaries
+Chase rate: 57% (67 matches)
+Avg 2nd inns: 155
+Death RPO: 11.1
+Dew: Medium evenings
+
+Win probability for Royal Challengers Bengaluru?",approved,0.80,"Royal Challengers Bengaluru are well placed now, although they still need one clean passage rather than a sloppy finish. Recent scoring gives them a pulse here: 34 off the last three overs has stopped the equation from running away. There is enough finishing quality in the current pair to keep a demanding finish alive. There is still enough batting left to absorb one mistake and keep the chase going.",assistant_authored_gold_v1
+gold_013,1178404,2019,18,interesting,death_overs_tension,high,12.0,5,"SYSTEM:
+You are an IPL cricket analyst. Estimate the probability (0.0 to 1.0) that the batting team wins the match.
+Write a short public reasoning summary focused only on the most important signals.
+Do not reveal hidden chain-of-thought.
+
+Format exactly as:
+<analysis>
+[2-5 sentence public reasoning summary here]
+</analysis>
+<answer>0.XX</answer>
+
+Answer must be a decimal between 0.0 and 1.0.
+
+USER:
+IPL Match - Chennai Super Kings chasing 162 set by Kolkata Knight Riders
+Venue: Eden Gardens
+Match type: Evening (7:30 PM IST, dew likely)
+Toss: Chennai Super Kings chose to field first
+
+End of Over 18:
+Score: 138/5 (108 balls faced)
+Need: 24 off 12 (RRR: 12.00)
+Current run rate: 7.67
+
+Momentum:
+Last over: 8
+Last 3 overs: 18 runs, 1 wickets
+Last 5 overs: Dot% 30% | Boundary% 17%
+
+Batters:
+SK Raina (chase SR 132, death SR 220)
+RA Jadeja (chase SR 95, death SR 90)
+Partnership: 14b, 17r
+
+Last over bowler: SP Narine (4/4 overs used, death econ 9.04, death wkts/ov 0.30)
+Next over: different bowler.
+
+Venue context (Eden Gardens):
+Surface: balanced, medium boundaries
+Chase rate: 60% (67 matches)
+Avg 2nd inns: 149
+Death RPO: 10.1
+Dew: Medium evenings
+
+Win probability for Chennai Super Kings?",approved,0.20,"This has become a difficult chase for Chennai Super Kings and they need the game to swing quickly back their way. Run rate pressure is severe here: they need 12.00, but the innings has only run at 7.67 so far.",assistant_authored_gold_v1
+gold_014,1178405,2019,15,late_tension,resources_but_work,high,11.2,8,"SYSTEM:
+You are an IPL cricket analyst. Estimate the probability (0.0 to 1.0) that the batting team wins the match.
+Write a short public reasoning summary focused only on the most important signals.
+Do not reveal hidden chain-of-thought.
+
+Format exactly as:
+<analysis>
+[2-5 sentence public reasoning summary here]
+</analysis>
+<answer>0.XX</answer>
+
+Answer must be a decimal between 0.0 and 1.0.
+
+USER:
+IPL Match - Sunrisers Hyderabad chasing 156 set by Delhi Capitals
+Venue: Rajiv Gandhi International Stadium
+Match type: Evening (7:30 PM IST, dew likely)
+Toss: Sunrisers Hyderabad chose to field first
+
+End of Over 15:
+Score: 100/2 (90 balls faced)
+Need: 56 off 30 (RRR: 11.20)
+Current run rate: 6.67
+
+Momentum:
+Last over: 5
+Last 3 overs: 20 runs, 0 wickets
+Last 5 overs: Dot% 43% | Boundary% 7%
+
+Batters:
+DA Warner (chase SR 164, death SR 210)
+RK Bhui (chase SR 126, death SR 161) (career data limited)
+Partnership: 20b, 22r
+
+Last over bowler: A Mishra (3/4 overs used, death econ 9.32, death wkts/ov 0.14)
+Next over: different bowler.
+
+Venue context (Rajiv Gandhi International Stadium):
+Surface: balanced, medium boundaries
+Chase rate: 58% (55 matches)
+Avg 2nd inns: 150
+Death RPO: 9.5
+Dew: Low evenings
+
+Win probability for Sunrisers Hyderabad?",approved,0.57,"This is still finely balanced for Sunrisers Hyderabad, and the next phase should decide who is really ahead. Resources are still intact with 8 wickets left, so Sunrisers Hyderabad can keep attacking instead of just surviving. The equation is the biggest issue: 56 off 30 means 11.20 an over, far above the current 6.67.",assistant_authored_gold_v1
+gold_015,1178421,2019,15,late_tension,balanced_chase,high,12.400000000000002,5,"SYSTEM:
+You are an IPL cricket analyst. Estimate the probability (0.0 to 1.0) that the batting team wins the match.
+Write a short public reasoning summary focused only on the most important signals.
+Do not reveal hidden chain-of-thought.
+
+Format exactly as:
+<analysis>
+[2-5 sentence public reasoning summary here]
+</analysis>
+<answer>0.XX</answer>
+
+Answer must be a decimal between 0.0 and 1.0.
+
+USER:
+IPL Match - Royal Challengers Bengaluru chasing 188 set by Delhi Capitals
+Venue: Arun Jaitley Stadium
+Match type: Evening (7:30 PM IST, dew likely)
+Toss: Delhi Capitals chose to bat first
+
+End of Over 15:
+Score: 126/5 (90 balls faced)
+Need: 62 off 30 (RRR: 12.40)
+Current run rate: 8.40
+
+Momentum:
+Last over: 11
+Last 3 overs: 19 runs, 2 wickets
+Last 5 overs: Dot% 23% | Boundary% 7%
+
+Batters:
+MP Stoinis (chase SR 126, death SR 161) (career data limited)
+Gurkeerat Singh (chase SR 126, death SR 161) (career data limited)
+Partnership: 12b, 15r
+
+Last over bowler: A Mishra (4/4 overs used, death econ 9.32, death wkts/ov 0.14)
+Next over: different bowler.
+
+Venue context (Arun Jaitley Stadium):
+Surface: batting-friendly, medium boundaries
+Chase rate: 52% (63 matches)
+Avg 2nd inns: 152
+Death RPO: 9.3
+Dew: Low evenings
+
+Win probability for Royal Challengers Bengaluru?",approved,0.09,"This is almost gone for Royal Challengers Bengaluru unless something very unusual happens immediately. The equation is the biggest issue: 62 off 30 means 12.40 an over, far above the current 8.40. The innings has taken recent damage with 2 wickets in the last three overs, and that matters more than the raw target.",assistant_authored_gold_v1
+gold_016,1181766,2019,15,late_tension,balanced_chase,high,10.4,5,"SYSTEM:
+You are an IPL cricket analyst. Estimate the probability (0.0 to 1.0) that the batting team wins the match.
+Write a short public reasoning summary focused only on the most important signals.
+Do not reveal hidden chain-of-thought.
+
+Format exactly as:
+<analysis>
+[2-5 sentence public reasoning summary here]
+</analysis>
+<answer>0.XX</answer>
+
+Answer must be a decimal between 0.0 and 1.0.
+
+USER:
+IPL Match - Delhi Capitals chasing 163 set by Sunrisers Hyderabad
+Venue: Dr. Y.S. Rajasekhara Reddy ACA-VDCA Cricket Stadium
+Match type: Evening (7:30 PM IST, dew likely)
+Toss: Delhi Capitals chose to field first
+
+End of Over 15:
+Score: 111/5 (90 balls faced)
+Need: 52 off 30 (RRR: 10.40)
+Current run rate: 7.40
+
+Momentum:
+Last over: 0
+Last 3 overs: 14 runs, 2 wickets
+Last 5 overs: Dot% 50% | Boundary% 10%
+
+Batters:
+RR Pant (chase SR 126, death SR 161) (career data limited)
+SE Rutherford (chase SR 126, death SR 161) (career data limited)
+Partnership: 2b, 0r
+
+Last over bowler: Rashid Khan (4/4 overs used, death econ 6.78, death wkts/ov 0.47)
+Next over: different bowler.
+
+Venue context (Dr. Y.S. Rajasekhara Reddy ACA-VDCA Cricket Stadium):
+Limited IPL history (9 matches); venue stats are estimated.
+Surface prior: balanced, medium boundaries
+Chase rate: ~44%
+Avg 2nd inns: ~134
+Death RPO: ~7.5
+Dew: Medium evenings
+
+Win probability for Delhi Capitals?",approved,0.20,"Delhi Capitals are under heavy pressure now and need something out of the ordinary from this position. They still need a clear gear change: 10.40 required is a fair step above the present 7.40. The innings has taken recent damage with 2 wickets in the last three overs, and that matters more than the raw target. Venue history is a mild drag as well because chases have not been especially easy here.",assistant_authored_gold_v1
+gold_017,1178403,2019,16,late_tension,death_overs_tension,high,11.0,8,"SYSTEM:
+You are an IPL cricket analyst. Estimate the probability (0.0 to 1.0) that the batting team wins the match.
+Write a short public reasoning summary focused only on the most important signals.
+Do not reveal hidden chain-of-thought.
+
+Format exactly as:
+<analysis>
+[2-5 sentence public reasoning summary here]
+</analysis>
+<answer>0.XX</answer>
+
+Answer must be a decimal between 0.0 and 1.0.
+
+USER:
+IPL Match - Royal Challengers Bengaluru chasing 174 set by Punjab Kings
+Venue: Punjab Cricket Association IS Bindra Stadium
+Match type: Evening (7:30 PM IST, dew likely)
+Toss: Royal Challengers Bengaluru chose to field first
+
+End of Over 16:
+Score: 130/2 (96 balls faced)
+Need: 44 off 24 (RRR: 11.00)
+Current run rate: 8.12
+
+Momentum:
+Last over: 4
+Last 3 overs: 13 runs, 1 wickets
+Last 5 overs: Dot% 27% | Boundary% 7%
+
+Batters:
+AB de Villiers (chase SR 162, death SR 223)
+MP Stoinis (chase SR 126, death SR 161) (career data limited)
+Partnership: 3b, 2r
+
+Last over bowler: Mohammed Shami (3/4 overs used, death econ 11.68, death wkts/ov 0.52)
+Next over: different bowler.
+
+Venue context (Punjab Cricket Association IS Bindra Stadium):
+Surface: balanced, medium boundaries
+Chase rate: 57% (49 matches)
+Avg 2nd inns: 156
+Death RPO: 10.5
+Dew: Low evenings
+
+Win probability for Royal Challengers Bengaluru?",approved,0.69,"Royal Challengers Bengaluru have the edge, but this chase is not secure yet. AB de Villiers also give them real late-overs hitting if this chase goes deep. 8 wickets in hand gives them room to be proactive rather than desperate. The venue's usual death-over scoring does give the batting side some hope if the chase reaches the final overs intact.",assistant_authored_gold_v1
+gold_018,1178407,2019,16,late_tension,balanced_chase,high,14.0,7,"SYSTEM:
+You are an IPL cricket analyst. Estimate the probability (0.0 to 1.0) that the batting team wins the match.
+Write a short public reasoning summary focused only on the most important signals.
+Do not reveal hidden chain-of-thought.
+
+Format exactly as:
+<analysis>
+[2-5 sentence public reasoning summary here]
+</analysis>
+<answer>0.XX</answer>
+
+Answer must be a decimal between 0.0 and 1.0.
+
+USER:
+IPL Match - Rajasthan Royals chasing 183 set by Punjab Kings
+Venue: Punjab Cricket Association IS Bindra Stadium
+Match type: Evening (7:30 PM IST, dew likely)
+Toss: Rajasthan Royals chose to field first
+
+End of Over 16:
+Score: 127/3 (96 balls faced)
+Need: 56 off 24 (RRR: 14.00)
+Current run rate: 7.94
+
+Momentum:
+Last over: 5
+Last 3 overs: 18 runs, 1 wickets
+Last 5 overs: Dot% 23% | Boundary% 7%
+
+Batters:
+AM Rahane (chase SR 117, death SR 141)
+NEW_BATTER_PENDING
+Partnership: 0b, 0r
+
+Last over bowler: R Ashwin (4/4 overs used, death econ 10.89, death wkts/ov 0.55)
+Next over: different bowler.
+
+Venue context (Punjab Cricket Association IS Bindra Stadium):
+Surface: balanced, medium boundaries
+Chase rate: 57% (49 matches)
+Avg 2nd inns: 156
+Death RPO: 10.5
+Dew: Low evenings
+
+Win probability for Rajasthan Royals?",approved,0.11,"Rajasthan Royals are deep in trouble here and only a freak finish really changes the picture now. The equation is the biggest issue: 56 off 24 means 14.00 an over, far above the current 7.94. The chase also resets slightly here because the next over starts with a fresh batter at the crease.",assistant_authored_gold_v1
+gold_019,1181768,2019,18,late_tension,balanced_chase,high,9.0,6,"SYSTEM:
+You are an IPL cricket analyst. Estimate the probability (0.0 to 1.0) that the batting team wins the match.
+Write a short public reasoning summary focused only on the most important signals.
+Do not reveal hidden chain-of-thought.
+
+Format exactly as:
+<analysis>
+[2-5 sentence public reasoning summary here]
+</analysis>
+<answer>0.XX</answer>
+
+Answer must be a decimal between 0.0 and 1.0.
+
+USER:
+IPL Match - Chennai Super Kings chasing 150 set by Mumbai Indians
+Venue: Rajiv Gandhi International Stadium
+Match type: Evening (7:30 PM IST, dew likely)
+Toss: Mumbai Indians chose to bat first
+
+End of Over 18:
+Score: 132/4 (108 balls faced)
+Need: 18 off 12 (RRR: 9.00)
+Current run rate: 7.33
+
+Momentum:
+Last over: 20
+Last 3 overs: 44 runs, 0 wickets
+Last 5 overs: Dot% 33% | Boundary% 23%
+
+Batters:
+SR Watson (chase SR 140, death SR 202)
+DJ Bravo (chase SR 147, death SR 184)
+Partnership: 32b, 50r
+
+Last over bowler: KH Pandya (3/4 overs used, death econ 5.00, death wkts/ov 1.26)
+Next over: different bowler.
+
+Venue context (Rajiv Gandhi International Stadium):
+Surface: balanced, medium boundaries
+Chase rate: 58% (55 matches)
+Avg 2nd inns: 150
+Death RPO: 9.5
+Dew: Low evenings
+
+Win probability for Chennai Super Kings?",approved,0.90,"Chennai Super Kings have the upper hand now, with the chase leaning their way more often than not. They have at least kept the chase moving, scoring 44 in the last three overs instead of drifting. The current partnership is important here because SR Watson and DJ Bravo have already built enough of a base to attack from.",assistant_authored_gold_v1
+gold_020,1178404,2019,19,late_tension,balanced_chase,high,8.0,5,"SYSTEM:
+You are an IPL cricket analyst. Estimate the probability (0.0 to 1.0) that the batting team wins the match.
+Write a short public reasoning summary focused only on the most important signals.
+Do not reveal hidden chain-of-thought.
+
+Format exactly as:
+<analysis>
+[2-5 sentence public reasoning summary here]
+</analysis>
+<answer>0.XX</answer>
+
+Answer must be a decimal between 0.0 and 1.0.
+
+USER:
+IPL Match - Chennai Super Kings chasing 162 set by Kolkata Knight Riders
+Venue: Eden Gardens
+Match type: Evening (7:30 PM IST, dew likely)
+Toss: Chennai Super Kings chose to field first
+
+End of Over 19:
+Score: 154/5 (114 balls faced)
+Need: 8 off 6 (RRR: 8.00)
+Current run rate: 8.11
+
+Momentum:
+Last over: 16
+Last 3 overs: 33 runs, 0 wickets
+Last 5 overs: Dot% 27% | Boundary% 20%
+
+Batters:
+RA Jadeja (chase SR 95, death SR 90)
+SK Raina (chase SR 132, death SR 220)
+Partnership: 20b, 33r
+
+Last over bowler: HF Gurney (4/4 overs used, death econ 10.77, death wkts/ov 0.49) (career data limited)
+Next over: different bowler.
+
+Venue context (Eden Gardens):
+Surface: balanced, medium boundaries
+Chase rate: 60% (67 matches)
+Avg 2nd inns: 149
+Death RPO: 10.1
+Dew: Medium evenings
+
+Win probability for Chennai Super Kings?",approved,0.92,"Chennai Super Kings are very strong favorites from here: 8 off 6 with 5 wickets left is a position they should finish almost every time. Recent scoring gives them a pulse here: 33 off the last three overs has stopped the equation from running away. This ground in an evening game usually gives chasers a fair shot, which helps a little around the margins.",assistant_authored_gold_v1
+gold_021,1216510,2020,3,easy,resources_but_work,medium,11.882352941176473,7,"SYSTEM:
+You are an IPL cricket analyst. Estimate the probability (0.0 to 1.0) that the batting team wins the match.
+Write a short public reasoning summary focused only on the most important signals.
+Do not reveal hidden chain-of-thought.
+
+Format exactly as:
+<analysis>
+[2-5 sentence public reasoning summary here]
+</analysis>
+<answer>0.XX</answer>
+
+Answer must be a decimal between 0.0 and 1.0.
+
+USER:
+IPL Match - Royal Challengers Bengaluru chasing 207 set by Punjab Kings
+Venue: Dubai International Cricket Stadium
+Match type: Evening (7:30 PM IST, dew likely)
+Toss: Royal Challengers Bengaluru chose to field first
+
+End of Over 3:
+Score: 5/3 (18 balls faced)
+Need: 202 off 102 (RRR: 11.88)
+Current run rate: 1.67
+
+Momentum:
+Last over: 1
+Last 3 overs: 5 runs, 3 wickets
+Last 5 overs: Dot% 72% | Boundary% 0%
+
+Batters:
+AJ Finch (chase SR 153, death SR 172)
+AB de Villiers (chase SR 151, death SR 238)
+Partnership: 2b, 1r
+
+Last over bowler: SS Cottrell (2/4 overs used, death econ 11.04, death wkts/ov 0.49) (career data limited)
+Next over: different bowler.
+
+Venue context (Dubai International Cricket Stadium):
+Limited IPL history (7 matches); venue stats are estimated.
+Surface prior: balanced, medium boundaries
+Chase rate: ~57%
+Avg 2nd inns: ~146
+Death RPO: ~10.9
+Dew: Low evenings
+
+Win probability for Royal Challengers Bengaluru?",approved,0.08,"It is still early enough for Royal Challengers Bengaluru to recover, but the chase has already started badly. The equation is the biggest issue: 202 off 102 means 11.88 an over, far above the current 1.67. The chase has lost shape recently, with 3 wickets in the last three overs and a 72% dot-ball share across the last five.",assistant_authored_gold_v1
+gold_022,1216521,2020,7,easy,cruise_control,medium,3.9230769230769234,10,"SYSTEM:
+You are an IPL cricket analyst. Estimate the probability (0.0 to 1.0) that the batting team wins the match.
+Write a short public reasoning summary focused only on the most important signals.
+Do not reveal hidden chain-of-thought.
+
+Format exactly as:
+<analysis>
+[2-5 sentence public reasoning summary here]
+</analysis>
+<answer>0.XX</answer>
+
+Answer must be a decimal between 0.0 and 1.0.
+
+USER:
+IPL Match - Mumbai Indians chasing 115 set by Chennai Super Kings
+Venue: Sharjah Cricket Stadium
+Match type: Evening (7:30 PM IST, dew likely)
+Toss: Mumbai Indians chose to field first
+
+End of Over 7:
+Score: 64/0 (42 balls faced)
+Need: 51 off 78 (RRR: 3.92)
+Current run rate: 9.14
+
+Momentum:
+Last over: 12
+Last 3 overs: 34 runs, 0 wickets
+Last 5 overs: Dot% 40% | Boundary% 27%
+
+Batters:
+Ishan Kishan (chase SR 126, death SR 160) (career data limited)
+Q de Kock (chase SR 126, death SR 160) (career data limited)
+Partnership: 42b, 64r
+
+Last over bowler: SN Thakur (1/4 overs used, death econ 10.99, death wkts/ov 0.47)
+Next over: different bowler.
+
+Venue context (Sharjah Cricket Stadium):
+Limited IPL history (6 matches); venue stats are estimated.
+Surface prior: batting-friendly, short boundaries
+Chase rate: ~67%
+Avg 2nd inns: ~147
+Death RPO: ~10.5
+Dew: Low evenings
+
+Win probability for Mumbai Indians?",approved,0.99,"Mumbai Indians should close this chase out from here unless they create a collapse for themselves. Run rate is under control: they only need 3.92 and are already moving at 9.14. Resources are still intact with 10 wickets left, so Mumbai Indians can keep attacking instead of just surviving.",assistant_authored_gold_v1
+gold_023,1216500,2020,19,easy,near_collapse,medium,49.0,2,"SYSTEM:
+You are an IPL cricket analyst. Estimate the probability (0.0 to 1.0) that the batting team wins the match.
+Write a short public reasoning summary focused only on the most important signals.
+Do not reveal hidden chain-of-thought.
+
+Format exactly as:
+<analysis>
+[2-5 sentence public reasoning summary here]
+</analysis>
+<answer>0.XX</answer>
+
+Answer must be a decimal between 0.0 and 1.0.
+
+USER:
+IPL Match - Rajasthan Royals chasing 185 set by Delhi Capitals
+Venue: Sharjah Cricket Stadium
+Match type: Evening (7:30 PM IST, dew likely)
+Toss: Rajasthan Royals chose to field first
+
+End of Over 19:
+Score: 136/8 (114 balls faced)
+Need: 49 off 6 (RRR: 49.00)
+Current run rate: 7.16
+
+Momentum:
+Last over: 7
+Last 3 overs: 29 runs, 1 wickets
+Last 5 overs: Dot% 33% | Boundary% 17%
+
+Batters:
+R Tewatia (chase SR 126, death SR 160) (career data limited)
+Kartik Tyagi (chase SR 126, death SR 160) (career data limited)
+Partnership: 10b, 15r
+
+Last over bowler: A Nortje (4/4 overs used, death econ 11.04, death wkts/ov 0.49) (career data limited)
+Next over: different bowler.
+
+Venue context (Sharjah Cricket Stadium):
+Limited IPL history (6 matches); venue stats are estimated.
+Surface prior: batting-friendly, short boundaries
+Chase rate: ~67%
+Avg 2nd inns: ~147
+Death RPO: ~10.5
+Dew: Low evenings
+
+Win probability for Rajasthan Royals?",approved,0.01,"This is almost gone for Rajasthan Royals unless something very unusual happens immediately. The equation is the biggest issue: 49 off 6 means 49.00 an over, far above the current 7.16. The lack of batting cushion is huge now: with 2 wickets left, every high-risk shot carries real collapse cost.",assistant_authored_gold_v1
+gold_024,1216501,2020,19,easy,balanced_chase,medium,26.0,5,"SYSTEM:
+You are an IPL cricket analyst. Estimate the probability (0.0 to 1.0) that the batting team wins the match.
+Write a short public reasoning summary focused only on the most important signals.
+Do not reveal hidden chain-of-thought.
+
+Format exactly as:
+<analysis>
+[2-5 sentence public reasoning summary here]
+</analysis>
+<answer>0.XX</answer>
+
+Answer must be a decimal between 0.0 and 1.0.
+
+USER:
+IPL Match - Chennai Super Kings chasing 168 set by Kolkata Knight Riders
+Venue: Sheikh Zayed Stadium
+Match type: Evening (7:30 PM IST, dew likely)
+Toss: Kolkata Knight Riders chose to bat first
+
+End of Over 19:
+Score: 142/5 (114 balls faced)
+Need: 26 off 6 (RRR: 26.00)
+Current run rate: 7.47
+
+Momentum:
+Last over: 10
+Last 3 overs: 18 runs, 2 wickets
+Last 5 overs: Dot% 37% | Boundary% 17%
+
+Batters:
+KM Jadhav (chase SR 96, death SR 83)
+RA Jadeja (chase SR 117, death SR 140)
+Partnership: 11b, 13r
+
+Last over bowler: SP Narine (4/4 overs used, death econ 9.80, death wkts/ov 0.20)
+Next over: different bowler.
+
+Venue context (Sheikh Zayed Stadium):
+Limited IPL history (5 matches); venue stats are estimated.
+Surface prior: balanced, medium boundaries
+Chase rate: ~60%
+Avg 2nd inns: ~129
+Death RPO: ~8.5
+Dew: Low evenings
+
+Win probability for Chennai Super Kings?",approved,0.01,"Chennai Super Kings are deep in trouble here and only a freak finish really changes the picture now. The equation is the biggest issue: 26 off 6 means 26.00 an over, far above the current 7.47. The recent wickets are a major problem: 2 down in the last three overs has disrupted the chase badly.",assistant_authored_gold_v1
+gold_025,1216527,2020,19,easy,balanced_chase,medium,2.0,5,"SYSTEM:
+You are an IPL cricket analyst. Estimate the probability (0.0 to 1.0) that the batting team wins the match.
+Write a short public reasoning summary focused only on the most important signals.
+Do not reveal hidden chain-of-thought.
+
+Format exactly as:
+<analysis>
+[2-5 sentence public reasoning summary here]
+</analysis>
+<answer>0.XX</answer>
+
+Answer must be a decimal between 0.0 and 1.0.
+
+USER:
+IPL Match - Rajasthan Royals chasing 224 set by Punjab Kings
+Venue: Sharjah Cricket Stadium
+Match type: Evening (7:30 PM IST, dew likely)
+Toss: Rajasthan Royals chose to field first
+
+End of Over 19:
+Score: 222/5 (114 balls faced)
+Need: 2 off 6 (RRR: 2.00)
+Current run rate: 11.68
+
+Momentum:
+Last over: 19
+Last 3 overs: 61 runs, 3 wickets
+Last 5 overs: Dot% 27% | Boundary% 47%
+
+Batters:
+JC Archer (chase SR 126, death SR 160) (career data limited)
+NEW_BATTER_PENDING
+Partnership: 0b, 0r
+
+Last over bowler: Mohammed Shami (4/4 overs used, death econ 10.13, death wkts/ov 0.73)
+Next over: different bowler.
+
+Venue context (Sharjah Cricket Stadium):
+Limited IPL history (6 matches); venue stats are estimated.
+Surface prior: batting-friendly, short boundaries
+Chase rate: ~67%
+Avg 2nd inns: ~147
+Death RPO: ~10.5
+Dew: Low evenings
+
+Win probability for Rajasthan Royals?",approved,0.98,"Rajasthan Royals are very strong favorites from here: 2 off 6 with 5 wickets left is a position they should finish almost every time. Run rate is under control: they only need 2.00 and are already moving at 11.68. The bowling side now has to move away from Mohammed Shami, which slightly improves the batting side's next-over outlook.",assistant_authored_gold_v1
+gold_026,1216541,2020,5,interesting,resources_but_work,high,10.066666666666666,8,"SYSTEM:
+You are an IPL cricket analyst. Estimate the probability (0.0 to 1.0) that the batting team wins the match.
+Write a short public reasoning summary focused only on the most important signals.
+Do not reveal hidden chain-of-thought.
+
+Format exactly as:
+<analysis>
+[2-5 sentence public reasoning summary here]
+</analysis>
+<answer>0.XX</answer>
+
+Answer must be a decimal between 0.0 and 1.0.
+
+USER:
+IPL Match - Rajasthan Royals chasing 196 set by Mumbai Indians
+Venue: Sheikh Zayed Stadium
+Match type: Evening (7:30 PM IST, dew likely)
+Toss: Mumbai Indians chose to bat first
+
+End of Over 5:
+Score: 45/2 (30 balls faced)
+Need: 151 off 90 (RRR: 10.07)
+Current run rate: 9.00
+
+Momentum:
+Last over: 4
+Last 3 overs: 32 runs, 1 wickets
+Last 5 overs: Dot% 50% | Boundary% 27%
+
+Batters:
+BA Stokes (chase SR 126, death SR 160) (career data limited)
+SV Samson (chase SR 135, death SR 140)
+Partnership: 2b, 1r
+
+Last over bowler: JL Pattinson (2/4 overs used, death econ 11.04, death wkts/ov 0.49) (career data limited)
+Next over: different bowler.
+
+Venue context (Sheikh Zayed Stadium):
+Limited IPL history (5 matches); venue stats are estimated.
+Surface prior: balanced, medium boundaries
+Chase rate: ~60%
+Avg 2nd inns: ~129
+Death RPO: ~8.5
+Dew: Low evenings
+
+Win probability for Rajasthan Royals?",approved,0.29,"It is still early enough for Rajasthan Royals to recover, but the chase has already started badly. The rate is workable rather than easy: 10.07 still leaves little room for a quiet over.",assistant_authored_gold_v1
+gold_027,1216525,2020,7,interesting,resources_but_work,high,10.76923076923077,8,"SYSTEM:
+You are an IPL cricket analyst. Estimate the probability (0.0 to 1.0) that the batting team wins the match.
+Write a short public reasoning summary focused only on the most important signals.
+Do not reveal hidden chain-of-thought.
+
+Format exactly as:
+<analysis>
+[2-5 sentence public reasoning summary here]
+</analysis>
+<answer>0.XX</answer>
+
+Answer must be a decimal between 0.0 and 1.0.
+
+USER:
+IPL Match - Chennai Super Kings chasing 170 set by Royal Challengers Bengaluru
+Venue: Dubai International Cricket Stadium
+Match type: Evening (7:30 PM IST, dew likely)
+Toss: Royal Challengers Bengaluru chose to bat first
+
+End of Over 7:
+Score: 30/2 (42 balls faced)
+Need: 140 off 78 (RRR: 10.77)
+Current run rate: 4.29
+
+Momentum:
+Last over: 4
+Last 3 overs: 11 runs, 1 wickets
+Last 5 overs: Dot% 50% | Boundary% 7%
+
+Batters:
+AT Rayudu (chase SR 104, death SR 92)
+N Jagadeesan (chase SR 126, death SR 160) (career data limited)
+Partnership: 8b, 5r
+
+Last over bowler: YS Chahal (1/4 overs used, death econ 11.46, death wkts/ov 0.47)
+Next over: different bowler.
+
+Venue context (Dubai International Cricket Stadium):
+Limited IPL history (7 matches); venue stats are estimated.
+Surface prior: balanced, medium boundaries
+Chase rate: ~57%
+Avg 2nd inns: ~146
+Death RPO: ~10.9
+Dew: Low evenings
+
+Win probability for Chennai Super Kings?",approved,0.15,"Chennai Super Kings are under heavy pressure now and need something out of the ordinary from this position. Run rate pressure is severe here: they need 10.77, but the innings has only run at 4.29 so far.",assistant_authored_gold_v1
+gold_028,1216516,2020,8,interesting,resources_but_work,high,10.333333333333334,7,"SYSTEM:
+You are an IPL cricket analyst. Estimate the probability (0.0 to 1.0) that the batting team wins the match.
+Write a short public reasoning summary focused only on the most important signals.
+Do not reveal hidden chain-of-thought.
+
+Format exactly as:
+<analysis>
+[2-5 sentence public reasoning summary here]
+</analysis>
+<answer>0.XX</answer>
+
+Answer must be a decimal between 0.0 and 1.0.
+
+USER:
+IPL Match - Chennai Super Kings chasing 165 set by Sunrisers Hyderabad
+Venue: Dubai International Cricket Stadium
+Match type: Evening (7:30 PM IST, dew likely)
+Toss: Sunrisers Hyderabad chose to bat first
+
+End of Over 8:
+Score: 41/3 (48 balls faced)
+Need: 124 off 72 (RRR: 10.33)
+Current run rate: 5.12
+
+Momentum:
+Last over: 1
+Last 3 overs: 15 runs, 2 wickets
+Last 5 overs: Dot% 47% | Boundary% 17%
+
+Batters:
+MS Dhoni (chase SR 123, death SR 178)
+KM Jadhav (chase SR 96, death SR 83)
+Partnership: 12b, 5r
+
+Last over bowler: Rashid Khan (1/4 overs used, death econ 6.85, death wkts/ov 0.60)
+Next over: different bowler.
+
+Venue context (Dubai International Cricket Stadium):
+Limited IPL history (7 matches); venue stats are estimated.
+Surface prior: balanced, medium boundaries
+Chase rate: ~57%
+Avg 2nd inns: ~146
+Death RPO: ~10.9
+Dew: Low evenings
+
+Win probability for Chennai Super Kings?",approved,0.13,"This has become a difficult chase for Chennai Super Kings and they need the game to swing quickly back their way. Run rate pressure is severe here: they need 10.33, but the innings has only run at 5.12 so far. The innings has taken recent damage with 2 wickets in the last three overs, and that matters more than the raw target.",assistant_authored_gold_v1
+gold_029,1216507,2020,10,interesting,balanced_chase,high,9.2,6,"SYSTEM:
+You are an IPL cricket analyst. Estimate the probability (0.0 to 1.0) that the batting team wins the match.
+Write a short public reasoning summary focused only on the most important signals.
+Do not reveal hidden chain-of-thought.
+
+Format exactly as:
+<analysis>
+[2-5 sentence public reasoning summary here]
+</analysis>
+<answer>0.XX</answer>
+
+Answer must be a decimal between 0.0 and 1.0.
+
+USER:
+IPL Match - Rajasthan Royals chasing 159 set by Sunrisers Hyderabad
+Venue: Dubai International Cricket Stadium
+Match type: Evening (7:30 PM IST, dew likely)
+Toss: Sunrisers Hyderabad chose to bat first
+
+End of Over 10:
+Score: 67/4 (60 balls faced)
+Need: 92 off 60 (RRR: 9.20)
+Current run rate: 6.70
+
+Momentum:
+Last over: 4
+Last 3 overs: 20 runs, 1 wickets
+Last 5 overs: Dot% 37% | Boundary% 10%
+
+Batters:
+SV Samson (chase SR 135, death SR 140)
+R Parag (chase SR 126, death SR 160) (career data limited)
+Partnership: 5b, 4r
+
+Last over bowler: Rashid Khan (2/4 overs used, death econ 6.85, death wkts/ov 0.60)
+Next over: different bowler.
+
+Venue context (Dubai International Cricket Stadium):
+Limited IPL history (7 matches); venue stats are estimated.
+Surface prior: balanced, medium boundaries
+Chase rate: ~57%
+Avg 2nd inns: ~146
+Death RPO: ~10.9
+Dew: Low evenings
+
+Win probability for Rajasthan Royals?",approved,0.26,This has become a difficult chase for Rajasthan Royals and they need the game to swing quickly back their way. They still need a clear gear change: 9.20 required is a fair step above the present 6.70.,assistant_authored_gold_v1
+gold_030,1237180,2020,10,interesting,resources_but_work,high,11.5,7,"SYSTEM:
+You are an IPL cricket analyst. Estimate the probability (0.0 to 1.0) that the batting team wins the match.
+Write a short public reasoning summary focused only on the most important signals.
+Do not reveal hidden chain-of-thought.
+
+Format exactly as:
+<analysis>
+[2-5 sentence public reasoning summary here]
+</analysis>
+<answer>0.XX</answer>
+
+Answer must be a decimal between 0.0 and 1.0.
+
+USER:
+IPL Match - Sunrisers Hyderabad chasing 190 set by Delhi Capitals
+Venue: Sheikh Zayed Stadium
+Match type: Evening (7:30 PM IST, dew likely)
+Toss: Delhi Capitals chose to bat first
+
+End of Over 10:
+Score: 75/3 (60 balls faced)
+Need: 115 off 60 (RRR: 11.50)
+Current run rate: 7.50
+
+Momentum:
+Last over: 11
+Last 3 overs: 23 runs, 0 wickets
+Last 5 overs: Dot% 37% | Boundary% 10%
+
+Batters:
+KS Williamson (chase SR 126, death SR 160) (career data limited)
+JO Holder (chase SR 126, death SR 160) (career data limited)
+Partnership: 30b, 31r
+
+Last over bowler: P Dubey (2/4 overs used, death econ 11.04, death wkts/ov 0.49) (career data limited)
+Next over: different bowler.
+
+Venue context (Sheikh Zayed Stadium):
+Limited IPL history (5 matches); venue stats are estimated.
+Surface prior: balanced, medium boundaries
+Chase rate: ~60%
+Avg 2nd inns: ~129
+Death RPO: ~8.5
+Dew: Low evenings
+
+Win probability for Sunrisers Hyderabad?",approved,0.18,"Sunrisers Hyderabad are under heavy pressure now and need something out of the ordinary from this position. Run rate pressure is severe here: they need 11.50, but the innings has only run at 7.50 so far.",assistant_authored_gold_v1
+gold_031,1216529,2020,11,interesting,resources_but_work,high,9.11111111111111,8,"SYSTEM:
+You are an IPL cricket analyst. Estimate the probability (0.0 to 1.0) that the batting team wins the match.
+Write a short public reasoning summary focused only on the most important signals.
+Do not reveal hidden chain-of-thought.
+
+Format exactly as:
+<analysis>
+[2-5 sentence public reasoning summary here]
+</analysis>
+<answer>0.XX</answer>
+
+Answer must be a decimal between 0.0 and 1.0.
+
+USER:
+IPL Match - Mumbai Indians chasing 163 set by Delhi Capitals
+Venue: Sheikh Zayed Stadium
+Match type: Evening (7:30 PM IST, dew likely)
+Toss: Delhi Capitals chose to bat first
+
+End of Over 11:
+Score: 81/2 (66 balls faced)
+Need: 82 off 54 (RRR: 9.11)
+Current run rate: 7.36
+
+Momentum:
+Last over: 3
+Last 3 overs: 21 runs, 1 wickets
+Last 5 overs: Dot% 27% | Boundary% 13%
+
+Batters:
+SA Yadav (chase SR 126, death SR 160) (career data limited)
+Ishan Kishan (chase SR 126, death SR 160) (career data limited)
+Partnership: 7b, 4r
+
+Last over bowler: K Rabada (2/4 overs used, death econ 8.70, death wkts/ov 0.96)
+Next over: different bowler.
+
+Venue context (Sheikh Zayed Stadium):
+Limited IPL history (5 matches); venue stats are estimated.
+Surface prior: balanced, medium boundaries
+Chase rate: ~60%
+Avg 2nd inns: ~129
+Death RPO: ~8.5
+Dew: Low evenings
+
+Win probability for Mumbai Indians?",approved,0.61,"This is still finely balanced for Mumbai Indians, and the next phase should decide who is really ahead. Resources are still intact with 8 wickets left, so Mumbai Indians can keep attacking instead of just surviving. The chase is still being pushed by the rate because 9.11 is comfortably above the current 7.36.",assistant_authored_gold_v1
+gold_032,1216501,2020,13,interesting,resources_but_work,high,9.571428571428571,8,"SYSTEM:
+You are an IPL cricket analyst. Estimate the probability (0.0 to 1.0) that the batting team wins the match.
+Write a short public reasoning summary focused only on the most important signals.
+Do not reveal hidden chain-of-thought.
+
+Format exactly as:
+<analysis>
+[2-5 sentence public reasoning summary here]
+</analysis>
+<answer>0.XX</answer>
+
+Answer must be a decimal between 0.0 and 1.0.
+
+USER:
+IPL Match - Chennai Super Kings chasing 168 set by Kolkata Knight Riders
+Venue: Sheikh Zayed Stadium
+Match type: Evening (7:30 PM IST, dew likely)
+Toss: Kolkata Knight Riders chose to bat first
+
+End of Over 13:
+Score: 101/2 (78 balls faced)
+Need: 67 off 42 (RRR: 9.57)
+Current run rate: 7.77
+
+Momentum:
+Last over: 2
+Last 3 overs: 11 runs, 1 wickets
+Last 5 overs: Dot% 30% | Boundary% 10%
+
+Batters:
+SR Watson (chase SR 147, death SR 200)
+MS Dhoni (chase SR 123, death SR 178)
+Partnership: 5b, 2r
+
+Last over bowler: KL Nagarkoti (3/4 overs used, death econ 11.04, death wkts/ov 0.49) (career data limited)
+Next over: different bowler.
+
+Venue context (Sheikh Zayed Stadium):
+Limited IPL history (5 matches); venue stats are estimated.
+Surface prior: balanced, medium boundaries
+Chase rate: ~60%
+Avg 2nd inns: ~129
+Death RPO: ~8.5
+Dew: Low evenings
+
+Win probability for Chennai Super Kings?",approved,0.65,"Chennai Super Kings are slightly in front, though the next over or two still matter. Resources are still intact with 8 wickets left, so Chennai Super Kings can keep attacking instead of just surviving. The chase is still being pushed by the rate because 9.57 is comfortably above the current 7.77.",assistant_authored_gold_v1
+gold_033,1216492,2020,16,interesting,death_overs_tension,high,10.5,7,"SYSTEM:
+You are an IPL cricket analyst. Estimate the probability (0.0 to 1.0) that the batting team wins the match.
+Write a short public reasoning summary focused only on the most important signals.
+Do not reveal hidden chain-of-thought.
+
+Format exactly as:
+<analysis>
+[2-5 sentence public reasoning summary here]
+</analysis>
+<answer>0.XX</answer>
+
+Answer must be a decimal between 0.0 and 1.0.
+
+USER:
+IPL Match - Chennai Super Kings chasing 163 set by Mumbai Indians
+Venue: Sheikh Zayed Stadium
+Match type: Evening (7:30 PM IST, dew likely)
+Toss: Chennai Super Kings chose to field first
+
+End of Over 16:
+Score: 121/3 (96 balls faced)
+Need: 42 off 24 (RRR: 10.50)
+Current run rate: 7.56
+
+Momentum:
+Last over: 5
+Last 3 overs: 22 runs, 1 wickets
+Last 5 overs: Dot% 17% | Boundary% 10%
+
+Batters:
+F du Plessis (chase SR 112, death SR 263)
+NEW_BATTER_PENDING
+Partnership: 0b, 0r
+
+Last over bowler: RD Chahar (4/4 overs used, death econ 2.91, death wkts/ov 0.00)
+Next over: different bowler.
+
+Venue context (Sheikh Zayed Stadium):
+Limited IPL history (5 matches); venue stats are estimated.
+Surface prior: balanced, medium boundaries
+Chase rate: ~60%
+Avg 2nd inns: ~129
+Death RPO: ~8.5
+Dew: Low evenings
+
+Win probability for Chennai Super Kings?",approved,0.57,"This is still finely balanced for Chennai Super Kings, and the next phase should decide who is really ahead. There is enough finishing quality in the current pair to keep a demanding finish alive. The chase is still being pushed by the rate because 10.50 is comfortably above the current 7.56.",assistant_authored_gold_v1
+gold_034,1216492,2020,15,late_tension,resources_but_work,high,9.4,8,"SYSTEM:
+You are an IPL cricket analyst. Estimate the probability (0.0 to 1.0) that the batting team wins the match.
+Write a short public reasoning summary focused only on the most important signals.
+Do not reveal hidden chain-of-thought.
+
+Format exactly as:
+<analysis>
+[2-5 sentence public reasoning summary here]
+</analysis>
+<answer>0.XX</answer>
+
+Answer must be a decimal between 0.0 and 1.0.
+
+USER:
+IPL Match - Chennai Super Kings chasing 163 set by Mumbai Indians
+Venue: Sheikh Zayed Stadium
+Match type: Evening (7:30 PM IST, dew likely)
+Toss: Chennai Super Kings chose to field first
+
+End of Over 15:
+Score: 116/2 (90 balls faced)
+Need: 47 off 30 (RRR: 9.40)
+Current run rate: 7.73
+
+Momentum:
+Last over: 11
+Last 3 overs: 28 runs, 0 wickets
+Last 5 overs: Dot% 13% | Boundary% 13%
+
+Batters:
+F du Plessis (chase SR 112, death SR 263)
+AT Rayudu (chase SR 104, death SR 92)
+Partnership: 78b, 110r
+
+Last over bowler: JJ Bumrah (3/4 overs used, death econ 7.36, death wkts/ov 0.54)
+Next over: different bowler.
+
+Venue context (Sheikh Zayed Stadium):
+Limited IPL history (5 matches); venue stats are estimated.
+Surface prior: balanced, medium boundaries
+Chase rate: ~60%
+Avg 2nd inns: ~129
+Death RPO: ~8.5
+Dew: Low evenings
+
+Win probability for Chennai Super Kings?",approved,0.88,"Chennai Super Kings are well placed now, although they still need one clean passage rather than a sloppy finish. Resources are still intact with 8 wickets left, so Chennai Super Kings can keep attacking instead of just surviving. F du Plessis and AT Rayudu are settled enough to matter, and that existing stand reduces the risk of the chase restarting from scratch. F du Plessis and AT Rayudu also give them real late-overs hitting if this chase goes deep.",assistant_authored_gold_v1
+gold_035,1216499,2020,15,late_tension,balanced_chase,high,9.6,6,"SYSTEM:
+You are an IPL cricket analyst. Estimate the probability (0.0 to 1.0) that the batting team wins the match.
+Write a short public reasoning summary focused only on the most important signals.
+Do not reveal hidden chain-of-thought.
+
+Format exactly as:
+<analysis>
+[2-5 sentence public reasoning summary here]
+</analysis>
+<answer>0.XX</answer>
+
+Answer must be a decimal between 0.0 and 1.0.
+
+USER:
+IPL Match - Mumbai Indians chasing 165 set by Royal Challengers Bengaluru
+Venue: Sheikh Zayed Stadium
+Match type: Evening (7:30 PM IST, dew likely)
+Toss: Mumbai Indians chose to field first
+
+End of Over 15:
+Score: 117/4 (90 balls faced)
+Need: 48 off 30 (RRR: 9.60)
+Current run rate: 7.80
+
+Momentum:
+Last over: 10
+Last 3 overs: 31 runs, 1 wickets
+Last 5 overs: Dot% 43% | Boundary% 23%
+
+Batters:
+SA Yadav (chase SR 126, death SR 160) (career data limited)
+HH Pandya (chase SR 126, death SR 160) (career data limited)
+Partnership: 7b, 10r
+
+Last over bowler: CH Morris (2/4 overs used, death econ 7.73, death wkts/ov 0.64)
+Next over: different bowler.
+
+Venue context (Sheikh Zayed Stadium):
+Limited IPL history (5 matches); venue stats are estimated.
+Surface prior: balanced, medium boundaries
+Chase rate: ~60%
+Avg 2nd inns: ~129
+Death RPO: ~8.5
+Dew: Low evenings
+
+Win probability for Mumbai Indians?",approved,0.60,"This is still finely balanced for Mumbai Indians, and the next phase should decide who is really ahead. They have at least kept the chase moving, scoring 31 in the last three overs instead of drifting. There is still enough batting left to absorb one mistake and keep the chase going. They still need a clear gear change: 9.60 required is a fair step above the present 7.80.",assistant_authored_gold_v1
+gold_036,1216527,2020,16,late_tension,balanced_chase,high,15.75,8,"SYSTEM:
+You are an IPL cricket analyst. Estimate the probability (0.0 to 1.0) that the batting team wins the match.
+Write a short public reasoning summary focused only on the most important signals.
+Do not reveal hidden chain-of-thought.
+
+Format exactly as:
+<analysis>
+[2-5 sentence public reasoning summary here]
+</analysis>
+<answer>0.XX</answer>
+
+Answer must be a decimal between 0.0 and 1.0.
+
+USER:
+IPL Match - Rajasthan Royals chasing 224 set by Punjab Kings
+Venue: Sharjah Cricket Stadium
+Match type: Evening (7:30 PM IST, dew likely)
+Toss: Rajasthan Royals chose to field first
+
+End of Over 16:
+Score: 161/2 (96 balls faced)
+Need: 63 off 24 (RRR: 15.75)
+Current run rate: 10.06
+
+Momentum:
+Last over: 21
+Last 3 overs: 39 runs, 0 wickets
+Last 5 overs: Dot% 33% | Boundary% 17%
+
+Batters:
+SV Samson (chase SR 135, death SR 140)
+R Tewatia (chase SR 126, death SR 160) (career data limited)
+Partnership: 42b, 61r
+
+Last over bowler: GJ Maxwell (3/4 overs used, death econ 7.25, death wkts/ov 1.00)
+Next over: different bowler.
+
+Venue context (Sharjah Cricket Stadium):
+Limited IPL history (6 matches); venue stats are estimated.
+Surface prior: batting-friendly, short boundaries
+Chase rate: ~67%
+Avg 2nd inns: ~147
+Death RPO: ~10.5
+Dew: Low evenings
+
+Win probability for Rajasthan Royals?",approved,0.12,"This has become a difficult chase for Rajasthan Royals and they need the game to swing quickly back their way. Run rate pressure is severe here: they need 15.75, but the innings has only run at 10.06 so far.",assistant_authored_gold_v1
+gold_037,1216532,2020,16,late_tension,death_overs_tension,high,12.25,6,"SYSTEM:
+You are an IPL cricket analyst. Estimate the probability (0.0 to 1.0) that the batting team wins the match.
+Write a short public reasoning summary focused only on the most important signals.
+Do not reveal hidden chain-of-thought.
+
+Format exactly as:
+<analysis>
+[2-5 sentence public reasoning summary here]
+</analysis>
+<answer>0.XX</answer>
+
+Answer must be a decimal between 0.0 and 1.0.
+
+USER:
+IPL Match - Delhi Capitals chasing 163 set by Sunrisers Hyderabad
+Venue: Sheikh Zayed Stadium
+Match type: Evening (7:30 PM IST, dew likely)
+Toss: Delhi Capitals chose to field first
+
+End of Over 16:
+Score: 114/4 (96 balls faced)
+Need: 49 off 24 (RRR: 12.25)
+Current run rate: 7.12
+
+Momentum:
+Last over: 10
+Last 3 overs: 36 runs, 1 wickets
+Last 5 overs: Dot% 27% | Boundary% 20%
+
+Batters:
+MP Stoinis (chase SR 126, death SR 160) (career data limited)
+RR Pant (chase SR 126, death SR 160) (career data limited)
+Partnership: 5b, 10r
+
+Last over bowler: B Kumar (3/4 overs used, death econ 9.94, death wkts/ov 0.46)
+Next over: different bowler.
+
+Venue context (Sheikh Zayed Stadium):
+Limited IPL history (5 matches); venue stats are estimated.
+Surface prior: balanced, medium boundaries
+Chase rate: ~60%
+Avg 2nd inns: ~129
+Death RPO: ~8.5
+Dew: Low evenings
+
+Win probability for Delhi Capitals?",approved,0.23,"This has become a difficult chase for Delhi Capitals and they need the game to swing quickly back their way. The equation is the biggest issue: 49 off 24 means 12.25 an over, far above the current 7.12.",assistant_authored_gold_v1
+gold_038,1216499,2020,17,late_tension,balanced_chase,high,9.0,6,"SYSTEM:
+You are an IPL cricket analyst. Estimate the probability (0.0 to 1.0) that the batting team wins the match.
+Write a short public reasoning summary focused only on the most important signals.
+Do not reveal hidden chain-of-thought.
+
+Format exactly as:
+<analysis>
+[2-5 sentence public reasoning summary here]
+</analysis>
+<answer>0.XX</answer>
+
+Answer must be a decimal between 0.0 and 1.0.
+
+USER:
+IPL Match - Mumbai Indians chasing 165 set by Royal Challengers Bengaluru
+Venue: Sheikh Zayed Stadium
+Match type: Evening (7:30 PM IST, dew likely)
+Toss: Mumbai Indians chose to field first
+
+End of Over 17:
+Score: 138/4 (102 balls faced)
+Need: 27 off 18 (RRR: 9.00)
+Current run rate: 8.12
+
+Momentum:
+Last over: 8
+Last 3 overs: 31 runs, 0 wickets
+Last 5 overs: Dot% 33% | Boundary% 30%
+
+Batters:
+HH Pandya (chase SR 126, death SR 160) (career data limited)
+SA Yadav (chase SR 126, death SR 160) (career data limited)
+Partnership: 19b, 31r
+
+Last over bowler: CH Morris (3/4 overs used, death econ 7.73, death wkts/ov 0.64)
+Next over: different bowler.
+
+Venue context (Sheikh Zayed Stadium):
+Limited IPL history (5 matches); venue stats are estimated.
+Surface prior: balanced, medium boundaries
+Chase rate: ~60%
+Avg 2nd inns: ~129
+Death RPO: ~8.5
+Dew: Low evenings
+
+Win probability for Mumbai Indians?",approved,0.85,"Mumbai Indians are well placed now, although they still need one clean passage rather than a sloppy finish. Recent scoring gives them a pulse here: 31 off the last three overs has stopped the equation from running away. There is a small tactical plus too: CH Morris has already done a heavy share of the work, so the next over should come from a different option. The equation remains live because 9.00 required is gettable but not forgiving.",assistant_authored_gold_v1
+gold_039,1216507,2020,17,late_tension,death_overs_tension,high,12.0,5,"SYSTEM:
+You are an IPL cricket analyst. Estimate the probability (0.0 to 1.0) that the batting team wins the match.
+Write a short public reasoning summary focused only on the most important signals.
+Do not reveal hidden chain-of-thought.
+
+Format exactly as:
+<analysis>
+[2-5 sentence public reasoning summary here]
+</analysis>
+<answer>0.XX</answer>
+
+Answer must be a decimal between 0.0 and 1.0.
+
+USER:
+IPL Match - Rajasthan Royals chasing 159 set by Sunrisers Hyderabad
+Venue: Dubai International Cricket Stadium
+Match type: Evening (7:30 PM IST, dew likely)
+Toss: Sunrisers Hyderabad chose to bat first
+
+End of Over 17:
+Score: 123/5 (102 balls faced)
+Need: 36 off 18 (RRR: 12.00)
+Current run rate: 7.24
+
+Momentum:
+Last over: 18
+Last 3 overs: 35 runs, 0 wickets
+Last 5 overs: Dot% 17% | Boundary% 13%
+
+Batters:
+R Parag (chase SR 126, death SR 160) (career data limited)
+R Tewatia (chase SR 126, death SR 160) (career data limited)
+Partnership: 30b, 45r
+
+Last over bowler: Sandeep Sharma (4/4 overs used, death econ 7.87, death wkts/ov 0.72)
+Next over: different bowler.
+
+Venue context (Dubai International Cricket Stadium):
+Limited IPL history (7 matches); venue stats are estimated.
+Surface prior: balanced, medium boundaries
+Chase rate: ~57%
+Avg 2nd inns: ~146
+Death RPO: ~10.9
+Dew: Low evenings
+
+Win probability for Rajasthan Royals?",approved,0.25,"This has become a difficult chase for Rajasthan Royals and they need the game to swing quickly back their way. Run rate pressure is severe here: they need 12.00, but the innings has only run at 7.24 so far.",assistant_authored_gold_v1
+gold_040,1216543,2020,18,late_tension,balanced_chase,high,12.5,4,"SYSTEM:
+You are an IPL cricket analyst. Estimate the probability (0.0 to 1.0) that the batting team wins the match.
+Write a short public reasoning summary focused only on the most important signals.
+Do not reveal hidden chain-of-thought.
+
+Format exactly as:
+<analysis>
+[2-5 sentence public reasoning summary here]
+</analysis>
+<answer>0.XX</answer>
+
+Answer must be a decimal between 0.0 and 1.0.
+
+USER:
+IPL Match - Rajasthan Royals chasing 162 set by Delhi Capitals
+Venue: Dubai International Cricket Stadium
+Match type: Evening (7:30 PM IST, dew likely)
+Toss: Delhi Capitals chose to bat first
+
+End of Over 18:
+Score: 137/6 (108 balls faced)
+Need: 25 off 12 (RRR: 12.50)
+Current run rate: 7.61
+
+Momentum:
+Last over: 4
+Last 3 overs: 14 runs, 1 wickets
+Last 5 overs: Dot% 40% | Boundary% 7%
+
+Batters:
+R Tewatia (chase SR 126, death SR 160) (career data limited)
+JC Archer (chase SR 126, death SR 160) (career data limited)
+Partnership: 3b, 2r
+
+Last over bowler: A Nortje (4/4 overs used, death econ 11.04, death wkts/ov 0.49) (career data limited)
+Next over: different bowler.
+
+Venue context (Dubai International Cricket Stadium):
+Limited IPL history (7 matches); venue stats are estimated.
+Surface prior: balanced, medium boundaries
+Chase rate: ~57%
+Avg 2nd inns: ~146
+Death RPO: ~10.9
+Dew: Low evenings
+
+Win probability for Rajasthan Royals?",approved,0.09,"This is almost gone for Rajasthan Royals unless something very unusual happens immediately. Run rate pressure is severe here: they need 12.50, but the innings has only run at 7.61 so far. With only 4 wickets in hand, the chase is fragile even if the target is still reachable.",assistant_authored_gold_v1
+gold_041,1254066,2021,7,easy,balanced_chase,medium,6.461538461538462,10,"SYSTEM:
+You are an IPL cricket analyst. Estimate the probability (0.0 to 1.0) that the batting team wins the match.
+Write a short public reasoning summary focused only on the most important signals.
+Do not reveal hidden chain-of-thought.
+
+Format exactly as:
+<analysis>
+[2-5 sentence public reasoning summary here]
+</analysis>
+<answer>0.XX</answer>
+
+Answer must be a decimal between 0.0 and 1.0.
+
+USER:
+IPL Match - Sunrisers Hyderabad chasing 151 set by Mumbai Indians
+Venue: MA Chidambaram Stadium, Chepauk, Chennai
+Match type: Evening (7:30 PM IST, dew likely)
+Toss: Mumbai Indians chose to bat first
+
+End of Over 7:
+Score: 67/0 (42 balls faced)
+Need: 84 off 78 (RRR: 6.46)
+Current run rate: 9.57
+
+Momentum:
+Last over: 10
+Last 3 overs: 25 runs, 0 wickets
+Last 5 overs: Dot% 33% | Boundary% 33%
+
+Batters:
+JM Bairstow (chase SR 123, death SR 159) (career data limited)
+DA Warner (chase SR 136, death SR 149)
+Partnership: 42b, 67r
+
+Last over bowler: AF Milne (2/4 overs used, death econ 11.04, death wkts/ov 0.47) (career data limited)
+Next over: different bowler.
+
+Venue context (MA Chidambaram Stadium, Chepauk, Chennai):
+Surface: spin-friendly, medium boundaries
+Chase rate: 39% (56 matches)
+Avg 2nd inns: 149
+Death RPO: 9.0
+Dew: Medium evenings
+
+Win probability for Sunrisers Hyderabad?",approved,0.97,Sunrisers Hyderabad should close this chase out from here unless they create a collapse for themselves. The equation is favorable now because the asking rate of 6.46 is below the current scoring rate of 9.57. Having 10 wickets in reserve keeps plenty of scoring options alive from here.,assistant_authored_gold_v1
+gold_042,1254080,2021,12,easy,resources_but_work,medium,7.125,10,"SYSTEM:
+You are an IPL cricket analyst. Estimate the probability (0.0 to 1.0) that the batting team wins the match.
+Write a short public reasoning summary focused only on the most important signals.
+Do not reveal hidden chain-of-thought.
+
+Format exactly as:
+<analysis>
+[2-5 sentence public reasoning summary here]
+</analysis>
+<answer>0.XX</answer>
+
+Answer must be a decimal between 0.0 and 1.0.
+
+USER:
+IPL Match - Chennai Super Kings chasing 172 set by Sunrisers Hyderabad
+Venue: Arun Jaitley Stadium, Delhi
+Match type: Evening (7:30 PM IST, dew likely)
+Toss: Sunrisers Hyderabad chose to bat first
+
+End of Over 12:
+Score: 115/0 (72 balls faced)
+Need: 57 off 48 (RRR: 7.12)
+Current run rate: 9.58
+
+Momentum:
+Last over: 15
+Last 3 overs: 31 runs, 0 wickets
+Last 5 overs: Dot% 17% | Boundary% 23%
+
+Batters:
+RD Gaikwad (chase SR 123, death SR 159) (career data limited)
+F du Plessis (chase SR 145, death SR 263)
+Partnership: 72b, 115r
+
+Last over bowler: J Suchith (3/4 overs used, death econ 10.00, death wkts/ov 0.00)
+Next over: different bowler.
+
+Venue context (Arun Jaitley Stadium, Delhi):
+Surface: batting-friendly, medium boundaries
+Chase rate: 53% (68 matches)
+Avg 2nd inns: 152
+Death RPO: 9.6
+Dew: Low evenings
+
+Win probability for Chennai Super Kings?",approved,0.99,Chennai Super Kings should close this chase out from here unless they create a collapse for themselves. Run rate is under control: they only need 7.12 and are already moving at 9.58. Having 10 wickets in reserve keeps plenty of scoring options alive from here.,assistant_authored_gold_v1
+gold_043,1254083,2021,13,easy,balanced_chase,medium,15.571428571428571,6,"SYSTEM:
+You are an IPL cricket analyst. Estimate the probability (0.0 to 1.0) that the batting team wins the match.
+Write a short public reasoning summary focused only on the most important signals.
+Do not reveal hidden chain-of-thought.
+
+Format exactly as:
+<analysis>
+[2-5 sentence public reasoning summary here]
+</analysis>
+<answer>0.XX</answer>
+
+Answer must be a decimal between 0.0 and 1.0.
+
+USER:
+IPL Match - Royal Challengers Bengaluru chasing 180 set by Punjab Kings
+Venue: Narendra Modi Stadium, Ahmedabad
+Match type: Evening (7:30 PM IST, dew likely)
+Toss: Royal Challengers Bengaluru chose to field first
+
+End of Over 13:
+Score: 71/4 (78 balls faced)
+Need: 109 off 42 (RRR: 15.57)
+Current run rate: 5.46
+
+Momentum:
+Last over: 2
+Last 3 overs: 9 runs, 3 wickets
+Last 5 overs: Dot% 53% | Boundary% 3%
+
+Batters:
+RM Patidar (chase SR 123, death SR 159) (career data limited)
+Shahbaz Ahmed (chase SR 123, death SR 159) (career data limited)
+Partnership: 5b, 2r
+
+Last over bowler: Harpreet Brar (4/4 overs used, death econ 11.04, death wkts/ov 0.47) (career data limited)
+Next over: different bowler.
+
+Venue context (Narendra Modi Stadium, Ahmedabad):
+Limited IPL history (11 matches); venue stats are estimated.
+Surface prior: batting-friendly, large boundaries
+Chase rate: ~45%
+Avg 2nd inns: ~145
+Death RPO: ~10.1
+Dew: Low evenings
+
+Win probability for Royal Challengers Bengaluru?",approved,0.01,"This is almost gone for Royal Challengers Bengaluru unless something very unusual happens immediately. Run rate pressure is severe here: they need 15.57, but the innings has only run at 5.46 so far. The recent wickets are a major problem: 3 down in the last three overs has disrupted the chase badly.",assistant_authored_gold_v1
+gold_044,1254069,2021,14,easy,balanced_chase,medium,15.666666666666668,5,"SYSTEM:
+You are an IPL cricket analyst. Estimate the probability (0.0 to 1.0) that the batting team wins the match.
+Write a short public reasoning summary focused only on the most important signals.
+Do not reveal hidden chain-of-thought.
+
+Format exactly as:
+<analysis>
+[2-5 sentence public reasoning summary here]
+</analysis>
+<answer>0.XX</answer>
+
+Answer must be a decimal between 0.0 and 1.0.
+
+USER:
+IPL Match - Rajasthan Royals chasing 189 set by Chennai Super Kings
+Venue: Wankhede Stadium, Mumbai
+Match type: Evening (7:30 PM IST, dew likely)
+Toss: Rajasthan Royals chose to field first
+
+End of Over 14:
+Score: 95/5 (84 balls faced)
+Need: 94 off 36 (RRR: 15.67)
+Current run rate: 6.79
+
+Momentum:
+Last over: 3
+Last 3 overs: 8 runs, 3 wickets
+Last 5 overs: Dot% 53% | Boundary% 0%
+
+Batters:
+R Parag (chase SR 123, death SR 159) (career data limited)
+R Tewatia (chase SR 123, death SR 159) (career data limited)
+Partnership: 7b, 3r
+
+Last over bowler: RA Jadeja (4/4 overs used, death econ 9.81, death wkts/ov 0.41)
+Next over: different bowler.
+
+Venue context (Wankhede Stadium, Mumbai):
+Surface: batting-friendly, medium boundaries
+Chase rate: 52% (71 matches)
+Avg 2nd inns: 154
+Death RPO: 10.5
+Dew: High evenings
+
+Win probability for Rajasthan Royals?",approved,0.01,"Rajasthan Royals are deep in trouble here and only a freak finish really changes the picture now. The equation is the biggest issue: 94 off 36 means 15.67 an over, far above the current 6.79. The innings has taken recent damage with 3 wickets in the last three overs, and that matters more than the raw target.",assistant_authored_gold_v1
+gold_045,1254071,2021,18,easy,cruise_control,medium,5.0,9,"SYSTEM:
+You are an IPL cricket analyst. Estimate the probability (0.0 to 1.0) that the batting team wins the match.
+Write a short public reasoning summary focused only on the most important signals.
+Do not reveal hidden chain-of-thought.
+
+Format exactly as:
+<analysis>
+[2-5 sentence public reasoning summary here]
+</analysis>
+<answer>0.XX</answer>
+
+Answer must be a decimal between 0.0 and 1.0.
+
+USER:
+IPL Match - Sunrisers Hyderabad chasing 121 set by Punjab Kings
+Venue: MA Chidambaram Stadium, Chepauk, Chennai
+Match type: Evening (7:30 PM IST, dew likely)
+Toss: Punjab Kings chose to bat first
+
+End of Over 18:
+Score: 111/1 (108 balls faced)
+Need: 10 off 12 (RRR: 5.00)
+Current run rate: 6.17
+
+Momentum:
+Last over: 7
+Last 3 overs: 16 runs, 0 wickets
+Last 5 overs: Dot% 33% | Boundary% 3%
+
+Batters:
+JM Bairstow (chase SR 123, death SR 159) (career data limited)
+KS Williamson (chase SR 123, death SR 159) (career data limited)
+Partnership: 47b, 38r
+
+Last over bowler: DJ Hooda (4/4 overs used, death econ 24.00, death wkts/ov 0.00)
+Next over: different bowler.
+
+Venue context (MA Chidambaram Stadium, Chepauk, Chennai):
+Surface: spin-friendly, medium boundaries
+Chase rate: 39% (56 matches)
+Avg 2nd inns: 149
+Death RPO: 9.0
+Dew: Medium evenings
+
+Win probability for Sunrisers Hyderabad?",approved,0.99,"Sunrisers Hyderabad are very strong favorites from here: 10 off 12 with 9 wickets left is a position they should finish almost every time. The current partnership is important here because JM Bairstow and KS Williamson have already built enough of a base to attack from. There is a small tactical plus too: DJ Hooda has already done a heavy share of the work, so the next over should come from a different option.",assistant_authored_gold_v1
+gold_046,1254081,2021,10,interesting,resources_but_work,high,8.5,8,"SYSTEM:
+You are an IPL cricket analyst. Estimate the probability (0.0 to 1.0) that the batting team wins the match.
+Write a short public reasoning summary focused only on the most important signals.
+Do not reveal hidden chain-of-thought.
+
+Format exactly as:
+<analysis>
+[2-5 sentence public reasoning summary here]
+</analysis>
+<answer>0.XX</answer>
+
+Answer must be a decimal between 0.0 and 1.0.
+
+USER:
+IPL Match - Mumbai Indians chasing 172 set by Rajasthan Royals
+Venue: Arun Jaitley Stadium, Delhi
+Match type: Evening (7:30 PM IST, dew likely)
+Toss: Mumbai Indians chose to field first
+
+End of Over 10:
+Score: 87/2 (60 balls faced)
+Need: 85 off 60 (RRR: 8.50)
+Current run rate: 8.70
+
+Momentum:
+Last over: 4
+Last 3 overs: 24 runs, 1 wickets
+Last 5 overs: Dot% 27% | Boundary% 23%
+
+Batters:
+Q de Kock (chase SR 123, death SR 159) (career data limited)
+KH Pandya (chase SR 123, death SR 159) (career data limited)
+Partnership: 4b, 4r
+
+Last over bowler: CH Morris (2/4 overs used, death econ 6.99, death wkts/ov 0.78)
+Next over: different bowler.
+
+Venue context (Arun Jaitley Stadium, Delhi):
+Surface: batting-friendly, medium boundaries
+Chase rate: 53% (68 matches)
+Avg 2nd inns: 152
+Death RPO: 9.6
+Dew: Low evenings
+
+Win probability for Mumbai Indians?",approved,0.74,"Mumbai Indians are slightly in front, though the next over or two still matter. Having 8 wickets in reserve keeps plenty of scoring options alive from here. They have at least kept the chase moving, scoring 24 in the last three overs instead of drifting. The rate is workable rather than easy: 8.50 still leaves little room for a quiet over.",assistant_authored_gold_v1
+gold_047,1254064,2021,13,interesting,balanced_chase,high,10.714285714285715,5,"SYSTEM:
+You are an IPL cricket analyst. Estimate the probability (0.0 to 1.0) that the batting team wins the match.
+Write a short public reasoning summary focused only on the most important signals.
+Do not reveal hidden chain-of-thought.
+
+Format exactly as:
+<analysis>
+[2-5 sentence public reasoning summary here]
+</analysis>
+<answer>0.XX</answer>
+
+Answer must be a decimal between 0.0 and 1.0.
+
+USER:
+IPL Match - Rajasthan Royals chasing 148 set by Delhi Capitals
+Venue: Wankhede Stadium, Mumbai
+Match type: Evening (7:30 PM IST, dew likely)
+Toss: Rajasthan Royals chose to field first
+
+End of Over 13:
+Score: 73/5 (78 balls faced)
+Need: 75 off 42 (RRR: 10.71)
+Current run rate: 5.62
+
+Momentum:
+Last over: 15
+Last 3 overs: 21 runs, 0 wickets
+Last 5 overs: Dot% 30% | Boundary% 17%
+
+Batters:
+R Tewatia (chase SR 123, death SR 159) (career data limited)
+DA Miller (chase SR 119, death SR 141)
+Partnership: 22b, 31r
+
+Last over bowler: MP Stoinis (1/4 overs used, death econ 10.95, death wkts/ov 0.62)
+Next over: different bowler.
+
+Venue context (Wankhede Stadium, Mumbai):
+Surface: batting-friendly, medium boundaries
+Chase rate: 52% (71 matches)
+Avg 2nd inns: 154
+Death RPO: 10.5
+Dew: High evenings
+
+Win probability for Rajasthan Royals?",approved,0.17,"This has become a difficult chase for Rajasthan Royals and they need the game to swing quickly back their way. The equation is the biggest issue: 75 off 42 means 10.71 an over, far above the current 5.62.",assistant_authored_gold_v1
+gold_048,1254095,2021,16,interesting,death_overs_tension,high,9.5,6,"SYSTEM:
+You are an IPL cricket analyst. Estimate the probability (0.0 to 1.0) that the batting team wins the match.
+Write a short public reasoning summary focused only on the most important signals.
+Do not reveal hidden chain-of-thought.
+
+Format exactly as:
+<analysis>
+[2-5 sentence public reasoning summary here]
+</analysis>
+<answer>0.XX</answer>
+
+Answer must be a decimal between 0.0 and 1.0.
+
+USER:
+IPL Match - Royal Challengers Bengaluru chasing 142 set by Sunrisers Hyderabad
+Venue: Zayed Cricket Stadium, Abu Dhabi
+Match type: Evening (7:30 PM IST, dew likely)
+Toss: Royal Challengers Bengaluru chose to field first
+
+End of Over 16:
+Score: 104/4 (96 balls faced)
+Need: 38 off 24 (RRR: 9.50)
+Current run rate: 6.50
+
+Momentum:
+Last over: 6
+Last 3 overs: 18 runs, 1 wickets
+Last 5 overs: Dot% 30% | Boundary% 10%
+
+Batters:
+AB de Villiers (chase SR 173, death SR 262)
+D Padikkal (chase SR 123, death SR 159) (career data limited)
+Partnership: 11b, 12r
+
+Last over bowler: S Kaul (4/4 overs used, death econ 12.15, death wkts/ov 0.53)
+Next over: different bowler.
+
+Venue context (Zayed Cricket Stadium, Abu Dhabi):
+Surface: balanced, medium boundaries
+Chase rate: 62% (26 matches)
+Avg 2nd inns: 147
+Death RPO: 9.6
+Dew: Low evenings
+
+Win probability for Royal Challengers Bengaluru?",approved,0.59,"Royal Challengers Bengaluru are in a live chase here rather than a comfortable or desperate one. AB de Villiers also give them real late-overs hitting if this chase goes deep. There is still enough batting left to absorb one mistake and keep the chase going. There is a small tactical plus too: S Kaul has already done a heavy share of the work, so the next over should come from a different option.",assistant_authored_gold_v1
+gold_049,1254098,2021,17,interesting,death_overs_tension,high,10.333333333333334,6,"SYSTEM:
+You are an IPL cricket analyst. Estimate the probability (0.0 to 1.0) that the batting team wins the match.
+Write a short public reasoning summary focused only on the most important signals.
+Do not reveal hidden chain-of-thought.
+
+Format exactly as:
+<analysis>
+[2-5 sentence public reasoning summary here]
+</analysis>
+<answer>0.XX</answer>
+
+Answer must be a decimal between 0.0 and 1.0.
+
+USER:
+IPL Match - Chennai Super Kings chasing 172 set by Kolkata Knight Riders
+Venue: Zayed Cricket Stadium, Abu Dhabi
+Match type: Evening (7:30 PM IST, dew likely)
+Toss: Kolkata Knight Riders chose to bat first
+
+End of Over 17:
+Score: 141/4 (102 balls faced)
+Need: 31 off 18 (RRR: 10.33)
+Current run rate: 8.29
+
+Momentum:
+Last over: 9
+Last 3 overs: 26 runs, 2 wickets
+Last 5 overs: Dot% 27% | Boundary% 7%
+
+Batters:
+MS Dhoni (chase SR 121, death SR 166)
+SK Raina (chase SR 123, death SR 173)
+Partnership: 2b, 3r
+
+Last over bowler: LH Ferguson (4/4 overs used, death econ 9.88, death wkts/ov 0.35)
+Next over: different bowler.
+
+Venue context (Zayed Cricket Stadium, Abu Dhabi):
+Surface: balanced, medium boundaries
+Chase rate: 62% (26 matches)
+Avg 2nd inns: 147
+Death RPO: 9.6
+Dew: Low evenings
+
+Win probability for Chennai Super Kings?",approved,0.53,"This is still finely balanced for Chennai Super Kings, and the next phase should decide who is really ahead. MS Dhoni and SK Raina also give them real late-overs hitting if this chase goes deep. They still need a clear gear change: 10.33 required is a fair step above the present 8.29.",assistant_authored_gold_v1
+gold_050,1254101,2021,17,interesting,death_overs_tension,high,10.333333333333334,7,"SYSTEM:
+You are an IPL cricket analyst. Estimate the probability (0.0 to 1.0) that the batting team wins the match.
+Write a short public reasoning summary focused only on the most important signals.
+Do not reveal hidden chain-of-thought.
+
+Format exactly as:
+<analysis>
+[2-5 sentence public reasoning summary here]
+</analysis>
+<answer>0.XX</answer>
+
+Answer must be a decimal between 0.0 and 1.0.
+
+USER:
+IPL Match - Royal Challengers Bengaluru chasing 165 set by Delhi Capitals
+Venue: Dubai International Cricket Stadium
+Match type: Evening (7:30 PM IST, dew likely)
+Toss: Royal Challengers Bengaluru chose to field first
+
+End of Over 17:
+Score: 134/3 (102 balls faced)
+Need: 31 off 18 (RRR: 10.33)
+Current run rate: 7.88
+
+Momentum:
+Last over: 15
+Last 3 overs: 38 runs, 0 wickets
+Last 5 overs: Dot% 10% | Boundary% 27%
+
+Batters:
+GJ Maxwell (chase SR 108, death SR 198)
+KS Bharat (chase SR 123, death SR 159) (career data limited)
+Partnership: 45b, 79r
+
+Last over bowler: K Rabada (4/4 overs used, death econ 8.71, death wkts/ov 0.91)
+Next over: different bowler.
+
+Venue context (Dubai International Cricket Stadium):
+Surface: balanced, medium boundaries
+Chase rate: 43% (30 matches)
+Avg 2nd inns: 146
+Death RPO: 9.3
+Dew: Low evenings
+
+Win probability for Royal Challengers Bengaluru?",approved,0.86,"Royal Challengers Bengaluru have the upper hand now, with the chase leaning their way more often than not. They have at least kept the chase moving, scoring 38 in the last three overs instead of drifting. The current partnership is important here because GJ Maxwell and KS Bharat have already built enough of a base to attack from. There is enough finishing quality in the current pair to keep a demanding finish alive.",assistant_authored_gold_v1
+gold_051,1254061,2021,18,interesting,death_overs_tension,high,10.5,5,"SYSTEM:
+You are an IPL cricket analyst. Estimate the probability (0.0 to 1.0) that the batting team wins the match.
+Write a short public reasoning summary focused only on the most important signals.
+Do not reveal hidden chain-of-thought.
+
+Format exactly as:
+<analysis>
+[2-5 sentence public reasoning summary here]
+</analysis>
+<answer>0.XX</answer>
+
+Answer must be a decimal between 0.0 and 1.0.
+
+USER:
+IPL Match - Rajasthan Royals chasing 222 set by Punjab Kings
+Venue: Wankhede Stadium, Mumbai
+Match type: Evening (7:30 PM IST, dew likely)
+Toss: Rajasthan Royals chose to field first
+
+End of Over 18:
+Score: 201/5 (108 balls faced)
+Need: 21 off 12 (RRR: 10.50)
+Current run rate: 11.17
+
+Momentum:
+Last over: 19
+Last 3 overs: 47 runs, 1 wickets
+Last 5 overs: Dot% 20% | Boundary% 37%
+
+Batters:
+R Tewatia (chase SR 123, death SR 159) (career data limited)
+SV Samson (chase SR 146, death SR 94)
+Partnership: 10b, 26r
+
+Last over bowler: JA Richardson (4/4 overs used, death econ 11.04, death wkts/ov 0.47) (career data limited)
+Next over: different bowler.
+
+Venue context (Wankhede Stadium, Mumbai):
+Surface: batting-friendly, medium boundaries
+Chase rate: 52% (71 matches)
+Avg 2nd inns: 154
+Death RPO: 10.5
+Dew: High evenings
+
+Win probability for Rajasthan Royals?",approved,0.65,"Rajasthan Royals are slightly in front, though the next over or two still matter. Recent scoring gives them a pulse here: 47 off the last three overs has stopped the equation from running away. The bowling side now has to move away from JA Richardson, which slightly improves the batting side's next-over outlook. The venue's usual death-over scoring does give the batting side some hope if the chase reaches the final overs intact.",assistant_authored_gold_v1
+gold_052,1254095,2021,18,interesting,death_overs_tension,high,9.0,5,"SYSTEM:
+You are an IPL cricket analyst. Estimate the probability (0.0 to 1.0) that the batting team wins the match.
+Write a short public reasoning summary focused only on the most important signals.
+Do not reveal hidden chain-of-thought.
+
+Format exactly as:
+<analysis>
+[2-5 sentence public reasoning summary here]
+</analysis>
+<answer>0.XX</answer>
+
+Answer must be a decimal between 0.0 and 1.0.
+
+USER:
+IPL Match - Royal Challengers Bengaluru chasing 142 set by Sunrisers Hyderabad
+Venue: Zayed Cricket Stadium, Abu Dhabi
+Match type: Evening (7:30 PM IST, dew likely)
+Toss: Royal Challengers Bengaluru chose to field first
+
+End of Over 18:
+Score: 124/5 (108 balls faced)
+Need: 18 off 12 (RRR: 9.00)
+Current run rate: 6.89
+
+Momentum:
+Last over: 11
+Last 3 overs: 26 runs, 1 wickets
+Last 5 overs: Dot% 23% | Boundary% 13%
+
+Batters:
+Shahbaz Ahmed (chase SR 123, death SR 159) (career data limited)
+AB de Villiers (chase SR 173, death SR 262)
+Partnership: 7b, 15r
+
+Last over bowler: Umran Malik (4/4 overs used, death econ 11.04, death wkts/ov 0.47) (career data limited)
+Next over: different bowler.
+
+Venue context (Zayed Cricket Stadium, Abu Dhabi):
+Surface: balanced, medium boundaries
+Chase rate: 62% (26 matches)
+Avg 2nd inns: 147
+Death RPO: 9.6
+Dew: Low evenings
+
+Win probability for Royal Challengers Bengaluru?",approved,0.71,"Royal Challengers Bengaluru are slightly in front, though the next over or two still matter. There is enough finishing quality in the current pair to keep a demanding finish alive. There is a small tactical plus too: Umran Malik has already done a heavy share of the work, so the next over should come from a different option.",assistant_authored_gold_v1
+gold_053,1254114,2021,18,interesting,death_overs_tension,high,12.0,6,"SYSTEM:
+You are an IPL cricket analyst. Estimate the probability (0.0 to 1.0) that the batting team wins the match.
+Write a short public reasoning summary focused only on the most important signals.
+Do not reveal hidden chain-of-thought.
+
+Format exactly as:
+<analysis>
+[2-5 sentence public reasoning summary here]
+</analysis>
+<answer>0.XX</answer>
+
+Answer must be a decimal between 0.0 and 1.0.
+
+USER:
+IPL Match - Chennai Super Kings chasing 173 set by Delhi Capitals
+Venue: Dubai International Cricket Stadium
+Match type: Evening (7:30 PM IST, dew likely)
+Toss: Chennai Super Kings chose to field first
+
+End of Over 18:
+Score: 149/4 (108 balls faced)
+Need: 24 off 12 (RRR: 12.00)
+Current run rate: 8.28
+
+Momentum:
+Last over: 11
+Last 3 overs: 28 runs, 0 wickets
+Last 5 overs: Dot% 23% | Boundary% 13%
+
+Batters:
+RD Gaikwad (chase SR 123, death SR 159) (career data limited)
+MM Ali (chase SR 123, death SR 159) (career data limited)
+Partnership: 20b, 30r
+
+Last over bowler: A Nortje (4/4 overs used, death econ 8.19, death wkts/ov 0.44)
+Next over: different bowler.
+
+Venue context (Dubai International Cricket Stadium):
+Surface: balanced, medium boundaries
+Chase rate: 43% (30 matches)
+Avg 2nd inns: 146
+Death RPO: 9.3
+Dew: Low evenings
+
+Win probability for Chennai Super Kings?",approved,0.36,"The bowling side is ahead for now, although Chennai Super Kings still have a path if they string together a clean passage. They still need a clear gear change: 12.00 required is a fair step above the present 8.28. This is not one of the grounds where the batting side can expect conditions to rescue a difficult chase.",assistant_authored_gold_v1
+gold_054,1254066,2021,16,late_tension,balanced_chase,high,7.75,5,"SYSTEM:
+You are an IPL cricket analyst. Estimate the probability (0.0 to 1.0) that the batting team wins the match.
+Write a short public reasoning summary focused only on the most important signals.
+Do not reveal hidden chain-of-thought.
+
+Format exactly as:
+<analysis>
+[2-5 sentence public reasoning summary here]
+</analysis>
+<answer>0.XX</answer>
+
+Answer must be a decimal between 0.0 and 1.0.
+
+USER:
+IPL Match - Sunrisers Hyderabad chasing 151 set by Mumbai Indians
+Venue: MA Chidambaram Stadium, Chepauk, Chennai
+Match type: Evening (7:30 PM IST, dew likely)
+Toss: Mumbai Indians chose to bat first
+
+End of Over 16:
+Score: 120/5 (96 balls faced)
+Need: 31 off 24 (RRR: 7.75)
+Current run rate: 7.50
+
+Momentum:
+Last over: 16
+Last 3 overs: 24 runs, 2 wickets
+Last 5 overs: Dot% 37% | Boundary% 10%
+
+Batters:
+Abdul Samad (chase SR 123, death SR 159) (career data limited)
+V Shankar (chase SR 123, death SR 159) (career data limited)
+Partnership: 7b, 16r
+
+Last over bowler: KH Pandya (3/4 overs used, death econ 9.33, death wkts/ov 0.42)
+Next over: different bowler.
+
+Venue context (MA Chidambaram Stadium, Chepauk, Chennai):
+Surface: spin-friendly, medium boundaries
+Chase rate: 39% (56 matches)
+Avg 2nd inns: 149
+Death RPO: 9.0
+Dew: Medium evenings
+
+Win probability for Sunrisers Hyderabad?",approved,0.72,"Sunrisers Hyderabad are slightly in front, though the next over or two still matter. The equation remains live because 7.75 required is gettable but not forgiving.",assistant_authored_gold_v1
+gold_055,1254058,2021,17,late_tension,death_overs_tension,high,11.333333333333332,4,"SYSTEM:
+You are an IPL cricket analyst. Estimate the probability (0.0 to 1.0) that the batting team wins the match.
+Write a short public reasoning summary focused only on the most important signals.
+Do not reveal hidden chain-of-thought.
+
+Format exactly as:
+<analysis>
+[2-5 sentence public reasoning summary here]
+</analysis>
+<answer>0.XX</answer>
+
+Answer must be a decimal between 0.0 and 1.0.
+
+USER:
+IPL Match - Royal Challengers Bengaluru chasing 160 set by Mumbai Indians
+Venue: MA Chidambaram Stadium, Chepauk, Chennai
+Match type: Evening (7:30 PM IST, dew likely)
+Toss: Royal Challengers Bengaluru chose to field first
+
+End of Over 17:
+Score: 126/6 (102 balls faced)
+Need: 34 off 18 (RRR: 11.33)
+Current run rate: 7.41
+
+Momentum:
+Last over: 5
+Last 3 overs: 23 runs, 3 wickets
+Last 5 overs: Dot% 40% | Boundary% 7%
+
+Batters:
+AB de Villiers (chase SR 173, death SR 262)
+KA Jamieson (chase SR 123, death SR 159) (career data limited)
+Partnership: 3b, 4r
+
+Last over bowler: JJ Bumrah (3/4 overs used, death econ 8.25, death wkts/ov 0.45)
+Next over: different bowler.
+
+Venue context (MA Chidambaram Stadium, Chepauk, Chennai):
+Surface: spin-friendly, medium boundaries
+Chase rate: 39% (56 matches)
+Avg 2nd inns: 149
+Death RPO: 9.0
+Dew: Medium evenings
+
+Win probability for Royal Challengers Bengaluru?",approved,0.12,"Royal Challengers Bengaluru are under heavy pressure now and need something out of the ordinary from this position. They still need a clear gear change: 11.33 required is a fair step above the present 7.41. With only 4 wickets in hand, the chase is fragile even if the target is still reachable.",assistant_authored_gold_v1
+gold_056,1254061,2021,17,late_tension,balanced_chase,high,13.333333333333334,5,"SYSTEM:
+You are an IPL cricket analyst. Estimate the probability (0.0 to 1.0) that the batting team wins the match.
+Write a short public reasoning summary focused only on the most important signals.
+Do not reveal hidden chain-of-thought.
+
+Format exactly as:
+<analysis>
+[2-5 sentence public reasoning summary here]
+</analysis>
+<answer>0.XX</answer>
+
+Answer must be a decimal between 0.0 and 1.0.
+
+USER:
+IPL Match - Rajasthan Royals chasing 222 set by Punjab Kings
+Venue: Wankhede Stadium, Mumbai
+Match type: Evening (7:30 PM IST, dew likely)
+Toss: Rajasthan Royals chose to field first
+
+End of Over 17:
+Score: 182/5 (102 balls faced)
+Need: 40 off 18 (RRR: 13.33)
+Current run rate: 10.71
+
+Momentum:
+Last over: 8
+Last 3 overs: 41 runs, 1 wickets
+Last 5 overs: Dot% 23% | Boundary% 33%
+
+Batters:
+SV Samson (chase SR 146, death SR 94)
+R Tewatia (chase SR 123, death SR 159) (career data limited)
+Partnership: 4b, 7r
+
+Last over bowler: Mohammed Shami (4/4 overs used, death econ 12.06, death wkts/ov 0.78)
+Next over: different bowler.
+
+Venue context (Wankhede Stadium, Mumbai):
+Surface: batting-friendly, medium boundaries
+Chase rate: 52% (71 matches)
+Avg 2nd inns: 154
+Death RPO: 10.5
+Dew: High evenings
+
+Win probability for Rajasthan Royals?",approved,0.16,Rajasthan Royals are under heavy pressure now and need something out of the ordinary from this position. They still need a clear gear change: 13.33 required is a fair step above the present 10.71.,assistant_authored_gold_v1
+gold_057,1254066,2021,17,late_tension,death_overs_tension,high,9.0,5,"SYSTEM:
+You are an IPL cricket analyst. Estimate the probability (0.0 to 1.0) that the batting team wins the match.
+Write a short public reasoning summary focused only on the most important signals.
+Do not reveal hidden chain-of-thought.
+
+Format exactly as:
+<analysis>
+[2-5 sentence public reasoning summary here]
+</analysis>
+<answer>0.XX</answer>
+
+Answer must be a decimal between 0.0 and 1.0.
+
+USER:
+IPL Match - Sunrisers Hyderabad chasing 151 set by Mumbai Indians
+Venue: MA Chidambaram Stadium, Chepauk, Chennai
+Match type: Evening (7:30 PM IST, dew likely)
+Toss: Mumbai Indians chose to bat first
+
+End of Over 17:
+Score: 124/5 (102 balls faced)
+Need: 27 off 18 (RRR: 9.00)
+Current run rate: 7.29
+
+Momentum:
+Last over: 4
+Last 3 overs: 22 runs, 2 wickets
+Last 5 overs: Dot% 37% | Boundary% 7%
+
+Batters:
+V Shankar (chase SR 123, death SR 159) (career data limited)
+Abdul Samad (chase SR 123, death SR 159) (career data limited)
+Partnership: 13b, 20r
+
+Last over bowler: JJ Bumrah (3/4 overs used, death econ 8.25, death wkts/ov 0.45)
+Next over: different bowler.
+
+Venue context (MA Chidambaram Stadium, Chepauk, Chennai):
+Surface: spin-friendly, medium boundaries
+Chase rate: 39% (56 matches)
+Avg 2nd inns: 149
+Death RPO: 9.0
+Dew: Medium evenings
+
+Win probability for Sunrisers Hyderabad?",approved,0.50,"This is still finely balanced for Sunrisers Hyderabad, and the next phase should decide who is really ahead. There is a small tactical plus too: JJ Bumrah has already done a heavy share of the work, so the next over should come from a different option. They still need a clear gear change: 9.00 required is a fair step above the present 7.29.",assistant_authored_gold_v1
+gold_058,1254090,2021,17,late_tension,death_overs_tension,high,12.333333333333332,5,"SYSTEM:
+You are an IPL cricket analyst. Estimate the probability (0.0 to 1.0) that the batting team wins the match.
+Write a short public reasoning summary focused only on the most important signals.
+Do not reveal hidden chain-of-thought.
+
+Format exactly as:
+<analysis>
+[2-5 sentence public reasoning summary here]
+</analysis>
+<answer>0.XX</answer>
+
+Answer must be a decimal between 0.0 and 1.0.
+
+USER:
+IPL Match - Punjab Kings chasing 165 set by Royal Challengers Bengaluru
+Venue: Sharjah Cricket Stadium
+Match type: Evening (7:30 PM IST, dew likely)
+Toss: Royal Challengers Bengaluru chose to bat first
+
+End of Over 17:
+Score: 128/5 (102 balls faced)
+Need: 37 off 18 (RRR: 12.33)
+Current run rate: 7.53
+
+Momentum:
+Last over: 7
+Last 3 overs: 26 runs, 3 wickets
+Last 5 overs: Dot% 40% | Boundary% 13%
+
+Batters:
+M Shahrukh Khan (chase SR 123, death SR 159) (career data limited)
+MC Henriques (chase SR 123, death SR 159) (career data limited)
+Partnership: 1b, 1r
+
+Last over bowler: GHS Garton (4/4 overs used, death econ 11.04, death wkts/ov 0.47) (career data limited)
+Next over: different bowler.
+
+Venue context (Sharjah Cricket Stadium):
+Surface: batting-friendly, short boundaries
+Chase rate: 61% (18 matches)
+Avg 2nd inns: 158
+Death RPO: 10.4
+Dew: Low evenings
+
+Win probability for Punjab Kings?",approved,0.09,"Punjab Kings are deep in trouble here and only a freak finish really changes the picture now. Run rate pressure is severe here: they need 12.33, but the innings has only run at 7.53 so far. The innings has taken recent damage with 3 wickets in the last three overs, and that matters more than the raw target.",assistant_authored_gold_v1
+gold_059,1254101,2021,18,late_tension,resources_but_work,high,9.5,7,"SYSTEM:
+You are an IPL cricket analyst. Estimate the probability (0.0 to 1.0) that the batting team wins the match.
+Write a short public reasoning summary focused only on the most important signals.
+Do not reveal hidden chain-of-thought.
+
+Format exactly as:
+<analysis>
+[2-5 sentence public reasoning summary here]
+</analysis>
+<answer>0.XX</answer>
+
+Answer must be a decimal between 0.0 and 1.0.
+
+USER:
+IPL Match - Royal Challengers Bengaluru chasing 165 set by Delhi Capitals
+Venue: Dubai International Cricket Stadium
+Match type: Evening (7:30 PM IST, dew likely)
+Toss: Royal Challengers Bengaluru chose to field first
+
+End of Over 18:
+Score: 146/3 (108 balls faced)
+Need: 19 off 12 (RRR: 9.50)
+Current run rate: 8.11
+
+Momentum:
+Last over: 12
+Last 3 overs: 38 runs, 0 wickets
+Last 5 overs: Dot% 10% | Boundary% 27%
+
+Batters:
+KS Bharat (chase SR 123, death SR 159) (career data limited)
+GJ Maxwell (chase SR 108, death SR 198)
+Partnership: 51b, 91r
+
+Last over bowler: Avesh Khan (3/4 overs used, death econ 9.60, death wkts/ov 0.06)
+Next over: different bowler.
+
+Venue context (Dubai International Cricket Stadium):
+Surface: balanced, medium boundaries
+Chase rate: 43% (30 matches)
+Avg 2nd inns: 146
+Death RPO: 9.3
+Dew: Low evenings
+
+Win probability for Royal Challengers Bengaluru?",approved,0.92,Royal Challengers Bengaluru are very strong favorites from here: 19 off 12 with 7 wickets left is a position they should finish almost every time. Recent scoring gives them a pulse here: 38 off the last three overs has stopped the equation from running away. The current partnership is important here because KS Bharat and GJ Maxwell have already built enough of a base to attack from.,assistant_authored_gold_v1
+gold_060,1254101,2021,19,late_tension,death_overs_tension,high,15.0,7,"SYSTEM:
+You are an IPL cricket analyst. Estimate the probability (0.0 to 1.0) that the batting team wins the match.
+Write a short public reasoning summary focused only on the most important signals.
+Do not reveal hidden chain-of-thought.
+
+Format exactly as:
+<analysis>
+[2-5 sentence public reasoning summary here]
+</analysis>
+<answer>0.XX</answer>
+
+Answer must be a decimal between 0.0 and 1.0.
+
+USER:
+IPL Match - Royal Challengers Bengaluru chasing 165 set by Delhi Capitals
+Venue: Dubai International Cricket Stadium
+Match type: Evening (7:30 PM IST, dew likely)
+Toss: Royal Challengers Bengaluru chose to field first
+
+End of Over 19:
+Score: 150/3 (114 balls faced)
+Need: 15 off 6 (RRR: 15.00)
+Current run rate: 7.89
+
+Momentum:
+Last over: 4
+Last 3 overs: 31 runs, 0 wickets
+Last 5 overs: Dot% 10% | Boundary% 20%
+
+Batters:
+GJ Maxwell (chase SR 108, death SR 198)
+KS Bharat (chase SR 123, death SR 159) (career data limited)
+Partnership: 57b, 95r
+
+Last over bowler: A Nortje (4/4 overs used, death econ 8.19, death wkts/ov 0.44)
+Next over: different bowler.
+
+Venue context (Dubai International Cricket Stadium):
+Surface: balanced, medium boundaries
+Chase rate: 43% (30 matches)
+Avg 2nd inns: 146
+Death RPO: 9.3
+Dew: Low evenings
+
+Win probability for Royal Challengers Bengaluru?",approved,0.20,"This has become a difficult chase for Royal Challengers Bengaluru and they need the game to swing quickly back their way. Run rate pressure is severe here: they need 15.00, but the innings has only run at 7.89 so far. Venue history is a mild drag as well because chases have not been especially easy here.",assistant_authored_gold_v1
+gold_061,1304063,2022,16,easy,resources_but_work,medium,7.5,9,"SYSTEM:
+You are an IPL cricket analyst. Estimate the probability (0.0 to 1.0) that the batting team wins the match.
+Write a short public reasoning summary focused only on the most important signals.
+Do not reveal hidden chain-of-thought.
+
+Format exactly as:
+<analysis>
+[2-5 sentence public reasoning summary here]
+</analysis>
+<answer>0.XX</answer>
+
+Answer must be a decimal between 0.0 and 1.0.
+
+USER:
+IPL Match - Sunrisers Hyderabad chasing 155 set by Chennai Super Kings
+Venue: Dr DY Patil Sports Academy, Mumbai
+Match type: Evening (7:30 PM IST, dew likely)
+Toss: Sunrisers Hyderabad chose to field first
+
+End of Over 16:
+Score: 125/1 (96 balls faced)
+Need: 30 off 24 (RRR: 7.50)
+Current run rate: 7.81
+
+Momentum:
+Last over: 4
+Last 3 overs: 28 runs, 0 wickets
+Last 5 overs: Dot% 23% | Boundary% 23%
+
+Batters:
+RA Tripathi (chase SR 125, death SR 160) (career data limited)
+Abhishek Sharma (chase SR 125, death SR 160) (career data limited)
+Partnership: 23b, 36r
+
+Last over bowler: M Theekshana (4/4 overs used, death econ 10.87, death wkts/ov 0.48) (career data limited)
+Next over: different bowler.
+
+Venue context (Dr DY Patil Sports Academy, Mumbai):
+Surface: batting-friendly, medium boundaries
+Chase rate: 63% (19 matches)
+Avg 2nd inns: 141
+Death RPO: 8.5
+Dew: High evenings
+
+Win probability for Sunrisers Hyderabad?",approved,0.99,"Sunrisers Hyderabad should close this chase out from here unless they create a collapse for themselves. They have at least kept the chase moving, scoring 28 in the last three overs instead of drifting. The current partnership is important here because RA Tripathi and Abhishek Sharma have already built enough of a base to attack from.",assistant_authored_gold_v1
+gold_062,1304065,2022,17,easy,near_collapse,medium,21.333333333333332,2,"SYSTEM:
+You are an IPL cricket analyst. Estimate the probability (0.0 to 1.0) that the batting team wins the match.
+Write a short public reasoning summary focused only on the most important signals.
+Do not reveal hidden chain-of-thought.
+
+Format exactly as:
+<analysis>
+[2-5 sentence public reasoning summary here]
+</analysis>
+<answer>0.XX</answer>
+
+Answer must be a decimal between 0.0 and 1.0.
+
+USER:
+IPL Match - Kolkata Knight Riders chasing 216 set by Delhi Capitals
+Venue: Brabourne Stadium, Mumbai
+Match type: Evening (7:30 PM IST, dew likely)
+Toss: Kolkata Knight Riders chose to field first
+
+End of Over 17:
+Score: 152/8 (102 balls faced)
+Need: 64 off 18 (RRR: 21.33)
+Current run rate: 8.94
+
+Momentum:
+Last over: 9
+Last 3 overs: 21 runs, 4 wickets
+Last 5 overs: Dot% 43% | Boundary% 20%
+
+Batters:
+AD Russell (chase SR 166, death SR 165)
+Rasikh Salam (chase SR 125, death SR 160) (career data limited)
+Partnership: 6b, 9r
+
+Last over bowler: Mustafizur Rahman (3/4 overs used, death econ 10.00, death wkts/ov 0.33)
+Next over: different bowler.
+
+Venue context (Brabourne Stadium, Mumbai):
+Limited IPL history (13 matches); venue stats are estimated.
+Surface prior: batting-friendly, medium boundaries
+Chase rate: ~54%
+Avg 2nd inns: ~167
+Death RPO: ~10.9
+Dew: Medium evenings
+
+Win probability for Kolkata Knight Riders?",approved,0.01,"This is almost gone for Kolkata Knight Riders unless something very unusual happens immediately. The equation is the biggest issue: 64 off 18 means 21.33 an over, far above the current 8.94. The lack of batting cushion is huge now: with 2 wickets left, every high-risk shot carries real collapse cost.",assistant_authored_gold_v1
+gold_063,1304048,2022,18,easy,balanced_chase,medium,2.0,4,"SYSTEM:
+You are an IPL cricket analyst. Estimate the probability (0.0 to 1.0) that the batting team wins the match.
+Write a short public reasoning summary focused only on the most important signals.
+Do not reveal hidden chain-of-thought.
+
+Format exactly as:
+<analysis>
+[2-5 sentence public reasoning summary here]
+</analysis>
+<answer>0.XX</answer>
+
+Answer must be a decimal between 0.0 and 1.0.
+
+USER:
+IPL Match - Delhi Capitals chasing 178 set by Mumbai Indians
+Venue: Brabourne Stadium, Mumbai
+Match type: Evening (7:30 PM IST, dew likely)
+Toss: Delhi Capitals chose to field first
+
+End of Over 18:
+Score: 174/6 (108 balls faced)
+Need: 4 off 12 (RRR: 2.00)
+Current run rate: 9.67
+
+Momentum:
+Last over: 24
+Last 3 overs: 52 runs, 0 wickets
+Last 5 overs: Dot% 13% | Boundary% 30%
+
+Batters:
+Lalit Yadav (chase SR 125, death SR 160) (career data limited)
+AR Patel (chase SR 155, death SR 193)
+Partnership: 28b, 70r
+
+Last over bowler: DR Sams (4/4 overs used, death econ 17.73, death wkts/ov 0.00)
+Next over: different bowler.
+
+Venue context (Brabourne Stadium, Mumbai):
+Limited IPL history (13 matches); venue stats are estimated.
+Surface prior: batting-friendly, medium boundaries
+Chase rate: ~54%
+Avg 2nd inns: ~167
+Death RPO: ~10.9
+Dew: Medium evenings
+
+Win probability for Delhi Capitals?",approved,0.99,Delhi Capitals should close this chase out from here unless they create a collapse for themselves. The equation is favorable now because the asking rate of 2.00 is below the current scoring rate of 9.67. Recent scoring gives them a pulse here: 52 off the last three overs has stopped the equation from running away.,assistant_authored_gold_v1
+gold_064,1304053,2022,18,easy,balanced_chase,medium,17.0,6,"SYSTEM:
+You are an IPL cricket analyst. Estimate the probability (0.0 to 1.0) that the batting team wins the match.
+Write a short public reasoning summary focused only on the most important signals.
+Do not reveal hidden chain-of-thought.
+
+Format exactly as:
+<analysis>
+[2-5 sentence public reasoning summary here]
+</analysis>
+<answer>0.XX</answer>
+
+Answer must be a decimal between 0.0 and 1.0.
+
+USER:
+IPL Match - Lucknow Super Giants chasing 211 set by Chennai Super Kings
+Venue: Brabourne Stadium, Mumbai
+Match type: Evening (7:30 PM IST, dew likely)
+Toss: Lucknow Super Giants chose to field first
+
+End of Over 18:
+Score: 177/4 (108 balls faced)
+Need: 34 off 12 (RRR: 17.00)
+Current run rate: 9.83
+
+Momentum:
+Last over: 12
+Last 3 overs: 33 runs, 1 wickets
+Last 5 overs: Dot% 23% | Boundary% 23%
+
+Batters:
+A Badoni (chase SR 125, death SR 160) (career data limited)
+E Lewis (chase SR 125, death SR 160) (career data limited)
+Partnership: 4b, 6r
+
+Last over bowler: DJ Bravo (4/4 overs used, death econ 8.46, death wkts/ov 0.70)
+Next over: different bowler.
+
+Venue context (Brabourne Stadium, Mumbai):
+Limited IPL history (13 matches); venue stats are estimated.
+Surface prior: batting-friendly, medium boundaries
+Chase rate: ~54%
+Avg 2nd inns: ~167
+Death RPO: ~10.9
+Dew: Medium evenings
+
+Win probability for Lucknow Super Giants?",approved,0.02,"Lucknow Super Giants are deep in trouble here and only a freak finish really changes the picture now. Run rate pressure is severe here: they need 17.00, but the innings has only run at 9.83 so far.",assistant_authored_gold_v1
+gold_065,1304064,2022,18,easy,cruise_control,medium,4.0,8,"SYSTEM:
+You are an IPL cricket analyst. Estimate the probability (0.0 to 1.0) that the batting team wins the match.
+Write a short public reasoning summary focused only on the most important signals.
+Do not reveal hidden chain-of-thought.
+
+Format exactly as:
+<analysis>
+[2-5 sentence public reasoning summary here]
+</analysis>
+<answer>0.XX</answer>
+
+Answer must be a decimal between 0.0 and 1.0.
+
+USER:
+IPL Match - Royal Challengers Bengaluru chasing 152 set by Mumbai Indians
+Venue: Maharashtra Cricket Association Stadium, Pune
+Match type: Evening (7:30 PM IST, dew likely)
+Toss: Royal Challengers Bengaluru chose to field first
+
+End of Over 18:
+Score: 144/2 (108 balls faced)
+Need: 8 off 12 (RRR: 4.00)
+Current run rate: 8.00
+
+Momentum:
+Last over: 13
+Last 3 overs: 33 runs, 1 wickets
+Last 5 overs: Dot% 20% | Boundary% 17%
+
+Batters:
+V Kohli (chase SR 125, death SR 202)
+KD Karthik (chase SR 125, death SR 143)
+Partnership: 7b, 14r
+
+Last over bowler: JJ Bumrah (4/4 overs used, death econ 7.54, death wkts/ov 0.49)
+Next over: different bowler.
+
+Venue context (Maharashtra Cricket Association Stadium, Pune):
+Surface: balanced, medium boundaries
+Chase rate: 61% (23 matches)
+Avg 2nd inns: 152
+Death RPO: 9.8
+Dew: Low evenings
+
+Win probability for Royal Challengers Bengaluru?",approved,0.99,Royal Challengers Bengaluru are basically one controlled over away from the target now. The equation is favorable now because the asking rate of 4.00 is below the current scoring rate of 8.00. Recent scoring gives them a pulse here: 33 off the last three overs has stopped the equation from running away.,assistant_authored_gold_v1
+gold_066,1304048,2022,5,interesting,resources_but_work,high,9.2,7,"SYSTEM:
+You are an IPL cricket analyst. Estimate the probability (0.0 to 1.0) that the batting team wins the match.
+Write a short public reasoning summary focused only on the most important signals.
+Do not reveal hidden chain-of-thought.
+
+Format exactly as:
+<analysis>
+[2-5 sentence public reasoning summary here]
+</analysis>
+<answer>0.XX</answer>
+
+Answer must be a decimal between 0.0 and 1.0.
+
+USER:
+IPL Match - Delhi Capitals chasing 178 set by Mumbai Indians
+Venue: Brabourne Stadium, Mumbai
+Match type: Evening (7:30 PM IST, dew likely)
+Toss: Delhi Capitals chose to field first
+
+End of Over 5:
+Score: 40/3 (30 balls faced)
+Need: 138 off 90 (RRR: 9.20)
+Current run rate: 8.00
+
+Momentum:
+Last over: 9
+Last 3 overs: 19 runs, 3 wickets
+Last 5 overs: Dot% 57% | Boundary% 20%
+
+Batters:
+PP Shaw (chase SR 125, death SR 160) (career data limited)
+Lalit Yadav (chase SR 125, death SR 160) (career data limited)
+Partnership: 5b, 8r
+
+Last over bowler: TS Mills (1/4 overs used, death econ 8.87, death wkts/ov 0.34)
+Next over: different bowler.
+
+Venue context (Brabourne Stadium, Mumbai):
+Limited IPL history (13 matches); venue stats are estimated.
+Surface prior: batting-friendly, medium boundaries
+Chase rate: ~54%
+Avg 2nd inns: ~167
+Death RPO: ~10.9
+Dew: Medium evenings
+
+Win probability for Delhi Capitals?",approved,0.12,"It is still early enough for Delhi Capitals to recover, but the chase has already started badly. The chase has lost shape recently, with 3 wickets in the last three overs and a 57% dot-ball share across the last five. The rate is workable rather than easy: 9.20 still leaves little room for a quiet over.",assistant_authored_gold_v1
+gold_067,1304070,2022,9,interesting,balanced_chase,high,10.090909090909092,6,"SYSTEM:
+You are an IPL cricket analyst. Estimate the probability (0.0 to 1.0) that the batting team wins the match.
+Write a short public reasoning summary focused only on the most important signals.
+Do not reveal hidden chain-of-thought.
+
+Format exactly as:
+<analysis>
+[2-5 sentence public reasoning summary here]
+</analysis>
+<answer>0.XX</answer>
+
+Answer must be a decimal between 0.0 and 1.0.
+
+USER:
+IPL Match - Rajasthan Royals chasing 193 set by Gujarat Titans
+Venue: Dr DY Patil Sports Academy, Mumbai
+Match type: Evening (7:30 PM IST, dew likely)
+Toss: Rajasthan Royals chose to field first
+
+End of Over 9:
+Score: 82/4 (54 balls faced)
+Need: 111 off 66 (RRR: 10.09)
+Current run rate: 9.11
+
+Momentum:
+Last over: 6
+Last 3 overs: 17 runs, 1 wickets
+Last 5 overs: Dot% 53% | Boundary% 10%
+
+Batters:
+HE van der Dussen (chase SR 125, death SR 160) (career data limited)
+SO Hetmyer (chase SR 125, death SR 160) (career data limited)
+Partnership: 9b, 8r
+
+Last over bowler: Rashid Khan (2/4 overs used, death econ 6.21, death wkts/ov 0.60)
+Next over: different bowler.
+
+Venue context (Dr DY Patil Sports Academy, Mumbai):
+Surface: batting-friendly, medium boundaries
+Chase rate: 63% (19 matches)
+Avg 2nd inns: 141
+Death RPO: 8.5
+Dew: High evenings
+
+Win probability for Rajasthan Royals?",approved,0.17,Rajasthan Royals are under heavy pressure now and need something out of the ordinary from this position. The rate is workable rather than easy: 10.09 still leaves little room for a quiet over.,assistant_authored_gold_v1
+gold_068,1304072,2022,10,interesting,resources_but_work,high,11.4,7,"SYSTEM:
+You are an IPL cricket analyst. Estimate the probability (0.0 to 1.0) that the batting team wins the match.
+Write a short public reasoning summary focused only on the most important signals.
+Do not reveal hidden chain-of-thought.
+
+Format exactly as:
+<analysis>
+[2-5 sentence public reasoning summary here]
+</analysis>
+<answer>0.XX</answer>
+
+Answer must be a decimal between 0.0 and 1.0.
+
+USER:
+IPL Match - Mumbai Indians chasing 200 set by Lucknow Super Giants
+Venue: Brabourne Stadium, Mumbai
+Match type: Evening (7:30 PM IST, dew likely)
+Toss: Mumbai Indians chose to field first
+
+End of Over 10:
+Score: 86/3 (60 balls faced)
+Need: 114 off 60 (RRR: 11.40)
+Current run rate: 8.60
+
+Momentum:
+Last over: 6
+Last 3 overs: 24 runs, 0 wickets
+Last 5 overs: Dot% 27% | Boundary% 10%
+
+Batters:
+SA Yadav (chase SR 132, death SR 206)
+Tilak Varma (chase SR 125, death SR 160) (career data limited)
+Partnership: 22b, 29r
+
+Last over bowler: KH Pandya (1/4 overs used, death econ 9.65, death wkts/ov 0.27)
+Next over: different bowler.
+
+Venue context (Brabourne Stadium, Mumbai):
+Limited IPL history (13 matches); venue stats are estimated.
+Surface prior: batting-friendly, medium boundaries
+Chase rate: ~54%
+Avg 2nd inns: ~167
+Death RPO: ~10.9
+Dew: Medium evenings
+
+Win probability for Mumbai Indians?",approved,0.19,Mumbai Indians are under heavy pressure now and need something out of the ordinary from this position. They still need a clear gear change: 11.40 required is a fair step above the present 8.60.,assistant_authored_gold_v1
+gold_069,1304081,2022,10,interesting,balanced_chase,high,9.4,6,"SYSTEM:
+You are an IPL cricket analyst. Estimate the probability (0.0 to 1.0) that the batting team wins the match.
+Write a short public reasoning summary focused only on the most important signals.
+Do not reveal hidden chain-of-thought.
+
+Format exactly as:
+<analysis>
+[2-5 sentence public reasoning summary here]
+</analysis>
+<answer>0.XX</answer>
+
+Answer must be a decimal between 0.0 and 1.0.
+
+USER:
+IPL Match - Kolkata Knight Riders chasing 157 set by Gujarat Titans
+Venue: Dr DY Patil Sports Academy, Mumbai
+Match type: Evening (7:30 PM IST, dew likely)
+Toss: Gujarat Titans chose to bat first
+
+End of Over 10:
+Score: 63/4 (60 balls faced)
+Need: 94 off 60 (RRR: 9.40)
+Current run rate: 6.30
+
+Momentum:
+Last over: 6
+Last 3 overs: 22 runs, 0 wickets
+Last 5 overs: Dot% 47% | Boundary% 17%
+
+Batters:
+RK Singh (chase SR 125, death SR 160) (career data limited)
+VR Iyer (chase SR 125, death SR 160) (career data limited)
+Partnership: 23b, 29r
+
+Last over bowler: Mohammed Shami (3/4 overs used, death econ 10.93, death wkts/ov 0.75)
+Next over: different bowler.
+
+Venue context (Dr DY Patil Sports Academy, Mumbai):
+Surface: batting-friendly, medium boundaries
+Chase rate: 63% (19 matches)
+Avg 2nd inns: 141
+Death RPO: 8.5
+Dew: High evenings
+
+Win probability for Kolkata Knight Riders?",approved,0.27,This has become a difficult chase for Kolkata Knight Riders and they need the game to swing quickly back their way. The chase is still being pushed by the rate because 9.40 is comfortably above the current 6.30.,assistant_authored_gold_v1
+gold_070,1304091,2022,12,interesting,balanced_chase,high,10.375,6,"SYSTEM:
+You are an IPL cricket analyst. Estimate the probability (0.0 to 1.0) that the batting team wins the match.
+Write a short public reasoning summary focused only on the most important signals.
+Do not reveal hidden chain-of-thought.
+
+Format exactly as:
+<analysis>
+[2-5 sentence public reasoning summary here]
+</analysis>
+<answer>0.XX</answer>
+
+Answer must be a decimal between 0.0 and 1.0.
+
+USER:
+IPL Match - Delhi Capitals chasing 196 set by Lucknow Super Giants
+Venue: Wankhede Stadium, Mumbai
+Match type: Evening (7:30 PM IST, dew likely)
+Toss: Lucknow Super Giants chose to bat first
+
+End of Over 12:
+Score: 113/4 (72 balls faced)
+Need: 83 off 48 (RRR: 10.38)
+Current run rate: 9.42
+
+Momentum:
+Last over: 18
+Last 3 overs: 26 runs, 0 wickets
+Last 5 overs: Dot% 40% | Boundary% 17%
+
+Batters:
+RR Pant (chase SR 123, death SR 176)
+R Powell (chase SR 125, death SR 160) (career data limited)
+Partnership: 19b, 27r
+
+Last over bowler: K Gowtham (2/4 overs used, death econ 25.00, death wkts/ov 0.00)
+Next over: different bowler.
+
+Venue context (Wankhede Stadium, Mumbai):
+Surface: batting-friendly, medium boundaries
+Chase rate: 54% (83 matches)
+Avg 2nd inns: 155
+Death RPO: 10.6
+Dew: High evenings
+
+Win probability for Delhi Capitals?",approved,0.29,"The bowling side is ahead for now, although Delhi Capitals still have a path if they string together a clean passage. The rate is workable rather than easy: 10.38 still leaves little room for a quiet over.",assistant_authored_gold_v1
+gold_071,1304081,2022,15,interesting,fragile_middle_overs,high,10.0,4,"SYSTEM:
+You are an IPL cricket analyst. Estimate the probability (0.0 to 1.0) that the batting team wins the match.
+Write a short public reasoning summary focused only on the most important signals.
+Do not reveal hidden chain-of-thought.
+
+Format exactly as:
+<analysis>
+[2-5 sentence public reasoning summary here]
+</analysis>
+<answer>0.XX</answer>
+
+Answer must be a decimal between 0.0 and 1.0.
+
+USER:
+IPL Match - Kolkata Knight Riders chasing 157 set by Gujarat Titans
+Venue: Dr DY Patil Sports Academy, Mumbai
+Match type: Evening (7:30 PM IST, dew likely)
+Toss: Gujarat Titans chose to bat first
+
+End of Over 15:
+Score: 107/6 (90 balls faced)
+Need: 50 off 30 (RRR: 10.00)
+Current run rate: 7.13
+
+Momentum:
+Last over: 8
+Last 3 overs: 28 runs, 2 wickets
+Last 5 overs: Dot% 43% | Boundary% 20%
+
+Batters:
+AD Russell (chase SR 166, death SR 165)
+Shivam Mavi (chase SR 125, death SR 160) (career data limited)
+Partnership: 10b, 9r
+
+Last over bowler: LH Ferguson (3/4 overs used, death econ 8.90, death wkts/ov 0.53)
+Next over: different bowler.
+
+Venue context (Dr DY Patil Sports Academy, Mumbai):
+Surface: batting-friendly, medium boundaries
+Chase rate: 63% (19 matches)
+Avg 2nd inns: 141
+Death RPO: 8.5
+Dew: High evenings
+
+Win probability for Kolkata Knight Riders?",approved,0.19,This has become a difficult chase for Kolkata Knight Riders and they need the game to swing quickly back their way. The chase is still being pushed by the rate because 10.00 is comfortably above the current 7.13. The resource picture is thin: 4 wickets left means they cannot afford another careless over. The recent wickets are a major problem: 2 down in the last three overs has disrupted the chase badly.,assistant_authored_gold_v1
+gold_072,1304059,2022,16,interesting,death_overs_tension,high,8.0,5,"SYSTEM:
+You are an IPL cricket analyst. Estimate the probability (0.0 to 1.0) that the batting team wins the match.
+Write a short public reasoning summary focused only on the most important signals.
+Do not reveal hidden chain-of-thought.
+
+Format exactly as:
+<analysis>
+[2-5 sentence public reasoning summary here]
+</analysis>
+<answer>0.XX</answer>
+
+Answer must be a decimal between 0.0 and 1.0.
+
+USER:
+IPL Match - Royal Challengers Bengaluru chasing 170 set by Rajasthan Royals
+Venue: Wankhede Stadium, Mumbai
+Match type: Evening (7:30 PM IST, dew likely)
+Toss: Royal Challengers Bengaluru chose to field first
+
+End of Over 16:
+Score: 138/5 (96 balls faced)
+Need: 32 off 24 (RRR: 8.00)
+Current run rate: 8.62
+
+Momentum:
+Last over: 13
+Last 3 overs: 50 runs, 0 wickets
+Last 5 overs: Dot% 20% | Boundary% 33%
+
+Batters:
+KD Karthik (chase SR 125, death SR 143)
+Shahbaz Ahmed (chase SR 125, death SR 160) (career data limited)
+Partnership: 21b, 51r
+
+Last over bowler: M Prasidh Krishna (3/4 overs used, death econ 11.57, death wkts/ov 0.28)
+Next over: different bowler.
+
+Venue context (Wankhede Stadium, Mumbai):
+Surface: batting-friendly, medium boundaries
+Chase rate: 54% (83 matches)
+Avg 2nd inns: 155
+Death RPO: 10.6
+Dew: High evenings
+
+Win probability for Royal Challengers Bengaluru?",approved,0.85,"Royal Challengers Bengaluru have the upper hand now, with the chase leaning their way more often than not. They have at least kept the chase moving, scoring 50 in the last three overs instead of drifting. KD Karthik and Shahbaz Ahmed are settled enough to matter, and that existing stand reduces the risk of the chase restarting from scratch. The equation remains live because 8.00 required is gettable but not forgiving.",assistant_authored_gold_v1
+gold_073,1304050,2022,17,interesting,death_overs_tension,high,9.666666666666668,6,"SYSTEM:
+You are an IPL cricket analyst. Estimate the probability (0.0 to 1.0) that the batting team wins the match.
+Write a short public reasoning summary focused only on the most important signals.
+Do not reveal hidden chain-of-thought.
+
+Format exactly as:
+<analysis>
+[2-5 sentence public reasoning summary here]
+</analysis>
+<answer>0.XX</answer>
+
+Answer must be a decimal between 0.0 and 1.0.
+
+USER:
+IPL Match - Gujarat Titans chasing 159 set by Lucknow Super Giants
+Venue: Wankhede Stadium, Mumbai
+Match type: Evening (7:30 PM IST, dew likely)
+Toss: Gujarat Titans chose to field first
+
+End of Over 17:
+Score: 130/4 (102 balls faced)
+Need: 29 off 18 (RRR: 9.67)
+Current run rate: 7.65
+
+Momentum:
+Last over: 17
+Last 3 overs: 42 runs, 0 wickets
+Last 5 overs: Dot% 23% | Boundary% 23%
+
+Batters:
+DA Miller (chase SR 125, death SR 172)
+R Tewatia (chase SR 125, death SR 160) (career data limited)
+Partnership: 31b, 52r
+
+Last over bowler: Ravi Bishnoi (4/4 overs used, death econ 11.07, death wkts/ov 0.50)
+Next over: different bowler.
+
+Venue context (Wankhede Stadium, Mumbai):
+Surface: batting-friendly, medium boundaries
+Chase rate: 54% (83 matches)
+Avg 2nd inns: 155
+Death RPO: 10.6
+Dew: High evenings
+
+Win probability for Gujarat Titans?",approved,0.84,"Gujarat Titans have the upper hand now, with the chase leaning their way more often than not. They have at least kept the chase moving, scoring 42 in the last three overs instead of drifting. The current partnership is important here because DA Miller and R Tewatia have already built enough of a base to attack from. DA Miller also give them real late-overs hitting if this chase goes deep.",assistant_authored_gold_v1
+gold_074,1304079,2022,15,late_tension,balanced_chase,high,10.6,5,"SYSTEM:
+You are an IPL cricket analyst. Estimate the probability (0.0 to 1.0) that the batting team wins the match.
+Write a short public reasoning summary focused only on the most important signals.
+Do not reveal hidden chain-of-thought.
+
+Format exactly as:
+<analysis>
+[2-5 sentence public reasoning summary here]
+</analysis>
+<answer>0.XX</answer>
+
+Answer must be a decimal between 0.0 and 1.0.
+
+USER:
+IPL Match - Chennai Super Kings chasing 156 set by Mumbai Indians
+Venue: Dr DY Patil Sports Academy, Mumbai
+Match type: Evening (7:30 PM IST, dew likely)
+Toss: Chennai Super Kings chose to field first
+
+End of Over 15:
+Score: 103/5 (90 balls faced)
+Need: 53 off 30 (RRR: 10.60)
+Current run rate: 6.87
+
+Momentum:
+Last over: 5
+Last 3 overs: 24 runs, 2 wickets
+Last 5 overs: Dot% 40% | Boundary% 10%
+
+Batters:
+MS Dhoni (chase SR 130, death SR 161)
+RA Jadeja (chase SR 180, death SR 218)
+Partnership: 1b, 1r
+
+Last over bowler: DR Sams (4/4 overs used, death econ 17.73, death wkts/ov 0.00)
+Next over: different bowler.
+
+Venue context (Dr DY Patil Sports Academy, Mumbai):
+Surface: batting-friendly, medium boundaries
+Chase rate: 63% (19 matches)
+Avg 2nd inns: 141
+Death RPO: 8.5
+Dew: High evenings
+
+Win probability for Chennai Super Kings?",approved,0.23,This has become a difficult chase for Chennai Super Kings and they need the game to swing quickly back their way. They still need a clear gear change: 10.60 required is a fair step above the present 6.87. The recent wickets are a major problem: 2 down in the last three overs has disrupted the chase badly.,assistant_authored_gold_v1
+gold_075,1304093,2022,15,late_tension,resources_but_work,high,9.2,7,"SYSTEM:
+You are an IPL cricket analyst. Estimate the probability (0.0 to 1.0) that the batting team wins the match.
+Write a short public reasoning summary focused only on the most important signals.
+Do not reveal hidden chain-of-thought.
+
+Format exactly as:
+<analysis>
+[2-5 sentence public reasoning summary here]
+</analysis>
+<answer>0.XX</answer>
+
+Answer must be a decimal between 0.0 and 1.0.
+
+USER:
+IPL Match - Kolkata Knight Riders chasing 153 set by Rajasthan Royals
+Venue: Wankhede Stadium, Mumbai
+Match type: Evening (7:30 PM IST, dew likely)
+Toss: Kolkata Knight Riders chose to field first
+
+End of Over 15:
+Score: 107/3 (90 balls faced)
+Need: 46 off 30 (RRR: 9.20)
+Current run rate: 7.13
+
+Momentum:
+Last over: 6
+Last 3 overs: 22 runs, 1 wickets
+Last 5 overs: Dot% 17% | Boundary% 20%
+
+Batters:
+RK Singh (chase SR 125, death SR 160) (career data limited)
+N Rana (chase SR 117, death SR 120)
+Partnership: 13b, 15r
+
+Last over bowler: R Ashwin (4/4 overs used, death econ 9.64, death wkts/ov 1.08)
+Next over: different bowler.
+
+Venue context (Wankhede Stadium, Mumbai):
+Surface: batting-friendly, medium boundaries
+Chase rate: 54% (83 matches)
+Avg 2nd inns: 155
+Death RPO: 10.6
+Dew: High evenings
+
+Win probability for Kolkata Knight Riders?",approved,0.70,"Kolkata Knight Riders are slightly in front, though the next over or two still matter. They have at least kept the chase moving, scoring 22 in the last three overs instead of drifting. 7 wickets in hand gives them room to be proactive rather than desperate. There is a small tactical plus too: R Ashwin has already done a heavy share of the work, so the next over should come from a different option.",assistant_authored_gold_v1
+gold_076,1304075,2022,16,late_tension,balanced_chase,high,13.0,5,"SYSTEM:
+You are an IPL cricket analyst. Estimate the probability (0.0 to 1.0) that the batting team wins the match.
+Write a short public reasoning summary focused only on the most important signals.
+Do not reveal hidden chain-of-thought.
+
+Format exactly as:
+<analysis>
+[2-5 sentence public reasoning summary here]
+</analysis>
+<answer>0.XX</answer>
+
+Answer must be a decimal between 0.0 and 1.0.
+
+USER:
+IPL Match - Gujarat Titans chasing 170 set by Chennai Super Kings
+Venue: Maharashtra Cricket Association Stadium, Pune
+Match type: Evening (7:30 PM IST, dew likely)
+Toss: Gujarat Titans chose to field first
+
+End of Over 16:
+Score: 118/5 (96 balls faced)
+Need: 52 off 24 (RRR: 13.00)
+Current run rate: 7.38
+
+Momentum:
+Last over: 10
+Last 3 overs: 31 runs, 0 wickets
+Last 5 overs: Dot% 30% | Boundary% 23%
+
+Batters:
+DA Miller (chase SR 125, death SR 172)
+Rashid Khan (chase SR 125, death SR 160) (career data limited)
+Partnership: 20b, 31r
+
+Last over bowler: M Theekshana (4/4 overs used, death econ 10.87, death wkts/ov 0.48) (career data limited)
+Next over: different bowler.
+
+Venue context (Maharashtra Cricket Association Stadium, Pune):
+Surface: balanced, medium boundaries
+Chase rate: 61% (23 matches)
+Avg 2nd inns: 152
+Death RPO: 9.8
+Dew: Low evenings
+
+Win probability for Gujarat Titans?",approved,0.12,"This has become a difficult chase for Gujarat Titans and they need the game to swing quickly back their way. Run rate pressure is severe here: they need 13.00, but the innings has only run at 7.38 so far.",assistant_authored_gold_v1
+gold_077,1304087,2022,16,late_tension,death_overs_tension,high,7.5,4,"SYSTEM:
+You are an IPL cricket analyst. Estimate the probability (0.0 to 1.0) that the batting team wins the match.
+Write a short public reasoning summary focused only on the most important signals.
+Do not reveal hidden chain-of-thought.
+
+Format exactly as:
+<analysis>
+[2-5 sentence public reasoning summary here]
+</analysis>
+<answer>0.XX</answer>
+
+Answer must be a decimal between 0.0 and 1.0.
+
+USER:
+IPL Match - Delhi Capitals chasing 147 set by Kolkata Knight Riders
+Venue: Wankhede Stadium, Mumbai
+Match type: Evening (7:30 PM IST, dew likely)
+Toss: Delhi Capitals chose to field first
+
+End of Over 16:
+Score: 117/6 (96 balls faced)
+Need: 30 off 24 (RRR: 7.50)
+Current run rate: 7.31
+
+Momentum:
+Last over: 4
+Last 3 overs: 23 runs, 1 wickets
+Last 5 overs: Dot% 33% | Boundary% 10%
+
+Batters:
+R Powell (chase SR 125, death SR 160) (career data limited)
+SN Thakur (chase SR 125, death SR 160) (career data limited)
+Partnership: 6b, 4r
+
+Last over bowler: SP Narine (4/4 overs used, death econ 6.14, death wkts/ov 0.57)
+Next over: different bowler.
+
+Venue context (Wankhede Stadium, Mumbai):
+Surface: batting-friendly, medium boundaries
+Chase rate: 54% (83 matches)
+Avg 2nd inns: 155
+Death RPO: 10.6
+Dew: High evenings
+
+Win probability for Delhi Capitals?",approved,0.68,"Delhi Capitals have the edge, but this chase is not secure yet. The bowling side now has to move away from SP Narine, which slightly improves the batting side's next-over outlook. The rate is workable rather than easy: 7.50 still leaves little room for a quiet over. The resource picture is thin: 4 wickets left means they cannot afford another careless over.",assistant_authored_gold_v1
+gold_078,1304090,2022,17,late_tension,balanced_chase,high,8.333333333333332,6,"SYSTEM:
+You are an IPL cricket analyst. Estimate the probability (0.0 to 1.0) that the batting team wins the match.
+Write a short public reasoning summary focused only on the most important signals.
+Do not reveal hidden chain-of-thought.
+
+Format exactly as:
+<analysis>
+[2-5 sentence public reasoning summary here]
+</analysis>
+<answer>0.XX</answer>
+
+Answer must be a decimal between 0.0 and 1.0.
+
+USER:
+IPL Match - Mumbai Indians chasing 159 set by Rajasthan Royals
+Venue: Dr DY Patil Sports Academy, Mumbai
+Match type: Evening (7:30 PM IST, dew likely)
+Toss: Mumbai Indians chose to field first
+
+End of Over 17:
+Score: 134/4 (102 balls faced)
+Need: 25 off 18 (RRR: 8.33)
+Current run rate: 7.88
+
+Momentum:
+Last over: 10
+Last 3 overs: 21 runs, 2 wickets
+Last 5 overs: Dot% 37% | Boundary% 13%
+
+Batters:
+KA Pollard (chase SR 173, death SR 200)
+TH David (chase SR 125, death SR 160) (career data limited)
+Partnership: 10b, 12r
+
+Last over bowler: YS Chahal (4/4 overs used, death econ 6.79, death wkts/ov 0.61)
+Next over: different bowler.
+
+Venue context (Dr DY Patil Sports Academy, Mumbai):
+Surface: batting-friendly, medium boundaries
+Chase rate: 63% (19 matches)
+Avg 2nd inns: 141
+Death RPO: 8.5
+Dew: High evenings
+
+Win probability for Mumbai Indians?",approved,0.81,"Mumbai Indians have the upper hand now, with the chase leaning their way more often than not. KA Pollard also give them real late-overs hitting if this chase goes deep. This ground in an evening game usually gives chasers a fair shot, which helps a little around the margins. There is a small tactical plus too: YS Chahal has already done a heavy share of the work, so the next over should come from a different option.",assistant_authored_gold_v1
+gold_079,1304093,2022,17,late_tension,death_overs_tension,high,10.333333333333334,7,"SYSTEM:
+You are an IPL cricket analyst. Estimate the probability (0.0 to 1.0) that the batting team wins the match.
+Write a short public reasoning summary focused only on the most important signals.
+Do not reveal hidden chain-of-thought.
+
+Format exactly as:
+<analysis>
+[2-5 sentence public reasoning summary here]
+</analysis>
+<answer>0.XX</answer>
+
+Answer must be a decimal between 0.0 and 1.0.
+
+USER:
+IPL Match - Kolkata Knight Riders chasing 153 set by Rajasthan Royals
+Venue: Wankhede Stadium, Mumbai
+Match type: Evening (7:30 PM IST, dew likely)
+Toss: Kolkata Knight Riders chose to field first
+
+End of Over 17:
+Score: 122/3 (102 balls faced)
+Need: 31 off 18 (RRR: 10.33)
+Current run rate: 7.18
+
+Momentum:
+Last over: 8
+Last 3 overs: 21 runs, 0 wickets
+Last 5 overs: Dot% 30% | Boundary% 13%
+
+Batters:
+RK Singh (chase SR 125, death SR 160) (career data limited)
+N Rana (chase SR 117, death SR 120)
+Partnership: 25b, 30r
+
+Last over bowler: M Prasidh Krishna (3/4 overs used, death econ 11.57, death wkts/ov 0.28)
+Next over: different bowler.
+
+Venue context (Wankhede Stadium, Mumbai):
+Surface: batting-friendly, medium boundaries
+Chase rate: 54% (83 matches)
+Avg 2nd inns: 155
+Death RPO: 10.6
+Dew: High evenings
+
+Win probability for Kolkata Knight Riders?",approved,0.69,"Kolkata Knight Riders have the edge, but this chase is not secure yet. This ground is capable of quick late scoring, so the death overs are still worth something to the chasing side. They still need a clear gear change: 10.33 required is a fair step above the present 7.18.",assistant_authored_gold_v1
+gold_080,1304069,2022,18,late_tension,balanced_chase,high,14.0,5,"SYSTEM:
+You are an IPL cricket analyst. Estimate the probability (0.0 to 1.0) that the batting team wins the match.
+Write a short public reasoning summary focused only on the most important signals.
+Do not reveal hidden chain-of-thought.
+
+Format exactly as:
+<analysis>
+[2-5 sentence public reasoning summary here]
+</analysis>
+<answer>0.XX</answer>
+
+Answer must be a decimal between 0.0 and 1.0.
+
+USER:
+IPL Match - Mumbai Indians chasing 199 set by Punjab Kings
+Venue: Maharashtra Cricket Association Stadium, Pune
+Match type: Evening (7:30 PM IST, dew likely)
+Toss: Mumbai Indians chose to field first
+
+End of Over 18:
+Score: 171/5 (108 balls faced)
+Need: 28 off 12 (RRR: 14.00)
+Current run rate: 9.50
+
+Momentum:
+Last over: 5
+Last 3 overs: 25 runs, 1 wickets
+Last 5 overs: Dot% 33% | Boundary% 13%
+
+Batters:
+SA Yadav (chase SR 132, death SR 206)
+JD Unadkat (chase SR 125, death SR 160) (career data limited)
+Partnership: 11b, 19r
+
+Last over bowler: Arshdeep Singh (4/4 overs used, death econ 8.22, death wkts/ov 0.84)
+Next over: different bowler.
+
+Venue context (Maharashtra Cricket Association Stadium, Pune):
+Surface: balanced, medium boundaries
+Chase rate: 61% (23 matches)
+Avg 2nd inns: 152
+Death RPO: 9.8
+Dew: Low evenings
+
+Win probability for Mumbai Indians?",approved,0.09,"This is almost gone for Mumbai Indians unless something very unusual happens immediately. Run rate pressure is severe here: they need 14.00, but the innings has only run at 9.50 so far.",assistant_authored_gold_v1
+gold_081,1359493,2023,6,easy,resources_but_work,medium,11.928571428571429,7,"SYSTEM:
+You are an IPL cricket analyst. Estimate the probability (0.0 to 1.0) that the batting team wins the match.
+Write a short public reasoning summary focused only on the most important signals.
+Do not reveal hidden chain-of-thought.
+
+Format exactly as:
+<analysis>
+[2-5 sentence public reasoning summary here]
+</analysis>
+<answer>0.XX</answer>
+
+Answer must be a decimal between 0.0 and 1.0.
+
+USER:
+IPL Match - Kolkata Knight Riders chasing 229 set by Sunrisers Hyderabad
+Venue: Eden Gardens, Kolkata
+Match type: Evening (7:30 PM IST, dew likely)
+Toss: Kolkata Knight Riders chose to field first
+
+End of Over 6:
+Score: 62/3 (36 balls faced)
+Need: 167 off 84 (RRR: 11.93)
+Current run rate: 10.33
+
+Momentum:
+Last over: 28
+Last 3 overs: 46 runs, 2 wickets
+Last 5 overs: Dot% 33% | Boundary% 37%
+
+Batters:
+N Jagadeesan (chase SR 126, death SR 157) (career data limited)
+N Rana (chase SR 123, death SR 143)
+Partnership: 15b, 42r
+
+Last over bowler: Umran Malik (1/4 overs used, death econ 9.79, death wkts/ov 0.95)
+Next over: different bowler.
+
+Venue context (Eden Gardens, Kolkata):
+Surface: balanced, medium boundaries
+Chase rate: 59% (74 matches)
+Avg 2nd inns: 152
+Death RPO: 10.3
+Dew: Medium evenings
+
+Win probability for Kolkata Knight Riders?",approved,0.10,Kolkata Knight Riders are deep in trouble here and only a freak finish really changes the picture now. They still need a clear gear change: 11.93 required is a fair step above the present 10.33. The recent wickets are a major problem: 2 down in the last three overs has disrupted the chase badly.,assistant_authored_gold_v1
+gold_082,1359512,2023,7,easy,balanced_chase,medium,14.46153846153846,8,"SYSTEM:
+You are an IPL cricket analyst. Estimate the probability (0.0 to 1.0) that the batting team wins the match.
+Write a short public reasoning summary focused only on the most important signals.
+Do not reveal hidden chain-of-thought.
+
+Format exactly as:
+<analysis>
+[2-5 sentence public reasoning summary here]
+</analysis>
+<answer>0.XX</answer>
+
+Answer must be a decimal between 0.0 and 1.0.
+
+USER:
+IPL Match - Punjab Kings chasing 258 set by Lucknow Super Giants
+Venue: Punjab Cricket Association IS Bindra Stadium, Mohali, Chandigarh
+Match type: Evening (7:30 PM IST, dew likely)
+Toss: Punjab Kings chose to field first
+
+End of Over 7:
+Score: 70/2 (42 balls faced)
+Need: 188 off 78 (RRR: 14.46)
+Current run rate: 10.00
+
+Momentum:
+Last over: 15
+Last 3 overs: 39 runs, 0 wickets
+Last 5 overs: Dot% 23% | Boundary% 30%
+
+Batters:
+Atharva Taide (chase SR 126, death SR 157) (career data limited)
+Sikandar Raza (chase SR 126, death SR 157) (career data limited)
+Partnership: 20b, 39r
+
+Last over bowler: A Mishra (1/4 overs used, death econ 5.53, death wkts/ov 0.89)
+Next over: different bowler.
+
+Venue context (Punjab Cricket Association IS Bindra Stadium, Mohali, Chandigarh):
+Surface: balanced, medium boundaries
+Chase rate: 58% (55 matches)
+Avg 2nd inns: 157
+Death RPO: 10.4
+Dew: Low evenings
+
+Win probability for Punjab Kings?",approved,0.05,"Punjab Kings are deep in trouble here and only a freak finish really changes the picture now. The equation is the biggest issue: 188 off 78 means 14.46 an over, far above the current 10.00.",assistant_authored_gold_v1
+gold_083,1359538,2023,15,easy,balanced_chase,medium,17.2,8,"SYSTEM:
+You are an IPL cricket analyst. Estimate the probability (0.0 to 1.0) that the batting team wins the match.
+Write a short public reasoning summary focused only on the most important signals.
+Do not reveal hidden chain-of-thought.
+
+Format exactly as:
+<analysis>
+[2-5 sentence public reasoning summary here]
+</analysis>
+<answer>0.XX</answer>
+
+Answer must be a decimal between 0.0 and 1.0.
+
+USER:
+IPL Match - Punjab Kings chasing 214 set by Delhi Capitals
+Venue: Himachal Pradesh Cricket Association Stadium, Dharamsala
+Match type: Evening (7:30 PM IST, dew likely)
+Toss: Punjab Kings chose to field first
+
+End of Over 15:
+Score: 128/2 (90 balls faced)
+Need: 86 off 30 (RRR: 17.20)
+Current run rate: 8.53
+
+Momentum:
+Last over: 11
+Last 3 overs: 28 runs, 0 wickets
+Last 5 overs: Dot% 17% | Boundary% 23%
+
+Batters:
+LS Livingstone (chase SR 126, death SR 157) (career data limited)
+JM Sharma (chase SR 126, death SR 157) (career data limited)
+Partnership: 50b, 78r
+
+Last over bowler: Mukesh Kumar (3/4 overs used, death econ 11.01, death wkts/ov 0.48) (career data limited)
+Next over: different bowler.
+
+Venue context (Himachal Pradesh Cricket Association Stadium, Dharamsala):
+Limited IPL history (8 matches); venue stats are estimated.
+Surface prior: pace-friendly, medium boundaries
+Chase rate: ~54%
+Avg 2nd inns: ~153
+Death RPO: ~10.7
+Dew: Low evenings
+
+Win probability for Punjab Kings?",approved,0.04,"This is almost gone for Punjab Kings unless something very unusual happens immediately. The equation is the biggest issue: 86 off 30 means 17.20 an over, far above the current 8.53.",assistant_authored_gold_v1
+gold_084,1359478,2023,16,easy,near_collapse,medium,28.75,3,"SYSTEM:
+You are an IPL cricket analyst. Estimate the probability (0.0 to 1.0) that the batting team wins the match.
+Write a short public reasoning summary focused only on the most important signals.
+Do not reveal hidden chain-of-thought.
+
+Format exactly as:
+<analysis>
+[2-5 sentence public reasoning summary here]
+</analysis>
+<answer>0.XX</answer>
+
+Answer must be a decimal between 0.0 and 1.0.
+
+USER:
+IPL Match - Sunrisers Hyderabad chasing 204 set by Rajasthan Royals
+Venue: Rajiv Gandhi International Stadium, Uppal, Hyderabad
+Match type: Evening (7:30 PM IST, dew likely)
+Toss: Sunrisers Hyderabad chose to field first
+
+End of Over 16:
+Score: 89/7 (96 balls faced)
+Need: 115 off 24 (RRR: 28.75)
+Current run rate: 5.56
+
+Momentum:
+Last over: 4
+Last 3 overs: 14 runs, 1 wickets
+Last 5 overs: Dot% 37% | Boundary% 7%
+
+Batters:
+Abdul Samad (chase SR 126, death SR 157) (career data limited)
+B Kumar (chase SR 97, death SR 100)
+Partnership: 12b, 8r
+
+Last over bowler: R Ashwin (4/4 overs used, death econ 7.00, death wkts/ov 0.46)
+Next over: different bowler.
+
+Venue context (Rajiv Gandhi International Stadium, Uppal, Hyderabad):
+Surface: balanced, medium boundaries
+Chase rate: 56% (61 matches)
+Avg 2nd inns: 149
+Death RPO: 9.4
+Dew: Low evenings
+
+Win probability for Sunrisers Hyderabad?",approved,0.01,"Sunrisers Hyderabad are deep in trouble here and only a freak finish really changes the picture now. Run rate pressure is severe here: they need 28.75, but the innings has only run at 5.56 so far. The resource picture is thin: 3 wickets left means they cannot afford another careless over.",assistant_authored_gold_v1
+gold_085,1359503,2023,17,easy,cruise_control,medium,4.333333333333333,7,"SYSTEM:
+You are an IPL cricket analyst. Estimate the probability (0.0 to 1.0) that the batting team wins the match.
+Write a short public reasoning summary focused only on the most important signals.
+Do not reveal hidden chain-of-thought.
+
+Format exactly as:
+<analysis>
+[2-5 sentence public reasoning summary here]
+</analysis>
+<answer>0.XX</answer>
+
+Answer must be a decimal between 0.0 and 1.0.
+
+USER:
+IPL Match - Chennai Super Kings chasing 135 set by Sunrisers Hyderabad
+Venue: MA Chidambaram Stadium, Chepauk, Chennai
+Match type: Evening (7:30 PM IST, dew likely)
+Toss: Chennai Super Kings chose to field first
+
+End of Over 17:
+Score: 122/3 (102 balls faced)
+Need: 13 off 18 (RRR: 4.33)
+Current run rate: 7.18
+
+Momentum:
+Last over: 3
+Last 3 overs: 18 runs, 2 wickets
+Last 5 overs: Dot% 33% | Boundary% 10%
+
+Batters:
+DP Conway (chase SR 126, death SR 157) (career data limited)
+NEW_BATTER_PENDING
+Partnership: 0b, 0r
+
+Last over bowler: M Markande (4/4 overs used, death econ 2.00, death wkts/ov 0.00)
+Next over: different bowler.
+
+Venue context (MA Chidambaram Stadium, Chepauk, Chennai):
+Surface: spin-friendly, medium boundaries
+Chase rate: 40% (65 matches)
+Avg 2nd inns: 149
+Death RPO: 9.0
+Dew: Medium evenings
+
+Win probability for Chennai Super Kings?",approved,0.98,"Chennai Super Kings should close this chase out from here unless they create a collapse for themselves. The equation is favorable now because the asking rate of 4.33 is below the current scoring rate of 7.18. The bowling side now has to move away from M Markande, which slightly improves the batting side's next-over outlook.",assistant_authored_gold_v1
+gold_086,1359499,2023,6,interesting,resources_but_work,high,10.785714285714286,8,"SYSTEM:
+You are an IPL cricket analyst. Estimate the probability (0.0 to 1.0) that the batting team wins the match.
+Write a short public reasoning summary focused only on the most important signals.
+Do not reveal hidden chain-of-thought.
+
+Format exactly as:
+<analysis>
+[2-5 sentence public reasoning summary here]
+</analysis>
+<answer>0.XX</answer>
+
+Answer must be a decimal between 0.0 and 1.0.
+
+USER:
+IPL Match - Sunrisers Hyderabad chasing 193 set by Mumbai Indians
+Venue: Rajiv Gandhi International Stadium, Uppal, Hyderabad
+Match type: Evening (7:30 PM IST, dew likely)
+Toss: Sunrisers Hyderabad chose to field first
+
+End of Over 6:
+Score: 42/2 (36 balls faced)
+Need: 151 off 84 (RRR: 10.79)
+Current run rate: 7.00
+
+Momentum:
+Last over: 7
+Last 3 overs: 20 runs, 1 wickets
+Last 5 overs: Dot% 37% | Boundary% 13%
+
+Batters:
+AK Markram (chase SR 126, death SR 157) (career data limited)
+MA Agarwal (chase SR 135, death SR 238)
+Partnership: 14b, 17r
+
+Last over bowler: JP Behrendorff (3/4 overs used, death econ 11.01, death wkts/ov 0.48) (career data limited)
+Next over: different bowler.
+
+Venue context (Rajiv Gandhi International Stadium, Uppal, Hyderabad):
+Surface: balanced, medium boundaries
+Chase rate: 56% (61 matches)
+Avg 2nd inns: 149
+Death RPO: 9.4
+Dew: Low evenings
+
+Win probability for Sunrisers Hyderabad?",approved,0.15,This has become a difficult chase for Sunrisers Hyderabad and they need the game to swing quickly back their way. The chase is still being pushed by the rate because 10.79 is comfortably above the current 7.00.,assistant_authored_gold_v1
+gold_087,1359521,2023,10,interesting,balanced_chase,high,9.7,6,"SYSTEM:
+You are an IPL cricket analyst. Estimate the probability (0.0 to 1.0) that the batting team wins the match.
+Write a short public reasoning summary focused only on the most important signals.
+Do not reveal hidden chain-of-thought.
+
+Format exactly as:
+<analysis>
+[2-5 sentence public reasoning summary here]
+</analysis>
+<answer>0.XX</answer>
+
+Answer must be a decimal between 0.0 and 1.0.
+
+USER:
+IPL Match - Sunrisers Hyderabad chasing 172 set by Kolkata Knight Riders
+Venue: Rajiv Gandhi International Stadium, Uppal, Hyderabad
+Match type: Evening (7:30 PM IST, dew likely)
+Toss: Kolkata Knight Riders chose to bat first
+
+End of Over 10:
+Score: 75/4 (60 balls faced)
+Need: 97 off 60 (RRR: 9.70)
+Current run rate: 7.50
+
+Momentum:
+Last over: 6
+Last 3 overs: 14 runs, 0 wickets
+Last 5 overs: Dot% 40% | Boundary% 10%
+
+Batters:
+H Klaasen (chase SR 126, death SR 157) (career data limited)
+AK Markram (chase SR 126, death SR 157) (career data limited)
+Partnership: 22b, 21r
+
+Last over bowler: SP Narine (1/4 overs used, death econ 6.54, death wkts/ov 0.49)
+Next over: different bowler.
+
+Venue context (Rajiv Gandhi International Stadium, Uppal, Hyderabad):
+Surface: balanced, medium boundaries
+Chase rate: 56% (61 matches)
+Avg 2nd inns: 149
+Death RPO: 9.4
+Dew: Low evenings
+
+Win probability for Sunrisers Hyderabad?",approved,0.25,Sunrisers Hyderabad are under heavy pressure now and need something out of the ordinary from this position. The chase is still being pushed by the rate because 9.70 is comfortably above the current 7.50.,assistant_authored_gold_v1
+gold_088,1359518,2023,11,interesting,balanced_chase,high,8.444444444444445,6,"SYSTEM:
+You are an IPL cricket analyst. Estimate the probability (0.0 to 1.0) that the batting team wins the match.
+Write a short public reasoning summary focused only on the most important signals.
+Do not reveal hidden chain-of-thought.
+
+Format exactly as:
+<analysis>
+[2-5 sentence public reasoning summary here]
+</analysis>
+<answer>0.XX</answer>
+
+Answer must be a decimal between 0.0 and 1.0.
+
+USER:
+IPL Match - Gujarat Titans chasing 131 set by Delhi Capitals
+Venue: Narendra Modi Stadium, Ahmedabad
+Match type: Evening (7:30 PM IST, dew likely)
+Toss: Delhi Capitals chose to bat first
+
+End of Over 11:
+Score: 55/4 (66 balls faced)
+Need: 76 off 54 (RRR: 8.44)
+Current run rate: 5.00
+
+Momentum:
+Last over: 6
+Last 3 overs: 20 runs, 0 wickets
+Last 5 overs: Dot% 50% | Boundary% 3%
+
+Batters:
+A Manohar (chase SR 126, death SR 157) (career data limited)
+HH Pandya (chase SR 124, death SR 165)
+Partnership: 26b, 23r
+
+Last over bowler: I Sharma (3/4 overs used, death econ 9.47, death wkts/ov 0.48)
+Next over: different bowler.
+
+Venue context (Narendra Modi Stadium, Ahmedabad):
+Surface: batting-friendly, large boundaries
+Chase rate: 58% (19 matches)
+Avg 2nd inns: 149
+Death RPO: 11.2
+Dew: Low evenings
+
+Win probability for Gujarat Titans?",approved,0.43,"The bowling side is ahead for now, although Gujarat Titans still have a path if they string together a clean passage. There is still enough batting left to absorb one mistake and keep the chase going. The chase is still being pushed by the rate because 8.44 is comfortably above the current 5.00.",assistant_authored_gold_v1
+gold_089,1359533,2023,11,interesting,fragile_middle_overs,high,8.555555555555555,4,"SYSTEM:
+You are an IPL cricket analyst. Estimate the probability (0.0 to 1.0) that the batting team wins the match.
+Write a short public reasoning summary focused only on the most important signals.
+Do not reveal hidden chain-of-thought.
+
+Format exactly as:
+<analysis>
+[2-5 sentence public reasoning summary here]
+</analysis>
+<answer>0.XX</answer>
+
+Answer must be a decimal between 0.0 and 1.0.
+
+USER:
+IPL Match - Delhi Capitals chasing 168 set by Punjab Kings
+Venue: Arun Jaitley Stadium, Delhi
+Match type: Evening (7:30 PM IST, dew likely)
+Toss: Delhi Capitals chose to field first
+
+End of Over 11:
+Score: 91/6 (66 balls faced)
+Need: 77 off 54 (RRR: 8.56)
+Current run rate: 8.27
+
+Momentum:
+Last over: 3
+Last 3 overs: 11 runs, 4 wickets
+Last 5 overs: Dot% 53% | Boundary% 10%
+
+Batters:
+P Dubey (chase SR 126, death SR 157) (career data limited)
+Aman Hakim Khan (chase SR 126, death SR 157) (career data limited)
+Partnership: 5b, 3r
+
+Last over bowler: Harpreet Brar (4/4 overs used, death econ 11.00, death wkts/ov 0.00)
+Next over: different bowler.
+
+Venue context (Arun Jaitley Stadium, Delhi):
+Surface: batting-friendly, medium boundaries
+Chase rate: 54% (72 matches)
+Avg 2nd inns: 153
+Death RPO: 9.7
+Dew: Low evenings
+
+Win probability for Delhi Capitals?",approved,0.13,"Delhi Capitals are under heavy pressure now and need something out of the ordinary from this position. The innings has taken recent damage with 4 wickets in the last three overs, and that matters more than the raw target. The equation remains live because 8.56 required is gettable but not forgiving.",assistant_authored_gold_v1
+gold_090,1359499,2023,14,interesting,balanced_chase,high,11.0,5,"SYSTEM:
+You are an IPL cricket analyst. Estimate the probability (0.0 to 1.0) that the batting team wins the match.
+Write a short public reasoning summary focused only on the most important signals.
+Do not reveal hidden chain-of-thought.
+
+Format exactly as:
+<analysis>
+[2-5 sentence public reasoning summary here]
+</analysis>
+<answer>0.XX</answer>
+
+Answer must be a decimal between 0.0 and 1.0.
+
+USER:
+IPL Match - Sunrisers Hyderabad chasing 193 set by Mumbai Indians
+Venue: Rajiv Gandhi International Stadium, Uppal, Hyderabad
+Match type: Evening (7:30 PM IST, dew likely)
+Toss: Sunrisers Hyderabad chose to field first
+
+End of Over 14:
+Score: 127/5 (84 balls faced)
+Need: 66 off 36 (RRR: 11.00)
+Current run rate: 9.07
+
+Momentum:
+Last over: 21
+Last 3 overs: 39 runs, 1 wickets
+Last 5 overs: Dot% 20% | Boundary% 27%
+
+Batters:
+MA Agarwal (chase SR 135, death SR 238)
+NEW_BATTER_PENDING
+Partnership: 0b, 0r
+
+Last over bowler: PP Chawla (4/4 overs used, death econ 11.86, death wkts/ov 0.27)
+Next over: different bowler.
+
+Venue context (Rajiv Gandhi International Stadium, Uppal, Hyderabad):
+Surface: balanced, medium boundaries
+Chase rate: 56% (61 matches)
+Avg 2nd inns: 149
+Death RPO: 9.4
+Dew: Low evenings
+
+Win probability for Sunrisers Hyderabad?",approved,0.28,"The bowling side is ahead for now, although Sunrisers Hyderabad still have a path if they string together a clean passage. They still need a clear gear change: 11.00 required is a fair step above the present 9.07. The chase also resets slightly here because the next over starts with a fresh batter at the crease.",assistant_authored_gold_v1
+gold_091,1359508,2023,14,interesting,balanced_chase,high,10.0,6,"SYSTEM:
+You are an IPL cricket analyst. Estimate the probability (0.0 to 1.0) that the batting team wins the match.
+Write a short public reasoning summary focused only on the most important signals.
+Do not reveal hidden chain-of-thought.
+
+Format exactly as:
+<analysis>
+[2-5 sentence public reasoning summary here]
+</analysis>
+<answer>0.XX</answer>
+
+Answer must be a decimal between 0.0 and 1.0.
+
+USER:
+IPL Match - Sunrisers Hyderabad chasing 145 set by Delhi Capitals
+Venue: Rajiv Gandhi International Stadium, Uppal, Hyderabad
+Match type: Evening (7:30 PM IST, dew likely)
+Toss: Delhi Capitals chose to bat first
+
+End of Over 14:
+Score: 85/4 (84 balls faced)
+Need: 60 off 36 (RRR: 10.00)
+Current run rate: 6.07
+
+Momentum:
+Last over: 8
+Last 3 overs: 18 runs, 3 wickets
+Last 5 overs: Dot% 27% | Boundary% 7%
+
+Batters:
+AK Markram (chase SR 126, death SR 157) (career data limited)
+H Klaasen (chase SR 126, death SR 157) (career data limited)
+Partnership: 3b, 6r
+
+Last over bowler: Kuldeep Yadav (3/4 overs used, death econ 8.96, death wkts/ov 0.51)
+Next over: different bowler.
+
+Venue context (Rajiv Gandhi International Stadium, Uppal, Hyderabad):
+Surface: balanced, medium boundaries
+Chase rate: 56% (61 matches)
+Avg 2nd inns: 149
+Death RPO: 9.4
+Dew: Low evenings
+
+Win probability for Sunrisers Hyderabad?",approved,0.27,"This has become a difficult chase for Sunrisers Hyderabad and they need the game to swing quickly back their way. The chase is still being pushed by the rate because 10.00 is comfortably above the current 6.07. The innings has taken recent damage with 3 wickets in the last three overs, and that matters more than the raw target.",assistant_authored_gold_v1
+gold_092,1359518,2023,14,interesting,balanced_chase,high,10.0,6,"SYSTEM:
+You are an IPL cricket analyst. Estimate the probability (0.0 to 1.0) that the batting team wins the match.
+Write a short public reasoning summary focused only on the most important signals.
+Do not reveal hidden chain-of-thought.
+
+Format exactly as:
+<analysis>
+[2-5 sentence public reasoning summary here]
+</analysis>
+<answer>0.XX</answer>
+
+Answer must be a decimal between 0.0 and 1.0.
+
+USER:
+IPL Match - Gujarat Titans chasing 131 set by Delhi Capitals
+Venue: Narendra Modi Stadium, Ahmedabad
+Match type: Evening (7:30 PM IST, dew likely)
+Toss: Delhi Capitals chose to bat first
+
+End of Over 14:
+Score: 71/4 (84 balls faced)
+Need: 60 off 36 (RRR: 10.00)
+Current run rate: 5.07
+
+Momentum:
+Last over: 8
+Last 3 overs: 16 runs, 0 wickets
+Last 5 overs: Dot% 33% | Boundary% 7%
+
+Batters:
+HH Pandya (chase SR 124, death SR 165)
+A Manohar (chase SR 126, death SR 157) (career data limited)
+Partnership: 44b, 39r
+
+Last over bowler: KK Ahmed (3/4 overs used, death econ 10.38, death wkts/ov 0.47)
+Next over: different bowler.
+
+Venue context (Narendra Modi Stadium, Ahmedabad):
+Surface: batting-friendly, large boundaries
+Chase rate: 58% (19 matches)
+Avg 2nd inns: 149
+Death RPO: 11.2
+Dew: Low evenings
+
+Win probability for Gujarat Titans?",approved,0.37,"Gujarat Titans are behind the game now, but the chase is still recoverable with one strong burst. Run rate pressure is severe here: they need 10.00, but the innings has only run at 5.07 so far. HH Pandya and A Manohar are settled enough to matter, and that existing stand reduces the risk of the chase restarting from scratch. There is still enough batting left to absorb one mistake and keep the chase going.",assistant_authored_gold_v1
+gold_093,1359495,2023,17,interesting,death_overs_tension,high,7.666666666666666,4,"SYSTEM:
+You are an IPL cricket analyst. Estimate the probability (0.0 to 1.0) that the batting team wins the match.
+Write a short public reasoning summary focused only on the most important signals.
+Do not reveal hidden chain-of-thought.
+
+Format exactly as:
+<analysis>
+[2-5 sentence public reasoning summary here]
+</analysis>
+<answer>0.XX</answer>
+
+Answer must be a decimal between 0.0 and 1.0.
+
+USER:
+IPL Match - Punjab Kings chasing 160 set by Lucknow Super Giants
+Venue: Bharat Ratna Shri Atal Bihari Vajpayee Ekana Cricket Stadium, Lucknow
+Match type: Evening (7:30 PM IST, dew likely)
+Toss: Punjab Kings chose to field first
+
+End of Over 17:
+Score: 137/6 (102 balls faced)
+Need: 23 off 18 (RRR: 7.67)
+Current run rate: 8.06
+
+Momentum:
+Last over: 9
+Last 3 overs: 29 runs, 2 wickets
+Last 5 overs: Dot% 33% | Boundary% 27%
+
+Batters:
+M Shahrukh Khan (chase SR 126, death SR 157) (career data limited)
+Sikandar Raza (chase SR 126, death SR 157) (career data limited)
+Partnership: 7b, 15r
+
+Last over bowler: Avesh Khan (3/4 overs used, death econ 9.68, death wkts/ov 0.36)
+Next over: different bowler.
+
+Venue context (Bharat Ratna Shri Atal Bihari Vajpayee Ekana Cricket Stadium, Lucknow):
+Limited IPL history (0 matches); venue stats are estimated.
+Surface prior: batting-friendly, medium boundaries
+Chase rate: ~56%
+Avg 2nd inns: ~146
+Death RPO: ~9.8
+Dew: Medium evenings
+
+Win probability for Punjab Kings?",approved,0.75,"Punjab Kings are slightly in front, though the next over or two still matter. The equation remains live because 7.67 required is gettable but not forgiving.",assistant_authored_gold_v1
+gold_094,1359495,2023,15,late_tension,balanced_chase,high,9.0,5,"SYSTEM:
+You are an IPL cricket analyst. Estimate the probability (0.0 to 1.0) that the batting team wins the match.
+Write a short public reasoning summary focused only on the most important signals.
+Do not reveal hidden chain-of-thought.
+
+Format exactly as:
+<analysis>
+[2-5 sentence public reasoning summary here]
+</analysis>
+<answer>0.XX</answer>
+
+Answer must be a decimal between 0.0 and 1.0.
+
+USER:
+IPL Match - Punjab Kings chasing 160 set by Lucknow Super Giants
+Venue: Bharat Ratna Shri Atal Bihari Vajpayee Ekana Cricket Stadium, Lucknow
+Match type: Evening (7:30 PM IST, dew likely)
+Toss: Punjab Kings chose to field first
+
+End of Over 15:
+Score: 115/5 (90 balls faced)
+Need: 45 off 30 (RRR: 9.00)
+Current run rate: 7.67
+
+Momentum:
+Last over: 7
+Last 3 overs: 33 runs, 1 wickets
+Last 5 overs: Dot% 40% | Boundary% 23%
+
+Batters:
+JM Sharma (chase SR 126, death SR 157) (career data limited)
+Sikandar Raza (chase SR 126, death SR 157) (career data limited)
+Partnership: 3b, 3r
+
+Last over bowler: Ravi Bishnoi (1/4 overs used, death econ 10.13, death wkts/ov 0.72)
+Next over: different bowler.
+
+Venue context (Bharat Ratna Shri Atal Bihari Vajpayee Ekana Cricket Stadium, Lucknow):
+Limited IPL history (0 matches); venue stats are estimated.
+Surface prior: batting-friendly, medium boundaries
+Chase rate: ~56%
+Avg 2nd inns: ~146
+Death RPO: ~9.8
+Dew: Medium evenings
+
+Win probability for Punjab Kings?",approved,0.61,Punjab Kings are in a live chase here rather than a comfortable or desperate one. Recent scoring gives them a pulse here: 33 off the last three overs has stopped the equation from running away. The equation remains live because 9.00 required is gettable but not forgiving.,assistant_authored_gold_v1
+gold_095,1359497,2023,15,late_tension,balanced_chase,high,12.8,5,"SYSTEM:
+You are an IPL cricket analyst. Estimate the probability (0.0 to 1.0) that the batting team wins the match.
+Write a short public reasoning summary focused only on the most important signals.
+Do not reveal hidden chain-of-thought.
+
+Format exactly as:
+<analysis>
+[2-5 sentence public reasoning summary here]
+</analysis>
+<answer>0.XX</answer>
+
+Answer must be a decimal between 0.0 and 1.0.
+
+USER:
+IPL Match - Rajasthan Royals chasing 178 set by Gujarat Titans
+Venue: Narendra Modi Stadium, Ahmedabad
+Match type: Evening (7:30 PM IST, dew likely)
+Toss: Rajasthan Royals chose to field first
+
+End of Over 15:
+Score: 114/5 (90 balls faced)
+Need: 64 off 30 (RRR: 12.80)
+Current run rate: 7.60
+
+Momentum:
+Last over: 13
+Last 3 overs: 48 runs, 1 wickets
+Last 5 overs: Dot% 20% | Boundary% 27%
+
+Batters:
+SO Hetmyer (chase SR 126, death SR 157) (career data limited)
+NEW_BATTER_PENDING
+Partnership: 0b, 0r
+
+Last over bowler: Noor Ahmad (1/4 overs used, death econ 11.01, death wkts/ov 0.48) (career data limited)
+Next over: different bowler.
+
+Venue context (Narendra Modi Stadium, Ahmedabad):
+Surface: batting-friendly, large boundaries
+Chase rate: 58% (19 matches)
+Avg 2nd inns: 149
+Death RPO: 11.2
+Dew: Low evenings
+
+Win probability for Rajasthan Royals?",approved,0.13,"This has become a difficult chase for Rajasthan Royals and they need the game to swing quickly back their way. Run rate pressure is severe here: they need 12.80, but the innings has only run at 7.60 so far. The chase also resets slightly here because the next over starts with a fresh batter at the crease.",assistant_authored_gold_v1
+gold_096,1359526,2023,15,late_tension,balanced_chase,high,13.8,8,"SYSTEM:
+You are an IPL cricket analyst. Estimate the probability (0.0 to 1.0) that the batting team wins the match.
+Write a short public reasoning summary focused only on the most important signals.
+Do not reveal hidden chain-of-thought.
+
+Format exactly as:
+<analysis>
+[2-5 sentence public reasoning summary here]
+</analysis>
+<answer>0.XX</answer>
+
+Answer must be a decimal between 0.0 and 1.0.
+
+USER:
+IPL Match - Sunrisers Hyderabad chasing 215 set by Rajasthan Royals
+Venue: Sawai Mansingh Stadium, Jaipur
+Match type: Evening (7:30 PM IST, dew likely)
+Toss: Rajasthan Royals chose to bat first
+
+End of Over 15:
+Score: 146/2 (90 balls faced)
+Need: 69 off 30 (RRR: 13.80)
+Current run rate: 9.73
+
+Momentum:
+Last over: 10
+Last 3 overs: 39 runs, 1 wickets
+Last 5 overs: Dot% 20% | Boundary% 23%
+
+Batters:
+RA Tripathi (chase SR 152, death SR 200)
+H Klaasen (chase SR 126, death SR 157) (career data limited)
+Partnership: 14b, 30r
+
+Last over bowler: K Yadav (3/4 overs used, death econ 11.01, death wkts/ov 0.48) (career data limited)
+Next over: different bowler.
+
+Venue context (Sawai Mansingh Stadium, Jaipur):
+Surface: batting-friendly, medium boundaries
+Chase rate: 70% (46 matches)
+Avg 2nd inns: 148
+Death RPO: 9.6
+Dew: Low evenings
+
+Win probability for Sunrisers Hyderabad?",approved,0.30,"Sunrisers Hyderabad are behind the game now, but the chase is still recoverable with one strong burst. Run rate pressure is severe here: they need 13.80, but the innings has only run at 9.73 so far.",assistant_authored_gold_v1
+gold_097,1359542,2023,15,late_tension,balanced_chase,high,12.6,6,"SYSTEM:
+You are an IPL cricket analyst. Estimate the probability (0.0 to 1.0) that the batting team wins the match.
+Write a short public reasoning summary focused only on the most important signals.
+Do not reveal hidden chain-of-thought.
+
+Format exactly as:
+<analysis>
+[2-5 sentence public reasoning summary here]
+</analysis>
+<answer>0.XX</answer>
+
+Answer must be a decimal between 0.0 and 1.0.
+
+USER:
+IPL Match - Kolkata Knight Riders chasing 177 set by Lucknow Super Giants
+Venue: Eden Gardens, Kolkata
+Match type: Evening (7:30 PM IST, dew likely)
+Toss: Kolkata Knight Riders chose to field first
+
+End of Over 15:
+Score: 114/4 (90 balls faced)
+Need: 63 off 30 (RRR: 12.60)
+Current run rate: 7.60
+
+Momentum:
+Last over: 6
+Last 3 overs: 20 runs, 1 wickets
+Last 5 overs: Dot% 30% | Boundary% 7%
+
+Batters:
+AD Russell (chase SR 176, death SR 158)
+RK Singh (chase SR 126, death SR 157) (career data limited)
+Partnership: 8b, 6r
+
+Last over bowler: Naveen-ul-Haq (2/4 overs used, death econ 11.01, death wkts/ov 0.48) (career data limited)
+Next over: different bowler.
+
+Venue context (Eden Gardens, Kolkata):
+Surface: balanced, medium boundaries
+Chase rate: 59% (74 matches)
+Avg 2nd inns: 152
+Death RPO: 10.3
+Dew: Medium evenings
+
+Win probability for Kolkata Knight Riders?",approved,0.13,"Kolkata Knight Riders are under heavy pressure now and need something out of the ordinary from this position. The equation is the biggest issue: 63 off 30 means 12.60 an over, far above the current 7.60.",assistant_authored_gold_v1
+gold_098,1359544,2023,15,late_tension,resources_but_work,high,10.0,8,"SYSTEM:
+You are an IPL cricket analyst. Estimate the probability (0.0 to 1.0) that the batting team wins the match.
+Write a short public reasoning summary focused only on the most important signals.
+Do not reveal hidden chain-of-thought.
+
+Format exactly as:
+<analysis>
+[2-5 sentence public reasoning summary here]
+</analysis>
+<answer>0.XX</answer>
+
+Answer must be a decimal between 0.0 and 1.0.
+
+USER:
+IPL Match - Gujarat Titans chasing 198 set by Royal Challengers Bengaluru
+Venue: M Chinnaswamy Stadium, Bengaluru
+Match type: Evening (7:30 PM IST, dew likely)
+Toss: Gujarat Titans chose to field first
+
+End of Over 15:
+Score: 148/2 (90 balls faced)
+Need: 50 off 30 (RRR: 10.00)
+Current run rate: 9.87
+
+Momentum:
+Last over: 14
+Last 3 overs: 39 runs, 1 wickets
+Last 5 overs: Dot% 20% | Boundary% 27%
+
+Batters:
+Shubman Gill (chase SR 135, death SR 115)
+MD Shanaka (chase SR 126, death SR 157) (career data limited)
+Partnership: 1b, 0r
+
+Last over bowler: Vijaykumar Vyshak (3/4 overs used, death econ 11.01, death wkts/ov 0.48) (career data limited)
+Next over: different bowler.
+
+Venue context (M Chinnaswamy Stadium, Bengaluru):
+Surface: batting-friendly, short boundaries
+Chase rate: 57% (72 matches)
+Avg 2nd inns: 157
+Death RPO: 11.2
+Dew: Medium evenings
+
+Win probability for Gujarat Titans?",approved,0.85,"Gujarat Titans have the upper hand now, with the chase leaning their way more often than not. Having 8 wickets in reserve keeps plenty of scoring options alive from here. They have at least kept the chase moving, scoring 39 in the last three overs instead of drifting. This ground is capable of quick late scoring, so the death overs are still worth something to the chasing side.",assistant_authored_gold_v1
+gold_099,1359498,2023,17,late_tension,death_overs_tension,high,11.666666666666666,5,"SYSTEM:
+You are an IPL cricket analyst. Estimate the probability (0.0 to 1.0) that the batting team wins the match.
+Write a short public reasoning summary focused only on the most important signals.
+Do not reveal hidden chain-of-thought.
+
+Format exactly as:
+<analysis>
+[2-5 sentence public reasoning summary here]
+</analysis>
+<answer>0.XX</answer>
+
+Answer must be a decimal between 0.0 and 1.0.
+
+USER:
+IPL Match - Royal Challengers Bengaluru chasing 227 set by Chennai Super Kings
+Venue: M Chinnaswamy Stadium, Bengaluru
+Match type: Evening (7:30 PM IST, dew likely)
+Toss: Royal Challengers Bengaluru chose to field first
+
+End of Over 17:
+Score: 192/5 (102 balls faced)
+Need: 35 off 18 (RRR: 11.67)
+Current run rate: 11.29
+
+Momentum:
+Last over: 11
+Last 3 overs: 33 runs, 1 wickets
+Last 5 overs: Dot% 27% | Boundary% 20%
+
+Batters:
+Shahbaz Ahmed (chase SR 126, death SR 157) (career data limited)
+SS Prabhudessai (chase SR 126, death SR 157) (career data limited)
+Partnership: 1b, 1r
+
+Last over bowler: TU Deshpande (3/4 overs used, death econ 22.89, death wkts/ov 0.13)
+Next over: different bowler.
+
+Venue context (M Chinnaswamy Stadium, Bengaluru):
+Surface: batting-friendly, short boundaries
+Chase rate: 57% (72 matches)
+Avg 2nd inns: 157
+Death RPO: 11.2
+Dew: Medium evenings
+
+Win probability for Royal Challengers Bengaluru?",approved,0.31,"The bowling side is ahead for now, although Royal Challengers Bengaluru still have a path if they string together a clean passage. The equation remains live because 11.67 required is gettable but not forgiving.",assistant_authored_gold_v1
+gold_100,1359518,2023,17,late_tension,death_overs_tension,high,12.333333333333332,6,"SYSTEM:
+You are an IPL cricket analyst. Estimate the probability (0.0 to 1.0) that the batting team wins the match.
+Write a short public reasoning summary focused only on the most important signals.
+Do not reveal hidden chain-of-thought.
+
+Format exactly as:
+<analysis>
+[2-5 sentence public reasoning summary here]
+</analysis>
+<answer>0.XX</answer>
+
+Answer must be a decimal between 0.0 and 1.0.
+
+USER:
+IPL Match - Gujarat Titans chasing 131 set by Delhi Capitals
+Venue: Narendra Modi Stadium, Ahmedabad
+Match type: Evening (7:30 PM IST, dew likely)
+Toss: Delhi Capitals chose to bat first
+
+End of Over 17:
+Score: 94/4 (102 balls faced)
+Need: 37 off 18 (RRR: 12.33)
+Current run rate: 5.53
+
+Momentum:
+Last over: 5
+Last 3 overs: 23 runs, 0 wickets
+Last 5 overs: Dot% 20% | Boundary% 10%
+
+Batters:
+A Manohar (chase SR 126, death SR 157) (career data limited)
+HH Pandya (chase SR 124, death SR 165)
+Partnership: 62b, 62r
+
+Last over bowler: Kuldeep Yadav (4/4 overs used, death econ 8.96, death wkts/ov 0.51)
+Next over: different bowler.
+
+Venue context (Narendra Modi Stadium, Ahmedabad):
+Surface: batting-friendly, large boundaries
+Chase rate: 58% (19 matches)
+Avg 2nd inns: 149
+Death RPO: 11.2
+Dew: Low evenings
+
+Win probability for Gujarat Titans?",approved,0.24,"This has become a difficult chase for Gujarat Titans and they need the game to swing quickly back their way. Run rate pressure is severe here: they need 12.33, but the innings has only run at 5.53 so far.",assistant_authored_gold_v1

@@ -88,8 +88,8 @@ def build_parser() -> argparse.ArgumentParser:
     )
     sft_run_parser.add_argument(
         "--dataset-variant",
-        default="first_pass_all",
-        choices=["first_pass_all", "reviewed_only", "review_pack", "draft"],
+        default="gold_v1",
+        choices=["gold_v1", "first_pass_all", "reviewed_only", "review_pack", "draft"],
         help="Which SFT dataset variant to train on.",
     )
     grpo_run_parser = subparsers.add_parser(
@@ -366,9 +366,11 @@ def cmd_build_sft_artifacts() -> int:
     print("-", _relative_to_root(artifacts.candidate_csv_path, paths.root))
     print("-", _relative_to_root(artifacts.draft_jsonl_path, paths.root))
     print("-", _relative_to_root(artifacts.review_pack_csv_path, paths.root))
+    print("-", _relative_to_root(artifacts.gold_review_pack_csv_path, paths.root))
     print("-", _relative_to_root(artifacts.reviewed_jsonl_path, paths.root))
     print("-", _relative_to_root(artifacts.reviewed_only_jsonl_path, paths.root))
     print("-", _relative_to_root(artifacts.first_pass_all_jsonl_path, paths.root))
+    print("-", _relative_to_root(artifacts.gold_v1_jsonl_path, paths.root))
     print("-", _relative_to_root(artifacts.warmup_training_jsonl_path, paths.root))
     return 0
 
@@ -377,11 +379,6 @@ def cmd_run_sft_warmup(model: str, output_dir: str, dataset_variant: str, dry_ru
     from ipl_reasoner.sft_train import run_sft_warmup
 
     paths = ProjectPaths.discover()
-    warmup_path = paths.processed / "sft_warmup_training.jsonl"
-    if not warmup_path.exists():
-        print("Missing SFT warmup dataset. Run `build-sft-artifacts` first.")
-        return 1
-
     target_dir = Path(output_dir) if output_dir else None
     try:
         manifest_path = run_sft_warmup(

@@ -41,8 +41,8 @@ def build_parser() -> argparse.ArgumentParser:
     )
     parser.add_argument(
         "--sft-dataset-variant",
-        default="first_pass_all",
-        choices=["first_pass_all", "reviewed_only", "review_pack", "draft"],
+        default="gold_v1",
+        choices=["gold_v1", "first_pass_all", "reviewed_only", "review_pack", "draft"],
         help="Which SFT dataset variant to train on.",
     )
     parser.add_argument(

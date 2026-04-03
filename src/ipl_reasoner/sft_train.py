@@ -20,8 +20,8 @@ class SFTWarmupConfig:
     num_examples: int
     reviewed_examples: int
     draft_examples: int
-    dataset_variant: str = "first_pass_all"
-    num_train_epochs: int = 2
+    dataset_variant: str = "gold_v1"
+    num_train_epochs: int = 3
     per_device_train_batch_size: int = 4
     learning_rate: float = 1e-4
     max_seq_length: int = 1024
@@ -34,13 +34,14 @@ def write_sft_warmup_manifest(
     paths: ProjectPaths,
     model_name: str = DEFAULT_SFT_MODEL,
     output_dir: Path | None = None,
-    dataset_variant: str = "first_pass_all",
+    dataset_variant: str = "gold_v1",
 ) -> Path:
     paths.ensure()
     output_dir = output_dir or (paths.artifacts / "sft" / DEFAULT_SFT_OUTPUT_DIRNAME)
     output_dir.mkdir(parents=True, exist_ok=True)
 
     dataset_variants = {
+        "gold_v1": paths.processed / "sft_warmup_gold_v1.jsonl",
         "first_pass_all": paths.processed / "sft_warmup_training.jsonl",
         "reviewed_only": paths.processed / "sft_warmup_reviewed_only.jsonl",
         "review_pack": paths.processed / "sft_warmup_reviewed.jsonl",
@@ -60,7 +61,7 @@ def write_sft_warmup_manifest(
             total_examples += 1
             payload = json.loads(line)
             source = payload.get("metadata", {}).get("response_source")
-            if source in {"first_pass_reviewed", "first_pass_all", "reviewed_only"}:
+            if source in {"first_pass_reviewed", "first_pass_all", "reviewed_only", "gold_v1"}:
                 reviewed_examples += 1
 
     config = SFTWarmupConfig(
@@ -82,7 +83,7 @@ def run_sft_warmup(
     paths: ProjectPaths,
     model_name: str = DEFAULT_SFT_MODEL,
     output_dir: Path | None = None,
-    dataset_variant: str = "first_pass_all",
+    dataset_variant: str = "gold_v1",
     dry_run: bool = False,
 ) -> Path:
     manifest_path = write_sft_warmup_manifest(
