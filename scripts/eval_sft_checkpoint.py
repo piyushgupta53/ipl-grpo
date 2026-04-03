@@ -12,6 +12,8 @@ import torch
 from peft import AutoPeftModelForCausalLM
 from transformers import AutoTokenizer
 
+from ipl_reasoner.prompt_format import ensure_assistant_turn
+
 
 def build_parser() -> argparse.ArgumentParser:
     parser = argparse.ArgumentParser(
@@ -48,7 +50,7 @@ def main() -> int:
     sanity_failures = 0
 
     for idx, row in enumerate(sampled, start=1):
-        prompt = str(row["prompt"])
+        prompt = ensure_assistant_turn(str(row["prompt"]))
         generated = generate(model, tokenizer, prompt, args.max_new_tokens)
         probability = extract_probability(generated)
         format_ok = bool(re.search(r"<analysis>.*?</analysis>\s*<answer>[\d.]+</answer>", generated, re.DOTALL))

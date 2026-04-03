@@ -11,9 +11,9 @@ from pathlib import Path
 import pandas as pd
 
 from ipl_reasoner.paths import ProjectPaths
+from ipl_reasoner.prompt_format import ensure_assistant_turn
 
 PREFERRED_SFT_SEASONS = {"2019", "2020", "2021", "2022", "2023"}
-SFT_PROMPT_SUFFIX = "\n"
 
 
 @dataclass(frozen=True)
@@ -1088,7 +1088,7 @@ def _write_gold_jsonl(gold_df: pd.DataFrame, output_path: Path) -> None:
 
 
 def _sft_prompt_text(prompt: str) -> str:
-    return prompt.rstrip() + SFT_PROMPT_SUFFIX
+    return ensure_assistant_turn(prompt)
 
 
 def _sft_completion_text(completion: str) -> str:

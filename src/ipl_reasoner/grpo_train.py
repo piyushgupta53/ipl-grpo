@@ -11,6 +11,7 @@ from typing import Any
 import pandas as pd
 
 from ipl_reasoner.paths import ProjectPaths
+from ipl_reasoner.prompt_format import ensure_assistant_turn
 
 DEFAULT_GRPO_MODEL = "Qwen/Qwen2.5-1.5B-Instruct"
 DEFAULT_GRPO_OUTPUT_DIRNAME = "grpo_run"
@@ -306,6 +307,8 @@ def _write_jsonl(df: pd.DataFrame, output_path: Path) -> None:
     records = df.to_dict("records")
     with output_path.open("w", encoding="utf-8") as f:
         for record in records:
+            if "prompt" in record:
+                record = {**record, "prompt": ensure_assistant_turn(str(record["prompt"]))}
             f.write(json.dumps(record, ensure_ascii=True) + "\n")
 
 
