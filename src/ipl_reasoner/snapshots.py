@@ -143,6 +143,7 @@ def _build_snapshots(matches: pd.DataFrame, deliveries: pd.DataFrame) -> pd.Data
                 .drop_duplicates()
                 .shape[0]
             )
+            known_bowler_state = _known_bowler_state(state)
 
             last_wicket_over = _last_wicket_over(state)
             partnership_runs, partnership_balls = _partnership_metrics(state)
@@ -178,6 +179,9 @@ def _build_snapshots(matches: pd.DataFrame, deliveries: pd.DataFrame) -> pd.Data
                     "batter_b": batter_b,
                     "last_over_bowler": last_over_bowler,
                     "last_over_bowler_overs_used": last_over_bowler_overs_used,
+                    "known_bowler_state_json": json.dumps(known_bowler_state, ensure_ascii=True),
+                    "known_bowlers_used_count": len(known_bowler_state),
+                    "known_bowling_overs_left": int(sum(item["remaining_overs"] for item in known_bowler_state)),
                     "last_wicket_over": last_wicket_over,
                     "partnership_balls": partnership_balls,
                     "partnership_runs": partnership_runs,
@@ -244,6 +248,31 @@ def _partnership_metrics(state: pd.DataFrame) -> tuple[int, int]:
     last_wicket_index = wicket_rows.index.max()
     after_wicket = state.loc[state.index > last_wicket_index]
     return int(after_wicket["total_runs"].sum()), int(after_wicket["legal_ball"].sum())
+
+
+def _known_bowler_state(state: pd.DataFrame) -> list[dict[str, object]]:
+    over_usage = (
+        state.loc[state["bowler"].notna(), ["bowler", "over"]]
+        .drop_duplicates()
+        .groupby("bowler")
+        .size()
+        .rename("overs_used")
+        .reset_index()
+    )
+
+    bowlers: list[dict[str, object]] = []
+    for row in over_usage.itertuples(index=False):
+        overs_used = int(row.overs_used)
+        bowlers.append(
+            {
+                "bowler": str(row.bowler).strip(),
+                "overs_used": overs_used,
+                "remaining_overs": max(0, 4 - overs_used),
+            }
+        )
+
+    bowlers.sort(key=lambda item: (-item["remaining_overs"], item["bowler"]))
+    return bowlers
 
 
 def _batters_at_over_break(over_rows: pd.DataFrame, next_over_row: pd.Series | None) -> tuple[str, str]:

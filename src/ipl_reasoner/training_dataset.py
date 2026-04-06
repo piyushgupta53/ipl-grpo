@@ -2,6 +2,7 @@
 
 from __future__ import annotations
 
+import json
 import random
 from collections import defaultdict, deque
 from dataclasses import dataclass
@@ -13,7 +14,7 @@ import pandas as pd
 from ipl_reasoner.constants import TEST_SEASONS, TRAIN_SEASONS, VALIDATION_SEASONS, VENUE_SIMILAR_TO
 from ipl_reasoner.paths import ProjectPaths
 
-PROMPT_VERSION = "prompt_v2"
+PROMPT_VERSION = "prompt_v3"
 EVENING_MATCH_TYPE = "Evening (7:30 PM IST, dew likely)"
 
 
@@ -76,6 +77,13 @@ def build_training_dataset(
             league_lookup,
             role="bowling",
         )
+        known_bowler_state = _load_known_bowler_state(getattr(row, "known_bowler_state_json", ""))
+        bowling_resources = _build_known_bowling_resources(
+            known_bowler_state=known_bowler_state,
+            season=season,
+            player_lookup=player_lookup,
+            league_lookup=league_lookup,
+        )
 
         venue_block = _build_venue_context_block(
             venue_code=row.venue_code,
@@ -124,6 +132,8 @@ def build_training_dataset(
             f"Partnership: {int(row.partnership_balls)}b, {int(row.partnership_runs)}r\n\n"
             f"Last over bowler: {row.last_over_bowler} ({int(row.last_over_bowler_overs_used)}/4 overs used, "
             f"death econ {float(bowler_stats['death_economy']):.2f}, death wkts/ov {float(bowler_stats['death_wickets_per_over']):.2f}){bowler_suffix}\n"
+            "Known bowling resources (among bowlers already used):\n"
+            f"{_format_known_bowling_resources_block(bowling_resources)}\n"
             "Next over: different bowler.\n\n"
             f"Venue context ({row.venue}):\n"
             f"{venue_block}\n\n"
@@ -155,6 +165,16 @@ def build_training_dataset(
                 "batter_a": row.batter_a,
                 "batter_b": row.batter_b,
                 "last_over_bowler": row.last_over_bowler,
+                "known_bowlers_used_count": int(bowling_resources["known_bowlers_used_count"]),
+                "known_bowling_overs_left": int(bowling_resources["known_bowling_overs_left"]),
+                "known_best_death_bowler": bowling_resources["best_bowler_name"],
+                "known_best_death_bowler_remaining_overs": int(bowling_resources["best_bowler_remaining_overs"]),
+                "known_best_death_bowler_death_economy": float(bowling_resources["best_bowler_death_economy"]),
+                "known_best_death_bowler_death_wickets_per_over": float(
+                    bowling_resources["best_bowler_death_wickets_per_over"]
+                ),
+                "known_death_overs_left_top2": int(bowling_resources["top2_remaining_overs"]),
+                "known_death_resource_score": float(bowling_resources["known_death_resource_score"]),
                 "split": row.split,
                 "prompt_version": PROMPT_VERSION,
             }
@@ -218,6 +238,145 @@ def _format_batter_line(player_name: str, stats: dict[str, object] | None) -> st
     assert stats is not None
     suffix = " (career data limited)" if stats["is_estimated"] else ""
     return f"{player_name} (chase SR {float(stats['chase_sr']):.0f}, death SR {float(stats['death_sr']):.0f}){suffix}"
+
+
+def _load_known_bowler_state(value: object) -> list[dict[str, object]]:
+    if value is None or (isinstance(value, float) and pd.isna(value)):
+        return []
+    if isinstance(value, list):
+        return value
+    text = str(value).strip()
+    if not text:
+        return []
+    try:
+        payload = json.loads(text)
+    except json.JSONDecodeError:
+        return []
+    if not isinstance(payload, list):
+        return []
+    normalized: list[dict[str, object]] = []
+    for item in payload:
+        if not isinstance(item, dict):
+            continue
+        bowler = str(item.get("bowler", "")).strip()
+        if not bowler:
+            continue
+        overs_used = int(item.get("overs_used", 0) or 0)
+        remaining_overs = int(item.get("remaining_overs", max(0, 4 - overs_used)) or 0)
+        normalized.append(
+            {
+                "bowler": bowler,
+                "overs_used": overs_used,
+                "remaining_overs": max(0, remaining_overs),
+            }
+        )
+    return normalized
+
+
+def _build_known_bowling_resources(
+    known_bowler_state: list[dict[str, object]],
+    season: str,
+    player_lookup: dict[tuple[str, str], dict[str, object]],
+    league_lookup: dict[str, dict[str, object]],
+) -> dict[str, object]:
+    league = league_lookup.get(season, {})
+    league_death_economy = float(league.get("bowling_death_economy_avg", 10.0) or 10.0)
+    league_death_wpo = float(league.get("bowling_death_wickets_per_over_avg", 0.30) or 0.30)
+
+    resources: list[dict[str, object]] = []
+    for item in known_bowler_state:
+        remaining_overs = int(item["remaining_overs"])
+        if remaining_overs <= 0:
+            continue
+
+        stats = _get_player_stats(
+            str(item["bowler"]),
+            season,
+            player_lookup,
+            league_lookup,
+            role="bowling",
+        )
+        death_economy = float(stats["death_economy"])
+        death_wpo = float(stats["death_wickets_per_over"])
+        quality_score = (
+            (league_death_economy - death_economy)
+            + ((death_wpo - league_death_wpo) * 10.0)
+            + (remaining_overs * 0.15)
+        )
+
+        resources.append(
+            {
+                "bowler": str(item["bowler"]),
+                "overs_used": int(item["overs_used"]),
+                "remaining_overs": remaining_overs,
+                "death_economy": death_economy,
+                "death_wickets_per_over": death_wpo,
+                "is_estimated": bool(stats["is_estimated"]),
+                "quality_score": quality_score,
+            }
+        )
+
+    resources.sort(
+        key=lambda item: (
+            -float(item["quality_score"]),
+            -int(item["remaining_overs"]),
+            str(item["bowler"]),
+        )
+    )
+
+    top2_remaining_overs = sum(int(item["remaining_overs"]) for item in resources[:2])
+    known_death_resource_score = sum(
+        max(-3.0, min(3.0, float(item["quality_score"]))) * int(item["remaining_overs"])
+        for item in resources
+    )
+
+    if resources:
+        best = resources[0]
+        best_name = str(best["bowler"])
+        best_remaining_overs = int(best["remaining_overs"])
+        best_death_economy = float(best["death_economy"])
+        best_death_wpo = float(best["death_wickets_per_over"])
+    else:
+        best_name = ""
+        best_remaining_overs = 0
+        best_death_economy = league_death_economy
+        best_death_wpo = league_death_wpo
+
+    return {
+        "resources": resources,
+        "known_bowlers_used_count": len(known_bowler_state),
+        "known_bowling_overs_left": sum(int(item["remaining_overs"]) for item in resources),
+        "best_bowler_name": best_name,
+        "best_bowler_remaining_overs": best_remaining_overs,
+        "best_bowler_death_economy": best_death_economy,
+        "best_bowler_death_wickets_per_over": best_death_wpo,
+        "top2_remaining_overs": top2_remaining_overs,
+        "known_death_resource_score": known_death_resource_score,
+    }
+
+
+def _format_known_bowling_resources_block(summary: dict[str, object]) -> str:
+    resources = list(summary["resources"])
+    if not resources:
+        return "No used bowlers with overs left yet.\nKnown overs left among used bowlers: 0"
+
+    lines: list[str] = []
+    for resource in resources[:3]:
+        overs_left = int(resource["remaining_overs"])
+        overs_label = "over" if overs_left == 1 else "overs"
+        suffix = " (career data limited)" if bool(resource["is_estimated"]) else ""
+        lines.append(
+            f"{resource['bowler']}: {overs_left} {overs_label} left "
+            f"(death econ {float(resource['death_economy']):.2f}, death wkts/ov {float(resource['death_wickets_per_over']):.2f}){suffix}"
+        )
+
+    if len(resources) > 3:
+        extra_count = len(resources) - 3
+        extra_label = "bowler" if extra_count == 1 else "bowlers"
+        lines.append(f"Other used {extra_label} with overs left: {extra_count}")
+
+    lines.append(f"Known overs left among used bowlers: {int(summary['known_bowling_overs_left'])}")
+    return "\n".join(lines)
 
 
 def _build_venue_context_block(

@@ -67,9 +67,14 @@ def build_parser() -> argparse.ArgumentParser:
         "build-sft-artifacts",
         help="Select recent SFT warmup candidates and export draft SFT data for review.",
     )
-    subparsers.add_parser(
+    sft_anchor_parser = subparsers.add_parser(
         "build-sft-anchor-pack",
         help="Create the manual anchor-label worksheet used to seed higher-quality SFT data.",
+    )
+    sft_anchor_parser.add_argument(
+        "--overwrite",
+        action="store_true",
+        help="Overwrite the existing anchor worksheet with a regenerated one.",
     )
     sft_run_parser = subparsers.add_parser(
         "run-sft-warmup",
@@ -381,7 +386,7 @@ def cmd_build_sft_artifacts() -> int:
     return 0
 
 
-def cmd_build_sft_anchor_pack() -> int:
+def cmd_build_sft_anchor_pack(overwrite: bool) -> int:
     import pandas as pd
 
     from ipl_reasoner.sft import build_sft_anchor_pack
@@ -392,7 +397,7 @@ def cmd_build_sft_anchor_pack() -> int:
         print("Missing training dataset. Run `build-training-dataset` first.")
         return 1
 
-    anchor_path = build_sft_anchor_pack(pd.read_csv(dataset_path), paths)
+    anchor_path = build_sft_anchor_pack(pd.read_csv(dataset_path), paths, overwrite=overwrite)
     print("Wrote manual SFT anchor worksheet:")
     print("-", _relative_to_root(anchor_path, paths.root))
     blank_backup = paths.manual / "sft_anchor_review_pack_v1.blank_backup.csv"
@@ -488,7 +493,7 @@ def main() -> int:
     if args.command == "build-sft-artifacts":
         return cmd_build_sft_artifacts()
     if args.command == "build-sft-anchor-pack":
-        return cmd_build_sft_anchor_pack()
+        return cmd_build_sft_anchor_pack(overwrite=args.overwrite)
     if args.command == "run-sft-warmup":
         return cmd_run_sft_warmup(
             model=args.model,

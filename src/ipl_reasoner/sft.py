@@ -269,6 +269,8 @@ def _parse_prompt_context(prompt: str) -> dict[str, object]:
         "last_over_bowler_death_economy": None,
         "last_over_bowler_death_wpo": None,
         "last_over_bowler_limited": False,
+        "known_bowling_resources": [],
+        "known_bowling_overs_left": None,
         "venue_limited": False,
         "venue_surface": "",
         "venue_chase_rate": None,
@@ -334,6 +336,27 @@ def _parse_prompt_context(prompt: str) -> dict[str, object]:
                 context["last_over_bowler_death_economy"] = float(match.group(3))
                 context["last_over_bowler_death_wpo"] = float(match.group(4))
                 context["last_over_bowler_limited"] = "career data limited" in match.group(5)
+        elif "over left (death econ" in line or "overs left (death econ" in line:
+            match = re.search(
+                r"(.+?): (\d+) over[s]? left \(death econ ([0-9.]+), death wkts/ov ([0-9.]+)\)(.*)",
+                line,
+            )
+            if match:
+                resources = list(context.get("known_bowling_resources") or [])
+                resources.append(
+                    {
+                        "bowler": match.group(1).strip(),
+                        "remaining_overs": int(match.group(2)),
+                        "death_economy": float(match.group(3)),
+                        "death_wpo": float(match.group(4)),
+                        "limited": "career data limited" in match.group(5),
+                    }
+                )
+                context["known_bowling_resources"] = resources
+        elif line.startswith("Known overs left among used bowlers: "):
+            match = re.search(r"Known overs left among used bowlers: (\d+)", line)
+            if match:
+                context["known_bowling_overs_left"] = int(match.group(1))
         elif line.startswith("Limited IPL history"):
             context["venue_limited"] = True
         elif line.startswith("Surface: ") or line.startswith("Surface prior: "):
@@ -573,6 +596,20 @@ def _build_signal_pool(
     if bowler_overs_used >= 3 and bowler_death_econ <= 8.5:
         signals.append(("bowler", _bowler_relief_sentence(context, rng), "positive", 1.0))
 
+    bowling_resources = list(context.get("known_bowling_resources") or [])
+    known_overs_left = int(context.get("known_bowling_overs_left") or 0)
+    if bowling_resources:
+        best_resource = sorted(
+            bowling_resources,
+            key=lambda item: (-int(item["remaining_overs"]), float(item["death_economy"]), -float(item["death_wpo"])),
+        )[0]
+        if over >= 15 and int(best_resource["remaining_overs"]) >= 2 and (
+            float(best_resource["death_economy"]) <= 8.8 or float(best_resource["death_wpo"]) >= 0.4
+        ):
+            signals.append(("bowling_resources", _bowling_resources_negative_sentence(context, rng), "negative", 1.6))
+        elif over >= 16 and known_overs_left <= 2:
+            signals.append(("bowling_resources", _bowling_resources_positive_sentence(context, rng), "positive", 1.3))
+
     return signals
 
 
@@ -644,6 +681,20 @@ def _build_context_aware_summary(context: dict[str, object], prob: float, rng: r
     bowler_death_econ = float(context.get("last_over_bowler_death_economy") or 0.0)
     if bowler_overs_used >= 3 and bowler_death_econ <= 8.5:
         factors.append((1.0, "bowler_relief", _bowler_relief_sentence(context, rng)))
+
+    bowling_resources = list(context.get("known_bowling_resources") or [])
+    known_overs_left = int(context.get("known_bowling_overs_left") or 0)
+    if bowling_resources:
+        best_resource = sorted(
+            bowling_resources,
+            key=lambda item: (-int(item["remaining_overs"]), float(item["death_economy"]), -float(item["death_wpo"])),
+        )[0]
+        if over >= 15 and int(best_resource["remaining_overs"]) >= 2 and (
+            float(best_resource["death_economy"]) <= 8.8 or float(best_resource["death_wpo"]) >= 0.4
+        ):
+            factors.append((1.6, "bowling_resources_neg", _bowling_resources_negative_sentence(context, rng)))
+        elif over >= 16 and known_overs_left <= 2:
+            factors.append((1.3, "bowling_resources_pos", _bowling_resources_positive_sentence(context, rng)))
 
     factors.sort(key=lambda item: item[0], reverse=True)
     chosen: list[str] = []
@@ -864,6 +915,34 @@ def _bowler_relief_sentence(context: dict[str, object], rng: random.Random) -> s
         [
             f"There may also be a small release next over because {bowler} has already bowled heavily and cannot simply keep applying the same pressure immediately.",
             f"The fielding side must now change from {bowler}, and that matters if he was one of their better death options.",
+        ]
+    )
+
+
+def _bowling_resources_negative_sentence(context: dict[str, object], rng: random.Random) -> str:
+    resources = list(context.get("known_bowling_resources") or [])
+    if not resources:
+        return _fallback_sentence(context, 0.5, rng)
+    best = sorted(
+        resources,
+        key=lambda item: (-int(item["remaining_overs"]), float(item["death_economy"]), -float(item["death_wpo"])),
+    )[0]
+    bowler = str(best["bowler"])
+    overs_left = int(best["remaining_overs"])
+    return rng.choice(
+        [
+            f"The fielding side still has a serious known death option in reserve because {bowler} has {overs_left} overs left.",
+            f"{bowler} still has {overs_left} overs available among the bowlers already used, which keeps real closing pressure on the batting side.",
+        ]
+    )
+
+
+def _bowling_resources_positive_sentence(context: dict[str, object], rng: random.Random) -> str:
+    known_overs_left = int(context.get("known_bowling_overs_left") or 0)
+    return rng.choice(
+        [
+            f"Among bowlers already used, only {known_overs_left} overs remain, so the fielding side may be running short on trusted closing options.",
+            f"The known bowling resources are thinning now, with only {known_overs_left} overs left among bowlers already used in the innings.",
         ]
     )
 
