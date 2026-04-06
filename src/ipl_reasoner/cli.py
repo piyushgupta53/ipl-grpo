@@ -67,6 +67,10 @@ def build_parser() -> argparse.ArgumentParser:
         "build-sft-artifacts",
         help="Select recent SFT warmup candidates and export draft SFT data for review.",
     )
+    subparsers.add_parser(
+        "build-sft-anchor-pack",
+        help="Create the manual anchor-label worksheet used to seed higher-quality SFT data.",
+    )
     sft_run_parser = subparsers.add_parser(
         "run-sft-warmup",
         help="Write the SFT warmup manifest or run the warmup training scaffold.",
@@ -89,7 +93,7 @@ def build_parser() -> argparse.ArgumentParser:
     sft_run_parser.add_argument(
         "--dataset-variant",
         default="gold_v1",
-        choices=["gold_v1", "first_pass_all", "reviewed_only", "review_pack", "draft"],
+        choices=["anchor_v1", "gold_v1", "first_pass_all", "reviewed_only", "review_pack", "draft"],
         help="Which SFT dataset variant to train on.",
     )
     grpo_run_parser = subparsers.add_parser(
@@ -366,12 +370,33 @@ def cmd_build_sft_artifacts() -> int:
     print("-", _relative_to_root(artifacts.candidate_csv_path, paths.root))
     print("-", _relative_to_root(artifacts.draft_jsonl_path, paths.root))
     print("-", _relative_to_root(artifacts.review_pack_csv_path, paths.root))
+    print("-", _relative_to_root(artifacts.anchor_review_pack_csv_path, paths.root))
     print("-", _relative_to_root(artifacts.gold_review_pack_csv_path, paths.root))
     print("-", _relative_to_root(artifacts.reviewed_jsonl_path, paths.root))
     print("-", _relative_to_root(artifacts.reviewed_only_jsonl_path, paths.root))
     print("-", _relative_to_root(artifacts.first_pass_all_jsonl_path, paths.root))
+    print("-", _relative_to_root(artifacts.anchor_v1_jsonl_path, paths.root))
     print("-", _relative_to_root(artifacts.gold_v1_jsonl_path, paths.root))
     print("-", _relative_to_root(artifacts.warmup_training_jsonl_path, paths.root))
+    return 0
+
+
+def cmd_build_sft_anchor_pack() -> int:
+    import pandas as pd
+
+    from ipl_reasoner.sft import build_sft_anchor_pack
+
+    paths = ProjectPaths.discover()
+    dataset_path = paths.processed / "training_dataset.csv"
+    if not dataset_path.exists():
+        print("Missing training dataset. Run `build-training-dataset` first.")
+        return 1
+
+    anchor_path = build_sft_anchor_pack(pd.read_csv(dataset_path), paths)
+    print("Wrote manual SFT anchor worksheet:")
+    print("-", _relative_to_root(anchor_path, paths.root))
+    blank_backup = paths.manual / "sft_anchor_review_pack_v1.blank_backup.csv"
+    print("-", _relative_to_root(blank_backup, paths.root))
     return 0
 
 
@@ -462,6 +487,8 @@ def main() -> int:
         return cmd_audit_training_dataset()
     if args.command == "build-sft-artifacts":
         return cmd_build_sft_artifacts()
+    if args.command == "build-sft-anchor-pack":
+        return cmd_build_sft_anchor_pack()
     if args.command == "run-sft-warmup":
         return cmd_run_sft_warmup(
             model=args.model,

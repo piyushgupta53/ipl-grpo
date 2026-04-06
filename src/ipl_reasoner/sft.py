@@ -21,10 +21,12 @@ class SFTArtifacts:
     candidate_csv_path: Path
     draft_jsonl_path: Path
     review_pack_csv_path: Path
+    anchor_review_pack_csv_path: Path
     gold_review_pack_csv_path: Path
     reviewed_jsonl_path: Path
     reviewed_only_jsonl_path: Path
     first_pass_all_jsonl_path: Path
+    anchor_v1_jsonl_path: Path
     gold_v1_jsonl_path: Path
     warmup_training_jsonl_path: Path
 
@@ -36,10 +38,12 @@ def build_sft_artifacts(training_dataset: pd.DataFrame, paths: ProjectPaths) -> 
     candidate_csv_path = paths.processed / "sft_candidate_examples.csv"
     draft_jsonl_path = paths.processed / "sft_warmup_drafts.jsonl"
     review_pack_csv_path = paths.processed / "sft_review_pack.csv"
+    anchor_review_pack_csv_path = paths.manual / "sft_anchor_review_pack_v1.csv"
     gold_review_pack_csv_path = paths.manual / "sft_gold_review_pack_v1.csv"
     reviewed_jsonl_path = paths.processed / "sft_warmup_reviewed.jsonl"
     reviewed_only_jsonl_path = paths.processed / "sft_warmup_reviewed_only.jsonl"
     first_pass_all_jsonl_path = paths.processed / "sft_warmup_first_pass_all.jsonl"
+    anchor_v1_jsonl_path = paths.processed / "sft_warmup_anchor_v1.jsonl"
     gold_v1_jsonl_path = paths.processed / "sft_warmup_gold_v1.jsonl"
     warmup_training_jsonl_path = paths.processed / "sft_warmup_training.jsonl"
 
@@ -47,24 +51,62 @@ def build_sft_artifacts(training_dataset: pd.DataFrame, paths: ProjectPaths) -> 
     _write_sft_jsonl(candidates, draft_jsonl_path)
     review_pack = _write_review_pack(candidates, review_pack_csv_path)
     first_pass_all = _apply_first_pass_review(candidates.copy())
-    gold_pack = _load_gold_review_pack(gold_review_pack_csv_path)
     _write_reviewed_jsonl(review_pack, reviewed_jsonl_path)
     _write_prompt_completion_jsonl(review_pack, reviewed_only_jsonl_path, response_column="approved_response", response_source="reviewed_only")
     _write_prompt_completion_jsonl(first_pass_all, first_pass_all_jsonl_path, response_column="approved_response", response_source="first_pass_all")
-    _write_gold_jsonl(gold_pack, gold_v1_jsonl_path)
     _write_warmup_training_jsonl(first_pass_all, warmup_training_jsonl_path)
+
+    if anchor_review_pack_csv_path.exists():
+        anchor_pack = _load_manual_review_pack(
+            anchor_review_pack_csv_path,
+            id_column="anchor_example_id",
+            response_source="anchor_v1",
+        )
+        if not anchor_pack.empty:
+            _write_manual_jsonl(anchor_pack, anchor_v1_jsonl_path, id_column="anchor_example_id", response_source="anchor_v1")
+        elif anchor_v1_jsonl_path.exists():
+            anchor_v1_jsonl_path.unlink()
+
+    gold_pack = _load_manual_review_pack(
+        gold_review_pack_csv_path,
+        id_column="gold_example_id",
+        response_source="gold_v1",
+    )
+    _write_manual_jsonl(gold_pack, gold_v1_jsonl_path, id_column="gold_example_id", response_source="gold_v1")
 
     return SFTArtifacts(
         candidate_csv_path=candidate_csv_path,
         draft_jsonl_path=draft_jsonl_path,
         review_pack_csv_path=review_pack_csv_path,
+        anchor_review_pack_csv_path=anchor_review_pack_csv_path,
         gold_review_pack_csv_path=gold_review_pack_csv_path,
         reviewed_jsonl_path=reviewed_jsonl_path,
         reviewed_only_jsonl_path=reviewed_only_jsonl_path,
         first_pass_all_jsonl_path=first_pass_all_jsonl_path,
+        anchor_v1_jsonl_path=anchor_v1_jsonl_path,
         gold_v1_jsonl_path=gold_v1_jsonl_path,
         warmup_training_jsonl_path=warmup_training_jsonl_path,
     )
+
+
+def build_sft_anchor_pack(
+    training_dataset: pd.DataFrame,
+    paths: ProjectPaths,
+    target_examples: int = 40,
+    overwrite: bool = False,
+) -> Path:
+    paths.ensure()
+    output_path = paths.manual / "sft_anchor_review_pack_v1.csv"
+    backup_path = paths.manual / "sft_anchor_review_pack_v1.blank_backup.csv"
+
+    if output_path.exists() and not overwrite:
+        return output_path
+
+    candidates = select_sft_candidates(training_dataset)
+    anchor_df = _select_anchor_pack(candidates, target_examples=target_examples)
+    anchor_df.to_csv(output_path, index=False)
+    anchor_df.to_csv(backup_path, index=False)
+    return output_path
 
 
 def select_sft_candidates(training_dataset: pd.DataFrame, total_examples: int = 240, seed: int = 42) -> pd.DataFrame:
@@ -943,6 +985,95 @@ def _select_review_pack(candidates: pd.DataFrame, target_examples: int) -> pd.Da
     return combined.sort_values(["season", "sft_bucket", "match_id", "snapshot_over"]).reset_index(drop=True)
 
 
+def _select_anchor_pack(candidates: pd.DataFrame, target_examples: int) -> pd.DataFrame:
+    df = candidates.copy()
+    df["scenario_tag"] = df.apply(_scenario_tag_for_row, axis=1)
+
+    target_by_tag = {
+        "balanced_chase": 12,
+        "death_overs_tension": 10,
+        "resources_but_work": 8,
+        "cruise_control": 4,
+        "near_collapse": 4,
+        "fragile_middle_overs": 2,
+    }
+
+    picks: list[pd.DataFrame] = []
+    used_keys: set[tuple[object, object]] = set()
+
+    for idx, (scenario_tag, scenario_target) in enumerate(target_by_tag.items()):
+        scenario_df = df.loc[df["scenario_tag"] == scenario_tag].sort_values(
+            ["review_priority", "season", "match_id", "snapshot_over"],
+            ascending=[True, True, True, True],
+        )
+        picked_rows: list[pd.Series] = []
+        for _, row in scenario_df.iterrows():
+            key = (row["match_id"], row["snapshot_over"])
+            if key in used_keys:
+                continue
+            picked_rows.append(row)
+            used_keys.add(key)
+            if len(picked_rows) >= scenario_target:
+                break
+        if picked_rows:
+            picks.append(pd.DataFrame(picked_rows))
+
+    combined = pd.concat(picks, ignore_index=True) if picks else df.head(0).copy()
+
+    if len(combined) < target_examples:
+        remaining = df.loc[
+            ~df.set_index(["match_id", "snapshot_over"]).index.isin(
+                combined.set_index(["match_id", "snapshot_over"]).index
+            )
+        ].sort_values(["review_priority", "season", "match_id", "snapshot_over"])
+        extra = remaining.head(target_examples - len(combined))
+        combined = pd.concat([combined, extra], ignore_index=True)
+
+    combined = combined.sort_values(["scenario_tag", "season", "match_id", "snapshot_over"]).reset_index(drop=True)
+    combined["anchor_example_id"] = [f"anchor_{idx:03d}" for idx in range(1, len(combined) + 1)]
+    combined["label_status"] = ""
+    combined["gold_probability"] = ""
+    combined["gold_analysis"] = ""
+    combined["reviewer_notes"] = ""
+
+    keep_cols = [
+        "anchor_example_id",
+        "match_id",
+        "season",
+        "snapshot_over",
+        "sft_bucket",
+        "scenario_tag",
+        "review_priority",
+        "required_run_rate",
+        "wickets_in_hand",
+        "prompt",
+        "label_status",
+        "gold_probability",
+        "gold_analysis",
+        "reviewer_notes",
+    ]
+    return combined.loc[:, keep_cols]
+
+
+def _scenario_tag_for_row(row: pd.Series) -> str:
+    rrr = float(row["required_run_rate"])
+    wickets = int(row["wickets_in_hand"])
+    over = int(row["snapshot_over"])
+    baseline = float(row["run_rate_baseline_prob"])
+
+    if rrr <= 6.5 and wickets >= 7 and baseline >= 0.75:
+        return "cruise_control"
+    if rrr >= 13.5 and wickets <= 4:
+        return "near_collapse"
+    if over >= 16 and 0.15 <= baseline <= 0.85:
+        return "death_overs_tension"
+    if wickets >= 7 and 7.5 <= rrr <= 11.5:
+        return "resources_but_work"
+    if 7 <= over <= 14 and wickets <= 5:
+        return "fragile_middle_overs"
+    return "balanced_chase"
+
+
 def _apply_first_pass_review(review_df: pd.DataFrame) -> pd.DataFrame:
     reviewed_rows: list[dict[str, object]] = []
     for row in review_df.to_dict("records"):
@@ -1029,15 +1160,20 @@ def _write_prompt_completion_jsonl(
             f.write(json.dumps(payload, ensure_ascii=True) + "\n")
 
 
-def _load_gold_review_pack(input_path: Path) -> pd.DataFrame:
+def _load_manual_review_pack(
+    input_path: Path,
+    *,
+    id_column: str,
+    response_source: str,
+) -> pd.DataFrame:
     if not input_path.exists():
         raise FileNotFoundError(
-            f"Missing gold SFT review pack at {input_path}. Expected the curated gold CSV to exist before building SFT artifacts."
+            f"Missing manual SFT review pack at {input_path}. Expected the curated CSV to exist before building SFT artifacts."
         )
 
     gold_df = pd.read_csv(input_path)
     required_cols = {
-        "gold_example_id",
+        id_column,
         "match_id",
         "season",
         "snapshot_over",
@@ -1050,14 +1186,15 @@ def _load_gold_review_pack(input_path: Path) -> pd.DataFrame:
     }
     missing = sorted(required_cols - set(gold_df.columns))
     if missing:
-        raise ValueError(f"Gold SFT review pack is missing columns: {', '.join(missing)}")
+        raise ValueError(f"Manual SFT review pack is missing columns: {', '.join(missing)}")
 
     approved = gold_df.loc[gold_df["label_status"].astype(str).str.strip().eq("approved")].copy()
     if approved.empty:
-        raise ValueError("Gold SFT review pack has no approved rows.")
+        return approved
 
     approved["gold_probability"] = approved["gold_probability"].astype(float)
     approved["approved_response"] = approved.apply(_build_gold_response, axis=1)
+    approved["response_source"] = response_source
     return approved
 
 
@@ -1067,21 +1204,27 @@ def _build_gold_response(row: pd.Series) -> str:
     return f"<analysis>\n{analysis}\n</analysis>\n<answer>{probability:.2f}</answer>"
 
 
-def _write_gold_jsonl(gold_df: pd.DataFrame, output_path: Path) -> None:
+def _write_manual_jsonl(
+    gold_df: pd.DataFrame,
+    output_path: Path,
+    *,
+    id_column: str,
+    response_source: str,
+) -> None:
     with output_path.open("w", encoding="utf-8") as f:
         for row in gold_df.to_dict("records"):
             payload = {
                 "prompt": _sft_prompt_text(str(row["prompt"])),
                 "completion": _sft_completion_text(str(row["approved_response"])),
                 "metadata": {
-                    "gold_example_id": row["gold_example_id"],
+                    id_column: row[id_column],
                     "match_id": row["match_id"],
                     "season": row["season"],
                     "snapshot_over": row["snapshot_over"],
                     "sft_bucket": row["sft_bucket"],
                     "review_priority": row["review_priority"],
                     "review_status": row.get("label_status"),
-                    "response_source": "gold_v1",
+                    "response_source": response_source,
                 },
             }
             f.write(json.dumps(payload, ensure_ascii=True) + "\n")

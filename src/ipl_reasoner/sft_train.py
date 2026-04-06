@@ -41,6 +41,7 @@ def write_sft_warmup_manifest(
     output_dir.mkdir(parents=True, exist_ok=True)
 
     dataset_variants = {
+        "anchor_v1": paths.processed / "sft_warmup_anchor_v1.jsonl",
         "gold_v1": paths.processed / "sft_warmup_gold_v1.jsonl",
         "first_pass_all": paths.processed / "sft_warmup_training.jsonl",
         "reviewed_only": paths.processed / "sft_warmup_reviewed_only.jsonl",
@@ -61,7 +62,7 @@ def write_sft_warmup_manifest(
             total_examples += 1
             payload = json.loads(line)
             source = payload.get("metadata", {}).get("response_source")
-            if source in {"first_pass_reviewed", "first_pass_all", "reviewed_only", "gold_v1"}:
+            if source in {"first_pass_reviewed", "first_pass_all", "reviewed_only", "gold_v1", "anchor_v1"}:
                 reviewed_examples += 1
 
     config = SFTWarmupConfig(
